@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/components/hint/hint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/components/hint/instances/counter_hint.gd" type="Script" id=2]
+
+[node name="counter_hint" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="count" type="Label" parent="contents" index="1"]
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 27.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 24, 0 )
+theme_type_variation = "CountLabel"
+align = 1
+uppercase = true

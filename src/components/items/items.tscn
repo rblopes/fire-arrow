@@ -1,0 +1,229 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://src/resources/fonts/category_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/components/items/item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/resources/items/progressive_strength.tres" type="Resource" id=3]
+[ext_resource path="res://src/resources/items/progressive_hookshot.tres" type="Resource" id=4]
+[ext_resource path="res://src/resources/items/boomerang.tres" type="Resource" id=5]
+[ext_resource path="res://src/resources/items/hover_boots.tres" type="Resource" id=6]
+[ext_resource path="res://src/resources/items/fire_arrow.tres" type="Resource" id=7]
+[ext_resource path="res://src/resources/items/zora_tunic.tres" type="Resource" id=8]
+[ext_resource path="res://src/resources/items/bow.tres" type="Resource" id=9]
+[ext_resource path="res://src/resources/items/megaton_hammer.tres" type="Resource" id=10]
+[ext_resource path="res://src/resources/items/lens_of_truth.tres" type="Resource" id=11]
+[ext_resource path="res://src/resources/items/dins_fire.tres" type="Resource" id=12]
+[ext_resource path="res://src/resources/items/mirror_shield.tres" type="Resource" id=13]
+[ext_resource path="res://src/resources/items/biggoron_sword.tres" type="Resource" id=14]
+[ext_resource path="res://src/resources/items/bomb.tres" type="Resource" id=15]
+[ext_resource path="res://src/resources/items/bombchu.tres" type="Resource" id=16]
+[ext_resource path="res://src/resources/items/goron_tunic.tres" type="Resource" id=17]
+[ext_resource path="res://src/resources/items/bottle.tres" type="Resource" id=18]
+[ext_resource path="res://src/resources/items/kokiri_sword.tres" type="Resource" id=19]
+[ext_resource path="res://src/resources/items/iron_boots.tres" type="Resource" id=20]
+[ext_resource path="res://src/resources/items/farores_wind.tres" type="Resource" id=21]
+[ext_resource path="res://src/resources/items/light_arrow.tres" type="Resource" id=22]
+[ext_resource path="res://src/resources/items/progressive_scale.tres" type="Resource" id=23]
+[ext_resource path="res://src/resources/items/progressive_wallet.tres" type="Resource" id=24]
+[ext_resource path="res://src/resources/items/magic.tres" type="Resource" id=25]
+[ext_resource path="res://src/resources/items/trade_quest_item.tres" type="Resource" id=26]
+[ext_resource path="res://src/resources/items/slingshot.tres" type="Resource" id=27]
+[ext_resource path="res://src/resources/styleboxes/empty.tres" type="StyleBox" id=28]
+
+[node name="items" type="PanelContainer"]
+margin_right = 304.0
+margin_bottom = 120.0
+custom_styles/panel = ExtResource( 28 )
+
+[node name="contents" type="VBoxContainer" parent="."]
+margin_right = 304.0
+margin_bottom = 120.0
+custom_constants/separation = 0
+
+[node name="heading" type="Label" parent="contents"]
+margin_right = 304.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 1 )
+text = "ITEMS"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="icons" type="GridContainer" parent="contents"]
+margin_top = 20.0
+margin_right = 304.0
+margin_bottom = 120.0
+size_flags_horizontal = 4
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slingshot" parent="contents/icons" instance=ExtResource( 2 )]
+item = ExtResource( 27 )
+
+[node name="bomb" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 34.0
+margin_right = 66.0
+item = ExtResource( 15 )
+
+[node name="bow" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_right = 100.0
+item = ExtResource( 9 )
+
+[node name="fire_arrow" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 102.0
+margin_right = 134.0
+item = ExtResource( 7 )
+
+[node name="dins_fire" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_right = 168.0
+item = ExtResource( 12 )
+
+[node name="mirror_shield" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 170.0
+margin_right = 202.0
+item = ExtResource( 13 )
+
+[node name="kokiri_sword" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 204.0
+margin_right = 236.0
+item = ExtResource( 19 )
+
+[node name="biggoron_sword" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 238.0
+margin_right = 270.0
+item = ExtResource( 14 )
+
+[node name="magic" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 272.0
+margin_right = 304.0
+item = ExtResource( 25 )
+
+[node name="boomerang" parent="contents/icons" instance=ExtResource( 2 )]
+margin_top = 34.0
+margin_bottom = 66.0
+item = ExtResource( 5 )
+
+[node name="bombchu" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 34.0
+margin_top = 34.0
+margin_right = 66.0
+margin_bottom = 66.0
+item = ExtResource( 16 )
+
+[node name="progressive_hookshot" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 34.0
+margin_right = 100.0
+margin_bottom = 66.0
+item = ExtResource( 4 )
+
+[node name="light_arrow" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 102.0
+margin_top = 34.0
+margin_right = 134.0
+margin_bottom = 66.0
+item = ExtResource( 22 )
+
+[node name="farores_wind" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_top = 34.0
+margin_right = 168.0
+margin_bottom = 66.0
+item = ExtResource( 21 )
+
+[node name="progressive_strength" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 170.0
+margin_top = 34.0
+margin_right = 202.0
+margin_bottom = 66.0
+item = ExtResource( 3 )
+
+[node name="goron_tunic" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 204.0
+margin_top = 34.0
+margin_right = 236.0
+margin_bottom = 66.0
+item = ExtResource( 17 )
+
+[node name="hover_boots" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 238.0
+margin_top = 34.0
+margin_right = 270.0
+margin_bottom = 66.0
+item = ExtResource( 6 )
+
+[node name="progressive_wallet" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 272.0
+margin_top = 34.0
+margin_right = 304.0
+margin_bottom = 66.0
+item = ExtResource( 24 )
+
+[node name="placeholder_01" type="Control" parent="contents/icons"]
+margin_top = 68.0
+margin_right = 32.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="lens_of_truth" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 34.0
+margin_top = 68.0
+margin_right = 66.0
+margin_bottom = 100.0
+item = ExtResource( 11 )
+
+[node name="megaton_hammer" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 100.0
+margin_bottom = 100.0
+item = ExtResource( 10 )
+
+[node name="bottle" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 102.0
+margin_top = 68.0
+margin_right = 134.0
+margin_bottom = 100.0
+item = ExtResource( 18 )
+
+[node name="trade_quest_item" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 168.0
+margin_bottom = 100.0
+item = ExtResource( 26 )
+
+[node name="progressive_scale" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 170.0
+margin_top = 68.0
+margin_right = 202.0
+margin_bottom = 100.0
+item = ExtResource( 23 )
+
+[node name="zora_tunic" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 236.0
+margin_bottom = 100.0
+item = ExtResource( 8 )
+
+[node name="iron_boots" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 238.0
+margin_top = 68.0
+margin_right = 270.0
+margin_bottom = 100.0
+item = ExtResource( 20 )
+
+[node name="placeholder_02" type="Control" parent="contents/icons"]
+margin_left = 272.0
+margin_top = 68.0
+margin_right = 304.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 32, 32 )

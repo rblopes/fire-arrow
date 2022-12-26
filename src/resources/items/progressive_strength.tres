@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=1]
+[ext_resource path="res://src/resources/icons/items/goron_bracelet.tres" type="Resource" id=2]
+[ext_resource path="res://src/resources/icons/items/silver_gauntlets.tres" type="Resource" id=3]
+[ext_resource path="res://src/resources/icons/items/golden_gauntlets.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+acts_as_checkbox = true
+uses_label = false
+icons = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]

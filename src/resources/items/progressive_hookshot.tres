@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/resources/icons/items/hookshot.tres" type="Resource" id=1]
+[ext_resource path="res://src/resources/icons/items/longshot.tres" type="Resource" id=2]
+[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=3]
+
+[resource]
+script = ExtResource( 3 )
+acts_as_checkbox = true
+uses_label = true
+icons = [ ExtResource( 1 ), ExtResource( 2 ) ]

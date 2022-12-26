@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/components/item_icon/item_icon.gd" type="Script" id=1]
+
+[node name="item_icon" type="TextureRect"]
+rect_min_size = Vector2( 20, 20 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+expand = true
+script = ExtResource( 1 )

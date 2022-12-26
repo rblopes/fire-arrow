@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/components/hint/hint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/components/hint/instances/special_location_hint.gd" type="Script" id=2]
+
+[node name="special_location_hint" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="symbol" type="Label" parent="contents" index="1"]
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 39.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 36, 0 )
+theme_type_variation = "SymbolLabel"
+align = 1
+uppercase = true

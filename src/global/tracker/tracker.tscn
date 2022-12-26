@@ -1,0 +1,97 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://src/global/tracker/tracker.gd" type="Script" id=1]
+[ext_resource path="res://src/global/tracker/items.gd" type="Script" id=2]
+[ext_resource path="res://src/resources/items/progressive_hookshot.tres" type="Resource" id=3]
+[ext_resource path="res://src/resources/items/boomerang.tres" type="Resource" id=4]
+[ext_resource path="res://src/resources/items/fire_arrow.tres" type="Resource" id=5]
+[ext_resource path="res://src/resources/items/dins_fire.tres" type="Resource" id=6]
+[ext_resource path="res://src/resources/items/bomb.tres" type="Resource" id=7]
+[ext_resource path="res://src/resources/items/bombchu.tres" type="Resource" id=8]
+[ext_resource path="res://src/resources/items/bottle.tres" type="Resource" id=9]
+[ext_resource path="res://src/resources/items/farores_wind.tres" type="Resource" id=10]
+[ext_resource path="res://src/resources/items/light_arrow.tres" type="Resource" id=11]
+[ext_resource path="res://src/resources/items/trade_quest_item.tres" type="Resource" id=12]
+[ext_resource path="res://src/resources/items/slingshot.tres" type="Resource" id=13]
+[ext_resource path="res://src/resources/items/bow.tres" type="Resource" id=14]
+[ext_resource path="res://src/resources/items/megaton_hammer.tres" type="Resource" id=15]
+[ext_resource path="res://src/resources/items/lens_of_truth.tres" type="Resource" id=16]
+[ext_resource path="res://src/resources/items/zora_tunic.tres" type="Resource" id=17]
+[ext_resource path="res://src/resources/items/mirror_shield.tres" type="Resource" id=18]
+[ext_resource path="res://src/resources/items/biggoron_sword.tres" type="Resource" id=19]
+[ext_resource path="res://src/resources/items/goron_tunic.tres" type="Resource" id=20]
+[ext_resource path="res://src/resources/items/kokiri_sword.tres" type="Resource" id=21]
+[ext_resource path="res://src/resources/items/progressive_strength.tres" type="Resource" id=22]
+[ext_resource path="res://src/resources/items/iron_boots.tres" type="Resource" id=23]
+[ext_resource path="res://src/resources/items/progressive_scale.tres" type="Resource" id=24]
+[ext_resource path="res://src/resources/items/progressive_wallet.tres" type="Resource" id=25]
+[ext_resource path="res://src/resources/items/magic.tres" type="Resource" id=26]
+[ext_resource path="res://src/resources/items/hover_boots.tres" type="Resource" id=27]
+[ext_resource path="res://src/global/tracker/songs.gd" type="Script" id=28]
+[ext_resource path="res://src/resources/songs/storms.tres" type="Resource" id=29]
+[ext_resource path="res://src/resources/songs/nocturne.tres" type="Resource" id=30]
+[ext_resource path="res://src/resources/songs/zeldas.tres" type="Resource" id=31]
+[ext_resource path="res://src/resources/songs/prelude.tres" type="Resource" id=32]
+[ext_resource path="res://src/resources/songs/requiem.tres" type="Resource" id=33]
+[ext_resource path="res://src/resources/songs/time.tres" type="Resource" id=34]
+[ext_resource path="res://src/resources/songs/bolero.tres" type="Resource" id=35]
+[ext_resource path="res://src/resources/songs/serenade.tres" type="Resource" id=36]
+[ext_resource path="res://src/resources/songs/sarias.tres" type="Resource" id=37]
+[ext_resource path="res://src/resources/songs/minuet.tres" type="Resource" id=38]
+[ext_resource path="res://src/resources/songs/suns.tres" type="Resource" id=39]
+[ext_resource path="res://src/resources/songs/eponas.tres" type="Resource" id=40]
+[ext_resource path="res://src/global/tracker/prizes.gd" type="Script" id=41]
+[ext_resource path="res://src/resources/prizes/forest.tres" type="Resource" id=42]
+[ext_resource path="res://src/resources/prizes/kokiri.tres" type="Resource" id=43]
+[ext_resource path="res://src/resources/prizes/zora.tres" type="Resource" id=44]
+[ext_resource path="res://src/resources/prizes/shadow.tres" type="Resource" id=45]
+[ext_resource path="res://src/resources/prizes/goron.tres" type="Resource" id=46]
+[ext_resource path="res://src/resources/prizes/light.tres" type="Resource" id=47]
+[ext_resource path="res://src/resources/prizes/water.tres" type="Resource" id=48]
+[ext_resource path="res://src/resources/prizes/spirit.tres" type="Resource" id=49]
+[ext_resource path="res://src/resources/prizes/fire.tres" type="Resource" id=50]
+[ext_resource path="res://src/global/tracker/stopwatch.gd" type="Script" id=52]
+[ext_resource path="res://src/global/tracker/groups.gd" type="Script" id=54]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+func get_hints() -> Array:
+	return Locations.locations.values()
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node
+
+
+func get_hints() -> Array:
+	return owner.tracker_layout.hints if is_instance_valid(owner.tracker_layout) else []
+"
+
+[node name="tracker" type="Node"]
+script = ExtResource( 1 )
+
+[node name="locations" type="Node" parent="."]
+script = SubResource( 1 )
+
+[node name="hints" type="Node" parent="."]
+script = SubResource( 2 )
+
+[node name="groups" type="Node" parent="."]
+script = ExtResource( 54 )
+
+[node name="items" type="Node" parent="."]
+script = ExtResource( 2 )
+items = [ ExtResource( 13 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 25 ), ExtResource( 12 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 23 ) ]
+
+[node name="prizes" type="Node" parent="."]
+script = ExtResource( 41 )
+prizes = [ ExtResource( 47 ), ExtResource( 42 ), ExtResource( 50 ), ExtResource( 48 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 46 ), ExtResource( 44 ) ]
+
+[node name="songs" type="Node" parent="."]
+script = ExtResource( 28 )
+songs = [ ExtResource( 31 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 32 ) ]
+
+[node name="stopwatch" type="Node" parent="."]
+script = ExtResource( 52 )

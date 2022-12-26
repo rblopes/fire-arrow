@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/resources/fonts/category_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/components/songs/song.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/resources/styleboxes/empty.tres" type="StyleBox" id=3]
+[ext_resource path="res://src/resources/songs/storms.tres" type="Resource" id=4]
+[ext_resource path="res://src/resources/songs/suns.tres" type="Resource" id=5]
+[ext_resource path="res://src/resources/songs/eponas.tres" type="Resource" id=6]
+[ext_resource path="res://src/resources/songs/nocturne.tres" type="Resource" id=7]
+[ext_resource path="res://src/resources/songs/zeldas.tres" type="Resource" id=8]
+[ext_resource path="res://src/resources/songs/prelude.tres" type="Resource" id=9]
+[ext_resource path="res://src/resources/songs/requiem.tres" type="Resource" id=10]
+[ext_resource path="res://src/resources/songs/time.tres" type="Resource" id=11]
+[ext_resource path="res://src/resources/songs/bolero.tres" type="Resource" id=12]
+[ext_resource path="res://src/resources/songs/serenade.tres" type="Resource" id=13]
+[ext_resource path="res://src/resources/songs/sarias.tres" type="Resource" id=14]
+[ext_resource path="res://src/resources/songs/minuet.tres" type="Resource" id=15]
+[ext_resource path="res://src/components/songs/songs.gd" type="Script" id=16]
+
+[node name="songs" type="PanelContainer"]
+margin_right = 202.0
+margin_bottom = 102.0
+custom_styles/panel = ExtResource( 3 )
+script = ExtResource( 16 )
+
+[node name="contents" type="VBoxContainer" parent="."]
+margin_right = 202.0
+margin_bottom = 102.0
+custom_constants/separation = 0
+
+[node name="heading" type="Label" parent="contents"]
+margin_right = 202.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 1 )
+text = "SONGS"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+
+[node name="icons" type="GridContainer" parent="contents"]
+margin_top = 20.0
+margin_right = 202.0
+margin_bottom = 102.0
+size_flags_horizontal = 4
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zeldas" parent="contents/icons" instance=ExtResource( 2 )]
+song = ExtResource( 8 )
+
+[node name="eponas" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 34.0
+margin_right = 66.0
+song = ExtResource( 6 )
+
+[node name="sarias" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_right = 100.0
+song = ExtResource( 14 )
+
+[node name="suns" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 102.0
+margin_right = 134.0
+song = ExtResource( 5 )
+
+[node name="time" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_right = 168.0
+song = ExtResource( 11 )
+
+[node name="storms" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 170.0
+margin_right = 202.0
+song = ExtResource( 4 )
+
+[node name="minuet" parent="contents/icons" instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_bottom = 82.0
+song = ExtResource( 15 )
+
+[node name="bolero" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 34.0
+margin_top = 42.0
+margin_right = 66.0
+margin_bottom = 82.0
+song = ExtResource( 12 )
+
+[node name="serenade" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 42.0
+margin_right = 100.0
+margin_bottom = 82.0
+song = ExtResource( 13 )
+
+[node name="requiem" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 102.0
+margin_top = 42.0
+margin_right = 134.0
+margin_bottom = 82.0
+song = ExtResource( 10 )
+
+[node name="nocturne" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_top = 42.0
+margin_right = 168.0
+margin_bottom = 82.0
+song = ExtResource( 7 )
+
+[node name="prelude" parent="contents/icons" instance=ExtResource( 2 )]
+margin_left = 170.0
+margin_top = 42.0
+margin_right = 202.0
+margin_bottom = 82.0
+song = ExtResource( 9 )

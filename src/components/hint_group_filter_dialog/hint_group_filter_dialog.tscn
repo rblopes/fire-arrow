@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/components/filtered_hint_list/filtered_hint_list.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/components/hint_group_filter_dialog/hint_group_filter_dialog.gd" type="Script" id=2]
+
+[node name="hint_filter_popup" type="Popup"]
+margin_right = 360.0
+margin_bottom = 96.0
+script = ExtResource( 2 )
+
+[node name="filtered_hint_list" parent="." instance=ExtResource( 1 )]
+
+[connection signal="about_to_show" from="." to="." method="_on_about_to_show"]
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="filter_updated" from="filtered_hint_list" to="." method="_on_filtered_hint_list_filter_updated"]
+[connection signal="item_selected" from="filtered_hint_list" to="." method="_on_filtered_hint_list_item_selected"]

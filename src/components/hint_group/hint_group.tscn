@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/components/hint_group/hint_group.gd" type="Script" id=1]
+[ext_resource path="res://src/components/hint_group/theme.tres" type="Theme" id=3]
+
+[node name="hint_group" type="PanelContainer"]
+anchor_right = 1.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 0, 20 )
+rect_clip_content = true
+theme = ExtResource( 3 )
+theme_type_variation = "HintGroupPanel"
+script = ExtResource( 1 )

@@ -1,0 +1,80 @@
+name: "Release"
+
+on:
+  push:
+    tags: v0.*
+
+env:
+  EXPORT_NAME: fire-arrow
+  GODOT_RELEASE: 3.5.1
+
+jobs:
+  linux_64bit:
+    name: "Release: Linux/X11 64-bit"
+    runs-on: ubuntu-latest
+    container: docker://barichello/godot-ci:3.5.1
+    env:
+      EXPORT_PATH: dist/${{ github.job }}
+      PRESET_NAME: Linux/X11 64-bit
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
+      - name: "Setup: Godot Export Templates"
+        run: |
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_RELEASE}.stable ~/.local/share/godot/templates
+      - name: "Export"
+        run: |
+          mkdir -v -p ${EXPORT_PATH}
+          godot -v --export "${PRESET_NAME}" ${EXPORT_PATH}/${EXPORT_NAME}.x86_64
+      - name: "Archive"
+        working-directory: ${{ env.EXPORT_PATH }}
+        run: tar czvf ../${{ github.job }}.tar.gz .
+      - name: "Publish"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          asset_name: ${{ env.EXPORT_NAME }}_$tag_${{ github.job }}.tar.gz
+          file: ${{ env.EXPORT_PATH }}.tar.gz
+          overwrite: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+
+  windows_64bit:
+    name: "Release: Windows 64-bit"
+    runs-on: ubuntu-latest
+    container: docker://barichello/godot-ci:3.5.1
+    env:
+      EXPORT_PATH: dist/${{ github.job }}
+      PRESET_NAME: Windows 64-bit
+    steps:
+      - name: "Setup: WINE and rcedit"
+        run: |
+          dpkg --add-architecture i386 && apt-get update && apt-get install -y wine-stable && apt-get install -y wine32
+          chown root:root -R ~
+          wget https://github.com/electron/rcedit/releases/download/v1.1.1/rcedit-x64.exe
+          mkdir -v -p ~/.local/share/rcedit
+          mv rcedit-x64.exe ~/.local/share/rcedit
+          godot -e -q
+          echo 'export/windows/wine = "/usr/bin/wine"' >> ~/.config/godot/editor_settings-3.tres
+          echo 'export/windows/rcedit = "/github/home/.local/share/rcedit/rcedit-x64.exe"' >> ~/.config/godot/editor_settings-3.tres
+      - name: "Checkout"
+        uses: actions/checkout@v3
+      - name: "Setup: Godot Export Templates"
+        run: |
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_RELEASE}.stable ~/.local/share/godot/templates
+      - name: "Export"
+        run: |
+          mkdir -v -p ${EXPORT_PATH}
+          godot -v --export "${PRESET_NAME}" ${EXPORT_PATH}/${EXPORT_NAME}.exe
+      - name: "Archive"
+        working-directory: ${{ env.EXPORT_PATH }}
+        run: zip -r ../${{ github.job }}.zip .
+      - name: "Publish"
+        uses: svenstaro/upload-release-action@v2
+        with:
+          asset_name: ${{ env.EXPORT_NAME }}_$tag_${{ github.job }}.zip
+          file: ${{ env.EXPORT_PATH }}.zip
+          overwrite: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}

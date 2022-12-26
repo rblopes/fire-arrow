@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/resources/icons/items/dins_fire.tres" type="Resource" id=1]
+[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+acts_as_checkbox = true
+uses_label = false
+icons = [ ExtResource( 1 ) ]

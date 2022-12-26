@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/components/prizes/prize.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/resources/styleboxes/empty.tres" type="StyleBox" id=2]
+[ext_resource path="res://src/resources/prizes/light.tres" type="Resource" id=3]
+[ext_resource path="res://src/resources/prizes/zora.tres" type="Resource" id=4]
+[ext_resource path="res://src/resources/prizes/kokiri.tres" type="Resource" id=5]
+[ext_resource path="res://src/resources/prizes/forest.tres" type="Resource" id=6]
+[ext_resource path="res://src/resources/prizes/water.tres" type="Resource" id=7]
+[ext_resource path="res://src/resources/prizes/fire.tres" type="Resource" id=8]
+[ext_resource path="res://src/resources/prizes/spirit.tres" type="Resource" id=9]
+[ext_resource path="res://src/resources/prizes/shadow.tres" type="Resource" id=10]
+[ext_resource path="res://src/resources/prizes/goron.tres" type="Resource" id=11]
+[ext_resource path="res://src/resources/fonts/category_heading.tres" type="DynamicFont" id=12]
+[ext_resource path="res://src/components/prizes/prizes.gd" type="Script" id=13]
+
+[node name="prizes" type="PanelContainer"]
+margin_right = 144.0
+margin_bottom = 140.0
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 13 )
+
+[node name="context_menu" type="PopupMenu" parent="."]
+items = [ "Uncheck All", null, 0, false, false, 1, 0, null, "", false, "", null, 0, false, true, 0, 0, null, "", true, "Clear Medallions", null, 0, false, false, 2, 0, null, "", false, "Clear Stones", null, 0, false, false, 3, 0, null, "", false, "", null, 0, false, true, 0, 0, null, "", true, "Clear All", null, 0, false, false, 4, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="contents" type="VBoxContainer" parent="."]
+margin_right = 144.0
+margin_bottom = 140.0
+custom_constants/separation = 0
+
+[node name="heading" type="Label" parent="contents"]
+margin_right = 144.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+custom_fonts/font = ExtResource( 12 )
+text = "PRIZES"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+
+[node name="icons" type="GridContainer" parent="contents"]
+margin_top = 20.0
+margin_right = 144.0
+margin_bottom = 140.0
+size_flags_horizontal = 4
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="light" parent="contents/icons" instance=ExtResource( 1 )]
+margin_right = 48.0
+margin_bottom = 40.0
+prize = ExtResource( 3 )
+
+[node name="forest" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 48.0
+margin_right = 96.0
+margin_bottom = 40.0
+prize = ExtResource( 6 )
+
+[node name="fire" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 96.0
+margin_right = 144.0
+margin_bottom = 40.0
+prize = ExtResource( 8 )
+
+[node name="water" parent="contents/icons" instance=ExtResource( 1 )]
+margin_top = 40.0
+margin_right = 48.0
+margin_bottom = 80.0
+prize = ExtResource( 7 )
+
+[node name="shadow" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 48.0
+margin_top = 40.0
+margin_right = 96.0
+margin_bottom = 80.0
+prize = ExtResource( 10 )
+
+[node name="spirit" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 96.0
+margin_top = 40.0
+margin_right = 144.0
+margin_bottom = 80.0
+prize = ExtResource( 9 )
+
+[node name="kokiri" parent="contents/icons" instance=ExtResource( 1 )]
+margin_top = 80.0
+margin_right = 48.0
+margin_bottom = 120.0
+prize = ExtResource( 5 )
+
+[node name="goron" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 48.0
+margin_top = 80.0
+margin_right = 96.0
+margin_bottom = 120.0
+prize = ExtResource( 11 )
+
+[node name="zora" parent="contents/icons" instance=ExtResource( 1 )]
+margin_left = 96.0
+margin_top = 80.0
+margin_right = 144.0
+margin_bottom = 120.0
+prize = ExtResource( 4 )
+
+[connection signal="id_pressed" from="context_menu" to="." method="_on_context_menu_id_pressed"]

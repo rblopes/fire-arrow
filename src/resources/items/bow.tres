@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=1]
+[ext_resource path="res://src/resources/icons/items/bow.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+acts_as_checkbox = true
+uses_label = false
+icons = [ ExtResource( 2 ) ]

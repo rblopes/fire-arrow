@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/components/item_icon_tray/item_icon_tray.gd" type="Script" id=1]
+[ext_resource path="res://src/components/item_icon/item_icon.tscn" type="PackedScene" id=2]
+
+[node name="item_icon_tray" type="HBoxContainer"]
+margin_bottom = 20.0
+mouse_filter = 0
+size_flags_horizontal = 9
+custom_constants/separation = 2
+alignment = 2
+script = ExtResource( 1 )
+item_icon_scene = ExtResource( 2 )

@@ -1,0 +1,410 @@
+{
+	"groups": [
+		{
+			"bg_color": "#800000",
+			"capacity": 3,
+			"collection": "Locations",
+			"filtered_flags": 3,
+			"flag": 1,
+			"name": "Irrelevant Places",
+			"shortcut": "B",
+			"type": "inline"
+		},
+		{
+			"bg_color": "#191970",
+			"capacity": 5,
+			"collection": "Locations",
+			"filtered_flags": 1,
+			"flag": 2,
+			"name": "Path to Goal",
+			"shortcut": "G",
+			"type": "goal"
+		},
+		{
+			"bg_color": "#7a5c03",
+			"capacity": 5,
+			"collection": "Hints",
+			"filtered_flags": 1,
+			"flag": 1,
+			"name": "Hints",
+			"shortcut": "H",
+			"type": "hints"
+		}
+	],
+	"hints": [
+		{
+			"type": "special_location",
+			"params": {
+				"choices": "DMC;DMT;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZR",
+				"description": "Adult Spawn at",
+				"shortcut": "A"
+			}
+		},
+		{
+			"type": "special_location",
+			"params": {
+				"choices": "DMC;DMT;GF;GV;GC;GY;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
+				"description": "Child Spawn at",
+				"shortcut": "C"
+			}
+		},
+		{
+			"type": "counter",
+			"params": {
+				"description": "Collected Skulltulas",
+				"increment_by": 10,
+				"max_value": 50
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "BOTW",
+				"description": "Dead Hand"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "COL",
+				"description": "Requiem Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "DMC",
+				"description": "Bolero Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "DMT",
+				"description": "Biggoron",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "FIR",
+				"description": "Above Flare Dancer"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "FIR",
+				"description": "Above Pierre"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GAN",
+				"description": "Shadow Trial Big Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GC",
+				"description": "Darunia"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GC",
+				"description": "Maze Leftmost Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GC",
+				"description": "Spinning Pot"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GF",
+				"description": "Archery 1500 Pt."
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GTG",
+				"description": "Final Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GTG",
+				"description": "Underwater Rupees"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GV",
+				"description": "Behind Rocks"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GY",
+				"description": "Composer's Grave"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GY",
+				"description": "ReDead Grave"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GY",
+				"description": "Sun's Song Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HC",
+				"description": "Great Fairy"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HF",
+				"description": "Ocarina of Time",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HW",
+				"description": "Haunted Wasteland"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "IC",
+				"description": "Iron Boots Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "IC",
+				"description": "Serenade Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "JJ",
+				"description": "Boomerang Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "20 Gold Skulltulas"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "30 Gold Skulltulas",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "40 Gold Skulltulas",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "50 Gold Skulltulas",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "Anju's Cuccos"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "Nocturne Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LH",
+				"description": "Diving Experiment"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LH",
+				"description": "Shoot in the Sun"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Skull Kid"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Skull Mask",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Target in the Woods"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "MKT",
+				"description": "Big Poes"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "MKT",
+				"description": "Treasure Chest Game"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "OGC",
+				"description": "Great Fairy"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SFM",
+				"description": "Minuet Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SHA",
+				"description": "Skull Pot"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SPI",
+				"description": "Mirror Shield Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SPI",
+				"description": "Silver Gauntlets Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "TOT",
+				"description": "Prelude Check"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "Boss Key Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "Central Pillar Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "River Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZD",
+				"description": "King Zora Thawed"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZF",
+				"description": "Icy Lake Bottom"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZR",
+				"description": "Frogs in a Storm"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZR",
+				"description": "Frogs Final Reward",
+				"is_pinned": true
+			}
+		}
+	]
+}
