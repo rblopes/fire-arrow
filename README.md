@@ -72,9 +72,9 @@ As expected, using Fire Arrow should be quick and simple:
 | <kbd>A</kbd>       | Set adult spawn location              |
 | <kbd>C</kbd>       | Set child spawn location              |
 | <kbd>F12</kbd>     | Take screenshot                       |
-| <kbd>F2</kbd>      | Start, pause and resume the stopwatch |
-| <kbd>Ctrl+F2</kbd> | Reset the tracker                     |
+| <kbd>F4</kbd>      | Start, pause and resume the stopwatch |
 | <kbd>Ctrl+F4</kbd> | Reset the stopwatch                   |
+| <kbd>Ctrl+F2</kbd> | Reset the tracker                     |
 | <kbd>Ctrl+O</kbd>  | Open the app data folder              |
 | <kbd>Ctrl+Q</kbd>  | Quit the app                          |
 
