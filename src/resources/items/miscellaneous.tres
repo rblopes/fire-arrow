@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=8 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://src/classes/resources/item.gd" type="Script" id=1]
 [ext_resource path="res://src/resources/icons/items/bottle.tres" type="Resource" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/resources/icons/items/null.tres" type="Resource" id=5]
 [ext_resource path="res://src/resources/icons/items/small_key.tres" type="Resource" id=6]
 [ext_resource path="res://src/resources/icons/items/boss_key.tres" type="Resource" id=7]
+[ext_resource path="res://src/resources/icons/items/rutos_letter.tres" type="Resource" id=8]
 
 [resource]
 resource_local_to_scene = true
@@ -14,4 +15,4 @@ resource_name = "Miscellaneuos Items"
 script = ExtResource( 1 )
 acts_as_checkbox = false
 uses_label = false
-icons = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 3 ) ]
+icons = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 3 ) ]
