@@ -23,6 +23,11 @@ func _on_context_menu_id_pressed(id: int) -> void:
 			prizes_manager.reset()
 
 
+func _on_prizes_manager_reset() -> void:
+	for node in $contents/icons.get_children():
+		node.goal.reset()
+
+
 func assign_symbol(source: Prize, destination: Prize) -> void:
 	prizes_manager.assign_label(source, destination)
 

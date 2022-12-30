@@ -6,7 +6,7 @@ const UNKNOWN_ASSIGNED_LABEL := "N/D"
 export var icon: Resource
 export var is_free: bool = false
 var is_checked: bool setget set_checked
-var assigned_label: String setget set_assigned_label, get_assigned_label
+var assigned_label: String = UNKNOWN_ASSIGNED_LABEL setget set_assigned_label, get_assigned_label
 
 
 func get_icon_texture() -> Texture:

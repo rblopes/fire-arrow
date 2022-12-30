@@ -16,4 +16,8 @@ func cycle_forward() -> void:
 
 
 func get_choice() -> String:
-	return choices[_choice]
+	return "" if choices.empty() else choices[_choice]
+
+
+func reset() -> void:
+	_choice = 0
