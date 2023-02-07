@@ -1,26 +1,26 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://dgvol3k0t0suu"]
 
-[ext_resource path="res://src/components/hints/hints.gd" type="Script" id=1]
-[ext_resource path="res://src/components/hint_group/hint_groups/hint_group_inline.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/components/hint_group/hint_groups/hint_group_grid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/components/hint_group/hint_groups/hint_group_rows.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/components/hint_group_filter_dialog/hint_group_filter_dialog.tscn" type="PackedScene" id=5]
+[ext_resource type="Script" path="res://src/components/hints/hints.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://lge8dg1r2ng2" path="res://src/components/hint_group/hint_groups/hint_group_inline.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cq8gfuqu5vc46" path="res://src/components/hint_group/hint_groups/hint_group_grid.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://byv65oypit633" path="res://src/components/hint_group/hint_groups/hint_group_rows.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cyuapc4swqc5f" path="res://src/components/hint_group_filter_dialog/hint_group_filter_dialog.tscn" id="5"]
 
-[node name="hints" type="MarginContainer"]
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
-script = ExtResource( 1 )
-hint_group_containers = {
-"goal": ExtResource( 4 ),
-"hints": ExtResource( 3 ),
-"inline": ExtResource( 2 )
+[node name="Hints" type="MarginContainer"]
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1")
+metadata/hint_group_containers = {
+"goal": ExtResource("4"),
+"hints": ExtResource("3"),
+"inline": ExtResource("2")
 }
 
-[node name="filter_dialog" parent="." instance=ExtResource( 5 )]
-margin_right = 0.0
-margin_bottom = 0.0
+[node name="FilterDialog" parent="." instance=ExtResource("5")]
+visible = false
 
-[node name="contents" type="VBoxContainer" parent="."]
-custom_constants/separation = 0
+[node name="Contents" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0

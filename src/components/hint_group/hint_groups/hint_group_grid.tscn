@@ -1,67 +1,56 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://cq8gfuqu5vc46"]
 
-[ext_resource path="res://src/components/hint_group/hint_group.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/components/hint/instances/item_hint.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/components/hint/instances/special_location_hint.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/components/hint/instances/counter_hint.tscn" type="PackedScene" id=4]
+[ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bdeddhthqoq6b" path="res://src/components/hint/instances/item_hint.tscn" id="2"]
+[ext_resource type="Script" path="res://src/classes/hints/counter_hint.gd" id="2_cnsj0"]
+[ext_resource type="PackedScene" uid="uid://bh80kpc5vx28k" path="res://src/components/hint/instances/special_location_hint.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://d3etqsddca44i" path="res://src/components/hint/instances/counter_hint.tscn" id="4"]
+[ext_resource type="Script" path="res://src/classes/hints/special_location_hint.gd" id="4_n7s61"]
+[ext_resource type="Script" path="res://src/classes/hints/item_hint.gd" id="6_as664"]
 
-[node name="hint_group_grid" instance=ExtResource( 1 )]
-rect_min_size = Vector2( 0, 40 )
-__meta__ = {
-"_edit_pinned_properties_": [ "rect_min_size" ]
+[node name="HintGroupGrid" instance=ExtResource("1")]
+custom_minimum_size = Vector2(0, 40)
+metadata/hint_button_scenes = {
+ExtResource("2_cnsj0"): ExtResource("4"),
+ExtResource("6_as664"): ExtResource("2"),
+ExtResource("4_n7s61"): ExtResource("3")
 }
-hint_buttons = {
-Resource( "res://src/classes/hints/counter_hint.gd" ): ExtResource( 4 ),
-Resource( "res://src/classes/hints/special_location_hint.gd" ): ExtResource( 3 ),
-Resource( "res://src/classes/hints/item_hint.gd" ): ExtResource( 2 )
-}
+metadata/_edit_pinned_properties_ = [&"metadata/hint_button_scenes"]
 
-[node name="layout" type="VBoxContainer" parent="." index="0"]
-margin_left = 2.0
-margin_right = 358.0
-margin_bottom = 40.0
-custom_constants/separation = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Layout" type="VBoxContainer" parent="." index="0"]
+layout_mode = 2
+theme_override_constants/separation = 0
 
-[node name="heading" type="Label" parent="layout" index="0"]
+[node name="Heading" type="Label" parent="Layout" index="0"]
 unique_name_in_owner = true
-margin_right = 356.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
-theme_type_variation = "HintGroupHeadingLabel"
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_type_variation = &"HintGroupHeadingLabel"
 text = "HEADER"
-align = 1
+horizontal_alignment = 1
 clip_text = true
 uppercase = true
 
-[node name="contents" type="MarginContainer" parent="layout" index="1"]
-margin_top = 20.0
-margin_right = 356.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 0, 20 )
+[node name="Contents" type="MarginContainer" parent="Layout" index="1"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
-[node name="placeholder" type="Label" parent="layout/contents" index="0"]
+[node name="Placeholder" type="Label" parent="Layout/Contents" index="0"]
 unique_name_in_owner = true
-margin_top = 1.0
-margin_right = 356.0
-margin_bottom = 18.0
-rect_min_size = Vector2( 0, 16 )
-theme_type_variation = "PlaceholderLabel"
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_type_variation = &"PlaceholderLabel"
 text = "NONE YET"
-align = 1
+horizontal_alignment = 1
 
-[node name="hints" type="GridContainer" parent="layout/contents" index="1"]
+[node name="Hints" type="GridContainer" parent="Layout/Contents" index="1"]
 unique_name_in_owner = true
-margin_right = 356.0
-margin_bottom = 20.0
-custom_constants/vseparation = 0
-custom_constants/hseparation = 2
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 0
 columns = 2

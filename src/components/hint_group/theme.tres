@@ -1,14 +1,16 @@
-[gd_resource type="Theme" load_steps=4 format=2]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c4agortqyccft"]
 
-[ext_resource path="res://src/resources/styleboxes/hint_group.tres" type="StyleBox" id=1]
-[ext_resource path="res://src/resources/fonts/hint_description.tres" type="DynamicFont" id=2]
-[ext_resource path="res://src/resources/fonts/category_heading.tres" type="DynamicFont" id=3]
+[ext_resource type="StyleBox" uid="uid://tuy25tr05dml" path="res://src/resources/styleboxes/hint_group.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://bpf8gxwfdubvc" path="res://assets/fonts/ibm_plex/IBMPlexSans-SemiBold.otf" id="1_6kb8r"]
+[ext_resource type="FontFile" uid="uid://b3kovh30lau0o" path="res://assets/fonts/ibm_plex/IBMPlexSansCondensed-Medium.otf" id="3_42q6o"]
 
 [resource]
-HintGroupHeadingLabel/base_type = "Label"
-HintGroupHeadingLabel/fonts/font = ExtResource( 3 )
-HintGroupPanel/base_type = "PanelContainer"
-HintGroupPanel/styles/panel = ExtResource( 1 )
-Label/colors/font_color = Color( 1, 1, 1, 1 )
-PlaceholderLabel/base_type = "Label"
-PlaceholderLabel/fonts/font = ExtResource( 2 )
+default_font_size = 12
+HintGroupHeadingLabel/base_type = &"Label"
+HintGroupHeadingLabel/colors/font_color = Color(1, 1, 1, 1)
+HintGroupHeadingLabel/fonts/font = ExtResource("1_6kb8r")
+HintGroupPanel/base_type = &"PanelContainer"
+HintGroupPanel/styles/panel = ExtResource("1")
+Label/colors/font_color = Color(1, 1, 1, 1)
+PlaceholderLabel/base_type = &"Label"
+PlaceholderLabel/fonts/font = ExtResource("3_42q6o")

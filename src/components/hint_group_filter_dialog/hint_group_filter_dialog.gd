@@ -3,14 +3,13 @@ extends Popup
 var _hint_group_filter: HintGroupFilter
 
 
-func _on_about_to_show() -> void:
-	$filtered_hint_list.update_list(_hint_group_filter.filter())
-	$filtered_hint_list.grab_focus()
+func _on_about_to_popup() -> void:
+	$FilteredHintList.update_list(_hint_group_filter.filter())
 
 
 func _on_filtered_hint_list_filter_updated(value: String) -> void:
 	if is_instance_valid(_hint_group_filter):
-		$filtered_hint_list.update_list(_hint_group_filter.filter(value))
+		$FilteredHintList.update_list(_hint_group_filter.filter(value))
 
 
 func _on_filtered_hint_list_item_selected(hint: Hint) -> void:
@@ -20,12 +19,12 @@ func _on_filtered_hint_list_item_selected(hint: Hint) -> void:
 
 func _on_popup_hide() -> void:
 	_hint_group_filter = null
-	$filtered_hint_list.clear()
+	$FilteredHintList.clear()
 
 
 func prompt(hint_group_filter: HintGroupFilter, control: Control) -> void:
 	_hint_group_filter = hint_group_filter
-	popup(Rect2(
+	popup(Rect2i(
 		control.get_global_rect().position - Vector2(0, 128),
-		Vector2(control.rect_size.x, 128)
+		Vector2(control.size.x, 128)
 	))

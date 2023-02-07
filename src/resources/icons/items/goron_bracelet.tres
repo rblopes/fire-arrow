@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Icon" load_steps=3 format=3 uid="uid://g3mx7mowt4hq"]
 
-[ext_resource path="res://src/classes/resources/icon.gd" type="Script" id=1]
-[ext_resource path="res://src/resources/textures/items/goron_bracelet.tres" type="Texture" id=2]
+[ext_resource type="Script" path="res://src/classes/resources/icon.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cvogqlvs804cl" path="res://src/resources/textures/items/goron_bracelet.tres" id="2"]
 
 [resource]
-script = ExtResource( 1 )
-texture = ExtResource( 2 )
+script = ExtResource("1")
+texture = ExtResource("2")
 name = "Goron Bracelet"
 label = ""

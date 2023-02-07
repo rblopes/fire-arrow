@@ -10,19 +10,20 @@ func _gui_input(event: InputEvent) -> void:
 
 
 func _on_hint_changed() -> void:
-	$contents/count.text = hint.get_formatted_count()
+	%Count.text = hint.get_formatted_count()
 
 
 func _ready() -> void:
+	super()
 	if is_instance_valid(hint):
-		$contents/count.text = hint.get_formatted_count()
+		%Count.text = hint.get_formatted_count()
 
 
 func queue_free_on_reset() -> void:
 	pass
 
 
-func set_hint(value: CounterHint) -> void:
+func set_hint(value: Hint) -> void:
 	if is_instance_valid(value):
 		hint = value
-		hint.connect("changed", self, "_on_hint_changed")
+		hint.changed.connect(_on_hint_changed)

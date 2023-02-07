@@ -1,68 +1,58 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://b1jfgaet2p3ae"]
 
-[ext_resource path="res://src/main.gd" type="Script" id=1]
-[ext_resource path="res://src/components/items/items.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/components/prizes/prizes.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/components/stopwatch/stopwatch.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/components/songs/songs.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/components/hints/hints.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/resources/fonts/main_menu.tres" type="DynamicFont" id=10]
+[ext_resource type="Script" path="res://src/main.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://cniqyxx5xprrh" path="res://assets/fonts/ibm_plex/IBMPlexSans-Text.otf" id="1_uggvd"]
+[ext_resource type="PackedScene" uid="uid://b6oa53o8a88lf" path="res://src/components/items/items.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bo8r234eyusci" path="res://src/components/prizes/prizes.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://br3cfk4p5q17s" path="res://src/components/stopwatch/stopwatch.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://ce2t81j6ebgj2" path="res://src/components/songs/songs.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dgvol3k0t0suu" path="res://src/components/hints/hints.tscn" id="7"]
 
-[sub_resource type="Theme" id=1]
-default_font = ExtResource( 10 )
+[sub_resource type="Theme" id="1"]
+default_font = ExtResource("1_uggvd")
+default_font_size = 12
 
-[node name="main" type="MarginContainer"]
+[node name="Main" type="MarginContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 1 )
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
-script = ExtResource( 1 )
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("1")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1")
 
-[node name="tracker" type="VBoxContainer" parent="."]
-margin_right = 360.0
-margin_bottom = 672.0
-custom_constants/separation = 4
+[node name="Contents" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
 
-[node name="items" parent="tracker" instance=ExtResource( 2 )]
-margin_right = 360.0
+[node name="Items" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+size_flags_horizontal = 4
 
-[node name="middle_row" type="HBoxContainer" parent="tracker"]
-margin_top = 124.0
-margin_right = 360.0
-margin_bottom = 264.0
-custom_constants/separation = 4
+[node name="Middle" type="HBoxContainer" parent="Contents"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 4
 alignment = 1
 
-[node name="songs" parent="tracker/middle_row" instance=ExtResource( 5 )]
-margin_left = 5.0
-margin_right = 207.0
-margin_bottom = 140.0
+[node name="Songs" parent="Contents/Middle" instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="prizes" parent="tracker/middle_row" instance=ExtResource( 3 )]
-margin_left = 211.0
-margin_right = 355.0
+[node name="Prizes" parent="Contents/Middle" instance=ExtResource("3")]
+layout_mode = 2
 
-[node name="hints" parent="tracker" instance=ExtResource( 7 )]
+[node name="Hints" parent="Contents" instance=ExtResource("7")]
 unique_name_in_owner = true
-margin_top = 268.0
-margin_right = 360.0
-margin_bottom = 268.0
+layout_mode = 2
 
-[node name="spacer" type="Control" parent="tracker"]
-margin_top = 272.0
-margin_right = 360.0
-margin_bottom = 640.0
-size_flags_horizontal = 3
+[node name="Spacer" type="Control" parent="Contents"]
+layout_mode = 2
 size_flags_vertical = 3
-theme = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme = SubResource("1")
 
-[node name="stopwatch" parent="tracker" instance=ExtResource( 4 )]
-margin_top = 644.0
-margin_right = 360.0
-margin_bottom = 672.0
+[node name="Stopwatch" parent="Contents" instance=ExtResource("4")]
+layout_mode = 2

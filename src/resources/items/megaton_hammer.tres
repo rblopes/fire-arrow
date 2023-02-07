@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://x6x75fkpp5a1"]
 
-[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=1]
-[ext_resource path="res://src/resources/icons/items/megaton_hammer.tres" type="Resource" id=2]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dyh7jmy1hrrp1" path="res://src/resources/icons/items/megaton_hammer.tres" id="2"]
 
 [resource]
-script = ExtResource( 1 )
+script = ExtResource("1")
 acts_as_checkbox = true
 uses_label = false
-icons = [ ExtResource( 2 ) ]
+icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])

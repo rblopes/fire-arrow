@@ -3,28 +3,31 @@ extends Hint
 
 signal changed()
 
-var choices: Array
-var location: LocationHint setget set_location
-var shortcut: ShortCut
+var choices: Array[Hint]
+
+var location: LocationHint:
+	set = set_location
+
+var shortcut: Shortcut
 
 
 func get_filter() -> HintGroupFilter:
-	return HintGroupFilter.new(choices, funcref(self, "set_location"))
+	return HintGroupFilter.new(choices, set_location)
 
 
 func get_symbol() -> String:
-	return location.symbol if location is LocationHint else "N/D"
+	return location.symbol if is_instance_valid(location) else "N/D"
 
 
 func is_pinned() -> bool:
 	return true
 
 
-func reset() -> void:
+func restart() -> void:
 	self.location = null
 
 
 func set_location(value: LocationHint) -> void:
 	if value != location:
 		location = value
-		emit_signal("changed")
+		changed.emit()

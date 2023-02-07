@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://4hj4bindrqha"]
 
-[ext_resource path="res://src/resources/icons/items/dins_fire.tres" type="Resource" id=1]
-[ext_resource path="res://src/classes/resources/item.gd" type="Script" id=2]
+[ext_resource type="Resource" uid="uid://cy6t6t6u2o1cn" path="res://src/resources/icons/items/dins_fire.tres" id="1"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
 
 [resource]
-script = ExtResource( 2 )
+script = ExtResource("2")
 acts_as_checkbox = true
 uses_label = false
-icons = [ ExtResource( 1 ) ]
+icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])

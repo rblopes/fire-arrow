@@ -1,6 +1,7 @@
 extends Node
 
-export (Array, Resource) var items: Array
+@export
+var items: Array[Item] = []
 
 
 func reset() -> void:

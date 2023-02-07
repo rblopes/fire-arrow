@@ -4,44 +4,44 @@ var tracker_layout: TrackerLayout
 
 
 func get_collection(collection_name: String) -> Node:
-	return get_node_or_null(collection_name.to_lower())
+	return get_node_or_null(collection_name)
 
 
 func get_prizes_manager() -> Node:
-	return $prizes
+	return $Prizes
 
 
 func get_songs_manager() -> Node:
-	return $songs
+	return $Songs
 
 
 func get_stopwatch() -> Stopwatch:
-	return $stopwatch as Stopwatch
+	return $Stopwatch as Stopwatch
 
 
 func reset() -> void:
-	$groups.reset()
-	$items.reset()
-	$prizes.reset()
-	$songs.reset()
-	$stopwatch.reset()
+	$Groups.reset()
+	$Items.reset()
+	$Prizes.reset()
+	$Songs.reset()
+	$Stopwatch.reset()
 
 
 func reset_stopwatch() -> void:
-	$stopwatch.reset()
+	$Stopwatch.reset()
 
 
 func resume_stopwatch() -> void:
-	match $stopwatch.current_state:
+	match $Stopwatch.current_state:
 		Stopwatch.States.STOPPED:
-			$stopwatch.start()
+			$Stopwatch.start()
 		Stopwatch.States.RUNNING:
-			$stopwatch.pause()
+			$Stopwatch.pause()
 		Stopwatch.States.PAUSED:
-			$stopwatch.resume()
+			$Stopwatch.resume()
 
 
 func setup_hints(p_tracker_layout: TrackerLayout) -> void:
 	tracker_layout = p_tracker_layout
-	$groups.hint_groups = tracker_layout.groups
-	$groups.init_hint_groups()
+	$Groups.hint_groups = tracker_layout.groups
+	$Groups.init_hint_groups()

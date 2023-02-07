@@ -1,8 +1,13 @@
 extends Node
 
-export (Array, Resource) var songs: Array
-onready var autocheck: bool = PreferencesManager.get_value("songs", "autocheck")
-onready var inverted_song_check: bool = PreferencesManager.get_value("songs", "check_in_reverse")
+@export
+var songs: Array[Song] = []
+
+@onready
+var autocheck: bool = PreferencesManager.get_value("songs", "autocheck")
+
+@onready
+var inverted_song_check: bool = PreferencesManager.get_value("songs", "check_in_reverse")
 
 
 func assign(song_from: Song, song_to: Song) -> void:

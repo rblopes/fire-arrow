@@ -1,9 +1,15 @@
 class_name Item
 extends Resource
 
-export var acts_as_checkbox: bool
-export var uses_label: bool
-export(Array, Resource) var icons: Array
+@export
+var acts_as_checkbox: bool = false
+
+@export
+var uses_label: bool = false
+
+@export
+var icons: Array[Icon] = []
+
 var is_checked: bool
 var selected_icon_index: int
 
@@ -17,7 +23,7 @@ func cycle_backward() -> void:
 			is_checked = true
 	else:
 		selected_icon_index = wrapi(selected_icon_index - 1, 0, icons.size())
-	emit_changed()
+	changed.emit()
 
 
 func cycle_forward() -> void:
@@ -29,10 +35,10 @@ func cycle_forward() -> void:
 			is_checked = true
 	else:
 		selected_icon_index = wrapi(selected_icon_index + 1, 0, icons.size())
-	emit_changed()
+	changed.emit()
 
 
-func get_icon_texture() -> Texture:
+func get_icon_texture() -> Texture2D:
 	return get_selected_icon().texture
 
 
@@ -47,4 +53,4 @@ func get_selected_icon() -> Icon:
 func uncheck() -> void:
 	is_checked = false
 	selected_icon_index = 0
-	emit_changed()
+	changed.emit()

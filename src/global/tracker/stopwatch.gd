@@ -1,8 +1,8 @@
 class_name Stopwatch
 extends Node
 
-signal state_changed(state)
-signal updated(elapsed_time)
+signal state_changed(state: States)
+signal updated(elapsed_time: float)
 
 enum States {
 	STOPPED,

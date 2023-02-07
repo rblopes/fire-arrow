@@ -7,17 +7,17 @@ const MODES: Dictionary = {
 
 
 func _load_tracker_layout(mode: String) -> TrackerLayout:
-	assert(mode in MODES.keys())
+	assert(mode in MODES)
 	return TrackerLayoutLoader.load_layout(MODES.get(mode))
 
 
 func _ready() -> void:
 	var tracker_layout := _load_tracker_layout(PreferencesManager.get_value("preset", "mode"))
 	Tracker.setup_hints(tracker_layout)
-	$"%hints".hint_groups = tracker_layout.groups
+	%Hints.hint_groups = tracker_layout.groups
 
 
-func _unhandled_key_input(event: InputEventKey) -> void:
+func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_echo():
 		return
 	if event.is_action_pressed("ui_resume_stopwatch"):

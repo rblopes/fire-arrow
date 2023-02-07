@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Prize" load_steps=3 format=3 uid="uid://pmsepvencob4"]
 
-[ext_resource path="res://src/classes/resources/prize.gd" type="Script" id=1]
-[ext_resource path="res://src/resources/icons/prizes/fire.tres" type="Resource" id=2]
+[ext_resource type="Script" path="res://src/classes/resources/prize.gd" id="1"]
+[ext_resource type="Resource" uid="uid://dednnu7kbq1k0" path="res://src/resources/icons/prizes/fire.tres" id="2"]
 
 [resource]
-script = ExtResource( 1 )
-icon = ExtResource( 2 )
+script = ExtResource("1")
+icon = ExtResource("2")
 is_free = false

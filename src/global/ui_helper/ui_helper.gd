@@ -2,8 +2,11 @@ extends Node
 
 const SCREENSHOT_FILENAME_FORMAT_MASK := "%04d-%02d-%02d %02d-%02d-%02d.png"
 
-export var icon_drag_preview: PackedScene
-export(String, FILE) var screenshot_output_path: String
+@onready
+var icon_drag_preview_scene: PackedScene = get_meta("icon_drag_preview_scene")
+
+@export
+var screenshot_output_path: String = ""
 
 
 func _get_screenshot_filename() -> String:
@@ -18,36 +21,35 @@ func _get_screenshot_filename() -> String:
 	]
 
 
-func get_shortcut(key_combination: String) -> ShortCut:
-	var result := ShortCut.new()
-	result.shortcut = InputEventKey.new()
+func get_shortcut(key_combination: String) -> Shortcut:
+	var result := Shortcut.new()
+	var event := InputEventKey.new()
 	for part in key_combination.split("+"):
 		match part:
 			"Alt":
-				result.shortcut.alt = true
+				event.alt_pressed = true
 			"Control":
-				result.shortcut.control = true
+				event.ctrl_pressed = true
 			"Shift":
-				result.shortcut.shift = true
+				event.shift_pressed = true
 			"Meta":
-				result.shortcut.meta = true
+				event.meta_pressed = true
 			_:
-				result.shortcut.scancode = OS.find_scancode_from_string(part)
+				event.keycode = OS.find_keycode_from_string(part)
+	result.events.append(event)
 	return result
 
 
-func set_icon_drag_preview_for(host_control: Control, data):
-	var result: Control = icon_drag_preview.instance()
+func set_icon_drag_preview_for(host_control: Control, data: Variant) -> Variant:
+	var result: Control = icon_drag_preview_scene.instantiate()
 	host_control.set_drag_preview(result)
 	result.set_icon(data)
 	return data
 
 
 func take_screenshot(node: Node) -> void:
-	var dir := Directory.new()
-	if not dir.dir_exists(screenshot_output_path):
-		if dir.make_dir_recursive(screenshot_output_path) != OK:
+	if not DirAccess.dir_exists_absolute(screenshot_output_path):
+		if DirAccess.make_dir_recursive_absolute(screenshot_output_path) != OK:
 			return
-	var image := node.get_viewport().get_texture().get_data()
-	image.flip_y()
-	image.save_png(screenshot_output_path.plus_file(_get_screenshot_filename()))
+	var image := node.get_viewport().get_texture().get_image()
+	image.save_png(screenshot_output_path.path_join(_get_screenshot_filename()))

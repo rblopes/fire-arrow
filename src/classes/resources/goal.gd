@@ -1,22 +1,24 @@
 class_name Goal
 extends Resource
 
-export(Array, String) var choices: Array
+@export
+var choices: Array[String] = []
+
 var _choice: int = 0
 
 
 func cycle_backward() -> void:
 	_choice = wrapi(_choice - 1, 0, len(choices))
-	emit_changed()
+	changed.emit()
 
 
 func cycle_forward() -> void:
 	_choice = wrapi(_choice + 1, 0, len(choices))
-	emit_changed()
+	changed.emit()
 
 
 func get_choice() -> String:
-	return "" if choices.empty() else choices[_choice]
+	return "" if choices.is_empty() else choices[_choice]
 
 
 func reset() -> void:

@@ -1,8 +1,8 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="Goal" load_steps=2 format=3 uid="uid://dfm04wry22dcp"]
 
-[ext_resource path="res://src/classes/resources/goal.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://src/classes/resources/goal.gd" id="1"]
 
 [resource]
 resource_name = "Dungeons"
-script = ExtResource( 1 )
-choices = [ "Pocket", "Forest", "Fire", "Water", "Shadow", "Spirit", "Deku", "DC", "JJ" ]
+script = ExtResource("1")
+choices = Array[String](["Pocket", "Forest", "Fire", "Water", "Shadow", "Spirit", "Deku", "DC", "JJ"])

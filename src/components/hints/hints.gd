@@ -1,15 +1,17 @@
 extends MarginContainer
 
-export var hint_group_containers: Dictionary
-var hint_groups: Array setget set_hint_groups
+@onready
+var hint_group_containers: Dictionary = get_meta("hint_group_containers")
+
+var hint_groups: Array[HintGroup]: set = set_hint_groups
 
 
 func _fill_hint_groups() -> void:
 	for group in hint_groups:
 		var packed_scene := _get_hint_group_container(group.type)
 		if is_instance_valid(packed_scene):
-			var node := packed_scene.instance()
-			$contents.add_child(node)
+			var node := packed_scene.instantiate()
+			$Contents.add_child(node)
 			node.owner = self
 			node.hint_group = group
 		else:
@@ -21,9 +23,9 @@ func _get_hint_group_container(key: String) -> PackedScene:
 
 
 func request_hint_group_filter_dialog(hint_group_filter: HintGroupFilter, control: Control) -> void:
-	$filter_dialog.prompt(hint_group_filter, control)
+	$FilterDialog.prompt(hint_group_filter, control)
 
 
-func set_hint_groups(value: Array) -> void:
+func set_hint_groups(value: Array[HintGroup]) -> void:
 	hint_groups = value
 	_fill_hint_groups()

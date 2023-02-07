@@ -1,6 +1,6 @@
 extends Node
 
-var hint_groups: Array
+var hint_groups: Array[HintGroup]
 
 
 func init_hint_groups() -> void:
@@ -15,4 +15,4 @@ func init_hint_groups() -> void:
 
 func reset() -> void:
 	for hint_group in hint_groups:
-		hint_group.reset()
+		hint_group.restart()

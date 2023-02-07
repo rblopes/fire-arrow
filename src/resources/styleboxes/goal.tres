@@ -1,10 +1,7 @@
-[gd_resource type="StyleBoxFlat" format=2]
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://dqtu470jm40dk"]
 
 [resource]
 content_margin_left = 2.0
 content_margin_right = 2.0
-bg_color = Color( 1, 1, 1, 0.184314 )
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
+bg_color = Color(1, 1, 1, 0.184314)
+anti_aliasing = false

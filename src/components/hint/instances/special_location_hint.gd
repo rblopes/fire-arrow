@@ -8,12 +8,13 @@ func _gui_input(event: InputEvent) -> void:
 
 
 func _on_hint_changed() -> void:
-	$contents/symbol.text = hint.get_symbol()
+	%Symbol.text = hint.get_symbol()
 
 
 func _ready() -> void:
+	super()
 	if is_instance_valid(hint):
-		$contents/symbol.text = hint.get_symbol()
+		%Symbol.text = hint.get_symbol()
 
 
 func _pressed() -> void:
@@ -24,8 +25,8 @@ func queue_free_on_reset() -> void:
 	pass
 
 
-func set_hint(value: SpecialLocationHint) -> void:
+func set_hint(value: Hint) -> void:
 	if is_instance_valid(value):
 		hint = value
-		hint.connect("changed", self, "_on_hint_changed")
 		shortcut = hint.shortcut
+		hint.changed.connect(_on_hint_changed)

@@ -1,7 +1,7 @@
 class_name LocationHint
 extends Hint
 
-export var symbol: String
+var symbol: String
 
 
 func _init(p_symbol: String = "", p_description: String = "") -> void:
@@ -10,4 +10,4 @@ func _init(p_symbol: String = "", p_description: String = "") -> void:
 
 
 func matches(criteria: String) -> bool:
-	return criteria.is_subsequence_ofi(symbol)
+	return criteria.is_subsequence_ofn(symbol)

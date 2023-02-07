@@ -1,6 +1,15 @@
 extends Control
 
-export var item: Resource setget set_item
+@export
+var item: Item:
+	set(value):
+		item = value
+		item.changed.connect(_on_item_changed)
+		$Icon.texture = item.get_icon_texture()
+
+
+func _get_drag_data(at_position: Vector2):
+	return UiHelper.set_icon_drag_preview_for(self, item)
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -9,21 +18,10 @@ func _gui_input(event: InputEvent) -> void:
 			item.cycle_backward()
 		if event.is_action_released("ui_mouse_button_cycle_forward"):
 			item.cycle_forward()
-		accept_event()
 
 
-func get_drag_data(position: Vector2):
-	return UiHelper.set_icon_drag_preview_for(self, item)
-
-
-func refresh() -> void:
-	$icon.texture = item.get_icon_texture()
-	$icon.material.set_shader_param("disabled", item.is_checked)
-	$label.text = item.get_label()
-	$label.visible = item.uses_label and item.is_checked
-
-
-func set_item(value: Item) -> void:
-	item = value
-	item.connect("changed", self, "refresh")
-	refresh()
+func _on_item_changed() -> void:
+	$Icon.texture = item.get_icon_texture()
+	$Icon.material.set_shader_parameter("disabled", item.is_checked)
+	$Label.text = item.get_label()
+	$Label.visible = item.uses_label and item.is_checked

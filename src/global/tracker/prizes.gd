@@ -1,7 +1,10 @@
 extends Node
 
-export (Array, Resource) var prizes: Array
-onready var should_check_in_reverse: bool = PreferencesManager.get_value("prizes", "check_in_reverse")
+@export
+var prizes: Array[Prize] = []
+
+@onready
+var should_check_in_reverse: bool = PreferencesManager.get_value("prizes", "check_in_reverse")
 
 
 func assign_label(source: Prize, destination: Prize) -> void:
@@ -24,7 +27,7 @@ func clear_stones() -> void:
 	clear_prizes(prizes.slice(6, 8))
 
 
-func clear_prizes(prizes_to_clear: Array) -> void:
+func clear_prizes(prizes_to_clear: Array[Prize]) -> void:
 	for prize in prizes_to_clear:
 		prize.is_checked = false
 		prize.assigned_label = Prize.UNKNOWN_ASSIGNED_LABEL

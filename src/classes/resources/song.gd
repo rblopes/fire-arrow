@@ -1,20 +1,19 @@
 class_name Song
 extends Resource
 
-export var icon: Resource
-var is_checked: bool setget set_checked
-var learned_from: Resource setget set_learned_from
+@export
+var icon: Icon = null
+
+var is_checked: bool:
+	set(value):
+		is_checked = value
+		changed.emit()
+
+var learned_from: Song:
+	set(value):
+		learned_from = value
+		changed.emit()
 
 
-func get_icon_texture() -> Texture:
-	return icon.texture
-
-
-func set_checked(value: bool) -> void:
-	is_checked = value
-	emit_changed()
-
-
-func set_learned_from(value: Song) -> void:
-	learned_from = value
-	emit_changed()
+func get_icon_texture() -> Texture2D:
+	return icon.texture if is_instance_valid(icon) else null

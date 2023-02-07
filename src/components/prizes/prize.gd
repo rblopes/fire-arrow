@@ -1,7 +1,31 @@
 extends Control
 
-export var goal: Resource setget set_goal
-export var prize: Resource setget set_prize
+@export
+var goal: Goal:
+	set(value):
+		if is_instance_valid(value):
+			goal = value.duplicate()
+			goal.changed.connect(_on_goal_changed)
+
+@export
+var prize: Prize:
+	set(value):
+		if is_instance_valid(value):
+			prize = value
+			prize.changed.connect(_on_prize_changed)
+			$Icon.texture = prize.get_icon_texture()
+
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	return data is Prize
+
+
+func _drop_data(at_position: Vector2, data: Variant) -> void:
+	owner.assign_symbol(data, prize)
+
+
+func _get_drag_data(at_position: Vector2) -> Variant:
+	return UiHelper.set_icon_drag_preview_for(self, prize)
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -19,35 +43,8 @@ func _on_goal_changed() -> void:
 	prize.assigned_label = goal.get_choice()
 
 
-func can_drop_data(at_position: Vector2, data: Prize) -> bool:
-	return data is Prize
-
-
-func drop_data(at_position: Vector2, data: Prize) -> void:
-	owner.assign_symbol(data, prize)
-
-
-func get_drag_data(at_position: Vector2) -> Prize:
-	return UiHelper.set_icon_drag_preview_for(self, prize)
-
-
-func refresh() -> void:
-	$icon.material.set_shader_param("disabled", prize.is_checked)
-	$symbol.text = prize.assigned_label
+func _on_prize_changed() -> void:
+	$Icon.material.set_shader_parameter("disabled", prize.is_checked)
+	$Symbol.text = prize.assigned_label
 	if prize.assigned_label == Prize.UNKNOWN_ASSIGNED_LABEL:
-		if is_instance_valid(goal):
-			goal.reset()
-
-
-func set_goal(value: Goal) -> void:
-	if is_instance_valid(value):
-		goal = value.duplicate()
-		goal.connect("changed", self, "_on_goal_changed")
-
-
-func set_prize(value: Prize) -> void:
-	if is_instance_valid(value):
-		prize = value
-		prize.connect("changed", self, "refresh")
-		$icon.texture = prize.get_icon_texture()
-		refresh()
+		goal.reset()

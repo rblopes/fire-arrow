@@ -1,10 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" script_class="Icon" load_steps=3 format=3 uid="uid://don71rslwembx"]
 
-[ext_resource path="res://src/resources/textures/items/magic.tres" type="Texture" id=1]
-[ext_resource path="res://src/classes/resources/icon.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://chnpfa3j6lemi" path="res://src/resources/textures/items/magic.tres" id="1"]
+[ext_resource type="Script" path="res://src/classes/resources/icon.gd" id="2"]
 
 [resource]
-script = ExtResource( 2 )
-texture = ExtResource( 1 )
+script = ExtResource("2")
+texture = ExtResource("1")
 name = "Magic Meter"
 label = "1/2"

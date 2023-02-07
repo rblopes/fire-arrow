@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://ekje1prvljes"]
 
-[ext_resource path="res://src/components/item_icon_tray/item_icon_tray.gd" type="Script" id=1]
-[ext_resource path="res://src/components/item_icon/item_icon.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" path="res://src/components/item_icon_tray/item_icon_tray.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ckr3qvetn2f3a" path="res://src/components/item_icon/item_icon.tscn" id="2"]
 
-[node name="item_icon_tray" type="HBoxContainer"]
-margin_bottom = 20.0
-mouse_filter = 0
+[node name="ItemIconTray" type="HBoxContainer"]
+offset_bottom = 20.0
 size_flags_horizontal = 9
-custom_constants/separation = 2
+mouse_filter = 0
 alignment = 2
-script = ExtResource( 1 )
-item_icon_scene = ExtResource( 2 )
+script = ExtResource("1")
+metadata/item_icon_scene = ExtResource("2")

@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://11u6al88r8at"]
 
-[ext_resource path="res://src/components/hint_group/hint_group.gd" type="Script" id=1]
-[ext_resource path="res://src/components/hint_group/theme.tres" type="Theme" id=3]
+[ext_resource type="Script" path="res://src/components/hint_group/hint_group.gd" id="1"]
+[ext_resource type="Theme" uid="uid://c4agortqyccft" path="res://src/components/hint_group/theme.tres" id="3"]
 
-[node name="hint_group" type="PanelContainer"]
+[node name="HintGroup" type="PanelContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 20)
+anchors_preset = 10
 anchor_right = 1.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 0, 20 )
-rect_clip_content = true
-theme = ExtResource( 3 )
-theme_type_variation = "HintGroupPanel"
-script = ExtResource( 1 )
+offset_bottom = 16.0
+theme = ExtResource("3")
+theme_type_variation = &"HintGroupPanel"
+script = ExtResource("1")
+metadata/hint_button_scenes = {}

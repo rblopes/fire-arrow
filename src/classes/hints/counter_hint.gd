@@ -15,7 +15,7 @@ var value: int = min_value
 
 func decrease() -> void:
 	value = int(max(min_value, value - increment_by))
-	emit_signal("changed")
+	changed.emit()
 
 
 func get_formatted_count(mask: String = "%02d") -> String:
@@ -24,13 +24,13 @@ func get_formatted_count(mask: String = "%02d") -> String:
 
 func increase() -> void:
 	value = int(min(max_value, value + increment_by))
-	emit_signal("changed")
+	changed.emit()
 
 
 func is_pinned() -> bool:
 	return true
 
 
-func reset() -> void:
+func restart() -> void:
 	value = min_value
-	emit_signal("changed")
+	changed.emit()

@@ -59,15 +59,15 @@ func parse_hint_group_params(params: Dictionary, tracker_layout: TrackerLayout) 
 	return result
 
 
-func parse_hint_groups(data: Array, tracker_layout: TrackerLayout) -> Array:
-	var result := []
+func parse_hint_groups(data: Array, tracker_layout: TrackerLayout) -> Array[HintGroup]:
+	var result: Array[HintGroup] = []
 	for params in data:
 		result.append(parse_hint_group_params(params, tracker_layout))
 	return result
 
 
-func parse_hints(data: Array) -> Array:
-	var result := []
+func parse_hints(data: Array) -> Array[Hint]:
+	var result: Array[Hint] = []
 	for hint_data in data:
 		match hint_data:
 			{"type": "counter", "params": var params}:

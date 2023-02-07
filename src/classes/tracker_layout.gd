@@ -1,6 +1,6 @@
 class_name TrackerLayout
-extends Reference
+extends RefCounted
 
-export var file_path: String = ""
-export(Array, Resource) var groups: Array = []
-export(Array, Resource) var hints: Array = []
+var file_path: String = ""
+var groups: Array[HintGroup] = []
+var hints: Array[Hint] = []

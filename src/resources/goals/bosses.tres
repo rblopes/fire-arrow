@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="Goal" load_steps=2 format=3 uid="uid://dnr3bymcow5yf"]
 
-[ext_resource path="res://src/classes/resources/goal.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://src/classes/resources/goal.gd" id="1"]
 
 [resource]
 resource_local_to_scene = true
 resource_name = "Bosses"
-script = ExtResource( 1 )
-choices = [ "Q. Gohma", "K. Dodongo", "Barinade", "P. Ganon", "Volvagia", "Morpha", "Twinrova", "B. Bongo" ]
+script = ExtResource("1")
+choices = Array[String](["Q. Gohma", "K. Dodongo", "Barinade", "P. Ganon", "Volvagia", "Morpha", "Twinrova", "B. Bongo"])

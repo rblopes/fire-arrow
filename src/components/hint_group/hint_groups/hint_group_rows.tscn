@@ -1,60 +1,47 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://byv65oypit633"]
 
-[ext_resource path="res://src/components/hint_group/hint_group.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/components/hint/instances/goal_location_hint.tscn" type="PackedScene" id=2]
+[ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://vh8glq02ats6" path="res://src/components/hint/instances/goal_location_hint.tscn" id="2"]
+[ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_uauis"]
 
-[node name="hint_group_rows" instance=ExtResource( 1 )]
-rect_min_size = Vector2( 0, 40 )
-__meta__ = {
-"_edit_pinned_properties_": [ "rect_min_size" ]
+[node name="HintGroupRows" instance=ExtResource("1")]
+custom_minimum_size = Vector2(0, 40)
+metadata/hint_button_scenes = {
+ExtResource("2_uauis"): ExtResource("2")
 }
-hint_buttons = {
-Resource( "res://src/classes/hints/location_hint.gd" ): ExtResource( 2 )
-}
+metadata/_edit_pinned_properties_ = [&"custom_minimum_size", &"metadata/hint_button_scenes"]
 
-[node name="layout" type="VBoxContainer" parent="." index="0"]
-margin_left = 2.0
-margin_right = 358.0
-margin_bottom = 40.0
-custom_constants/separation = 0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Layout" type="VBoxContainer" parent="." index="0"]
+layout_mode = 2
+theme_override_constants/separation = 0
 
-[node name="heading" type="Label" parent="layout" index="0"]
+[node name="Heading" type="Label" parent="Layout" index="0"]
 unique_name_in_owner = true
-margin_right = 356.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
-theme_type_variation = "HintGroupHeadingLabel"
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_type_variation = &"HintGroupHeadingLabel"
 text = "HEADER"
-align = 1
+horizontal_alignment = 1
 clip_text = true
 uppercase = true
 
-[node name="contents" type="MarginContainer" parent="layout" index="1"]
-margin_top = 20.0
-margin_right = 356.0
-margin_bottom = 40.0
+[node name="Contents" type="MarginContainer" parent="Layout" index="1"]
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_left = 0
-custom_constants/margin_bottom = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
 
-[node name="placeholder" type="Label" parent="layout/contents" index="0"]
+[node name="Placeholder" type="Label" parent="Layout/Contents" index="0"]
 unique_name_in_owner = true
-margin_top = 1.0
-margin_right = 356.0
-margin_bottom = 18.0
-rect_min_size = Vector2( 0, 16 )
-theme_type_variation = "PlaceholderLabel"
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_type_variation = &"PlaceholderLabel"
 text = "NONE YET"
-align = 1
+horizontal_alignment = 1
 
-[node name="hints" type="VBoxContainer" parent="layout/contents" index="1"]
+[node name="Hints" type="VBoxContainer" parent="Layout/Contents" index="1"]
 unique_name_in_owner = true
-margin_right = 356.0
-margin_bottom = 20.0
-custom_constants/separation = 0
+layout_mode = 2
+theme_override_constants/separation = 0

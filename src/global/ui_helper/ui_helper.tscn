@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dnmf6c3v4m8o6"]
 
-[ext_resource path="res://src/global/ui_helper/ui_helper.gd" type="Script" id=1]
-[ext_resource path="res://src/components/icon_drag_preview/icon_drag_preview.tscn" type="PackedScene" id=2]
+[ext_resource type="Script" path="res://src/global/ui_helper/ui_helper.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://ogwbvninu5rr" path="res://src/components/icon_drag_preview/icon_drag_preview.tscn" id="2"]
 
-[node name="ui_helper" type="Node"]
-script = ExtResource( 1 )
-icon_drag_preview = ExtResource( 2 )
+[node name="UIHelper" type="Node"]
+script = ExtResource("1")
 screenshot_output_path = "user://Screenshots"
+metadata/icon_drag_preview_scene = ExtResource("2")

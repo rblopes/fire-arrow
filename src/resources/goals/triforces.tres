@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" script_class="Goal" load_steps=2 format=3 uid="uid://tfd6hct7lj85"]
 
-[ext_resource path="res://src/classes/resources/goal.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://src/classes/resources/goal.gd" id="1"]
 
 [resource]
 resource_local_to_scene = true
 resource_name = "Triforces"
-script = ExtResource( 1 )
-choices = [ "Power", "Wisdom", "Courage" ]
+script = ExtResource("1")
+choices = Array[String](["Power", "Wisdom", "Courage"])

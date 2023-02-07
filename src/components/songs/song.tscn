@@ -1,32 +1,36 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cbklcrwfwq1m5"]
 
-[ext_resource path="res://src/components/songs/song.gd" type="Script" id=1]
-[ext_resource path="res://src/resources/materials/grayscale.tres" type="Material" id=3]
+[ext_resource type="Script" path="res://src/components/songs/song.gd" id="1"]
+[ext_resource type="Material" uid="uid://c7cul3sllwsjy" path="res://src/resources/materials/grayscale.tres" id="3"]
 
-[node name="song" type="Control"]
-margin_right = 32.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 32, 40 )
+[node name="Song" type="Control"]
+custom_minimum_size = Vector2(32, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 40.0
 mouse_default_cursor_shape = 2
-script = ExtResource( 1 )
+script = ExtResource("1")
 
-[node name="big" type="TextureRect" parent="."]
-material = ExtResource( 3 )
-margin_right = 32.0
-margin_bottom = 32.0
-rect_min_size = Vector2( 32, 32 )
+[node name="Big" type="TextureRect" parent="."]
+material = ExtResource("3")
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
 mouse_filter = 2
-expand = true
+expand_mode = 1
 
-[node name="tiny" type="TextureRect" parent="."]
+[node name="Small" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -16.0
-margin_top = -16.0
+offset_left = -16.0
+offset_top = -16.0
 grow_horizontal = 2
 grow_vertical = 0
-rect_min_size = Vector2( 16, 16 )
 mouse_filter = 2
-expand = true
+expand_mode = 1

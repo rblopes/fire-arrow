@@ -1,43 +1,47 @@
-[gd_resource type="Theme" load_steps=7 format=2]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bp6552hrktij1"]
 
-[ext_resource path="res://src/resources/fonts/hint_counter.tres" type="DynamicFont" id=1]
-[ext_resource path="res://src/resources/fonts/hint_description.tres" type="DynamicFont" id=2]
-[ext_resource path="res://src/resources/styleboxes/goal.tres" type="StyleBox" id=3]
-[ext_resource path="res://src/resources/fonts/hint_location_symbol.tres" type="DynamicFont" id=4]
-[ext_resource path="res://src/resources/styleboxes/empty.tres" type="StyleBox" id=5]
-[ext_resource path="res://src/resources/styleboxes/symbol.tres" type="StyleBox" id=6]
+[ext_resource type="FontFile" uid="uid://3djjltpektvx" path="res://assets/fonts/ibm_plex/IBMPlexSans-Bold.otf" id="1_y6ad1"]
+[ext_resource type="StyleBox" uid="uid://dqtu470jm40dk" path="res://src/resources/styleboxes/goal.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://b3kovh30lau0o" path="res://assets/fonts/ibm_plex/IBMPlexSansCondensed-Medium.otf" id="3_vtlap"]
+[ext_resource type="FontFile" uid="uid://d26cuq53f6ygv" path="res://assets/fonts/ibm_plex/IBMPlexSansCondensed-Bold.otf" id="4_wpjtq"]
+[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="5"]
+[ext_resource type="StyleBox" uid="uid://bk6j0uqtoeher" path="res://src/resources/styleboxes/symbol.tres" id="6"]
 
 [resource]
-CountLabel/base_type = "Label"
-CountLabel/colors/font_color = Color( 0, 0, 0, 1 )
-CountLabel/fonts/font = ExtResource( 1 )
-CountLabel/styles/normal = ExtResource( 6 )
-DescriptionLabel/base_type = "Label"
-DescriptionLabel/fonts/font = ExtResource( 2 )
-GoalLabel/base_type = "Label"
-GoalLabel/colors/font_color = Color( 0.905882, 0.905882, 0.905882, 1 )
-GoalLabel/fonts/font = ExtResource( 4 )
-GoalLabel/styles/normal = ExtResource( 3 )
+default_font_size = 12
+CountLabel/base_type = &"Label"
+CountLabel/colors/font_color = Color(0, 0, 0, 1)
+CountLabel/fonts/font = ExtResource("1_y6ad1")
+CountLabel/styles/normal = ExtResource("6")
+DescriptionLabel/base_type = &"Label"
+DescriptionLabel/fonts/font = ExtResource("3_vtlap")
+GoalLabel/base_type = &"Label"
+GoalLabel/colors/font_color = Color(0.905882, 0.905882, 0.905882, 1)
+GoalLabel/fonts/font = ExtResource("4_wpjtq")
+GoalLabel/styles/normal = ExtResource("3")
 HBoxContainer/constants/separation = 2
-HintButton/base_type = "Button"
-HintButton/styles/disabled = ExtResource( 5 )
-HintButton/styles/focus = ExtResource( 5 )
-HintButton/styles/hover = ExtResource( 5 )
-HintButton/styles/normal = ExtResource( 5 )
-HintButton/styles/pressed = ExtResource( 5 )
-IrrelevantLocationHintButton/base_type = "Button"
-IrrelevantLocationHintButton/colors/font_color = Color( 0, 0, 0, 1 )
-IrrelevantLocationHintButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
-IrrelevantLocationHintButton/colors/font_color_focus = Color( 0, 0, 0, 1 )
-IrrelevantLocationHintButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
-IrrelevantLocationHintButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
-IrrelevantLocationHintButton/fonts/font = ExtResource( 4 )
-IrrelevantLocationHintButton/styles/disabled = ExtResource( 6 )
-IrrelevantLocationHintButton/styles/focus = ExtResource( 5 )
-IrrelevantLocationHintButton/styles/hover = ExtResource( 6 )
-IrrelevantLocationHintButton/styles/normal = ExtResource( 6 )
-IrrelevantLocationHintButton/styles/pressed = ExtResource( 6 )
-SymbolLabel/base_type = "Label"
-SymbolLabel/colors/font_color = Color( 0, 0, 0, 1 )
-SymbolLabel/fonts/font = ExtResource( 4 )
-SymbolLabel/styles/normal = ExtResource( 6 )
+HintButton/base_type = &"Button"
+HintButton/constants/h_separation = 0
+HintButton/constants/outline_size = 0
+HintButton/styles/disabled = ExtResource("5")
+HintButton/styles/focus = ExtResource("5")
+HintButton/styles/hover = ExtResource("5")
+HintButton/styles/normal = ExtResource("5")
+HintButton/styles/pressed = ExtResource("5")
+IrrelevantLocationHintButton/base_type = &"Button"
+IrrelevantLocationHintButton/colors/font_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/colors/font_disabled_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/colors/font_focus_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/colors/font_hover_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+IrrelevantLocationHintButton/fonts/font = ExtResource("4_wpjtq")
+IrrelevantLocationHintButton/styles/disabled = ExtResource("6")
+IrrelevantLocationHintButton/styles/focus = ExtResource("5")
+IrrelevantLocationHintButton/styles/hover = ExtResource("6")
+IrrelevantLocationHintButton/styles/normal = ExtResource("6")
+IrrelevantLocationHintButton/styles/pressed = ExtResource("6")
+SymbolLabel/base_type = &"Label"
+SymbolLabel/colors/font_color = Color(0, 0, 0, 1)
+SymbolLabel/fonts/font = ExtResource("4_wpjtq")
+SymbolLabel/styles/normal = ExtResource("6")

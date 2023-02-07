@@ -1,23 +1,19 @@
 class_name HintGroupFilter
-extends Reference
+extends RefCounted
 
-var select_callback: FuncRef
-var hints: Array
+var select_callback: Callable
+var hints: Array[Hint]
 
 
-func _init(p_hints: Array, p_select_callback: FuncRef) -> void:
-	select_callback = p_select_callback
+func _init(p_hints: Array[Hint], p_select_callback: Callable) -> void:
 	hints = p_hints
+	select_callback = p_select_callback
 
 
-func filter(value: String = "") -> Array:
-	var result := []
-	for hint in hints:
-		if hint is Hint and hint.matches(value):
-			result.append(hint)
-	return result
+func filter(value: String = "") -> Array[Hint]:
+	return hints.filter(func(hint: Hint) -> bool: return is_instance_valid(hint) and hint.matches(value))
 
 
 func select(hint: Hint) -> void:
 	if is_instance_valid(hint) and select_callback.is_valid():
-		select_callback.call_func(hint)
+		select_callback.call(hint)

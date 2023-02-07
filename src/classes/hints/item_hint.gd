@@ -1,12 +1,11 @@
 class_name ItemHint
 extends Hint
 
-var symbol: String setget , get_symbol
 var location: LocationHint
 
 
 func get_symbol() -> String:
-	return location.symbol if location is LocationHint else ""
+	return location.symbol if is_instance_valid(location) else ""
 
 
 func is_pinned() -> bool:
@@ -14,7 +13,7 @@ func is_pinned() -> bool:
 
 
 func matches(criteria: String) -> bool:
-	return criteria.is_subsequence_ofi(description)
+	return criteria.is_subsequence_ofn(description)
 
 
 func set_pinned(value: bool) -> void:

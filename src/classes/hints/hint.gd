@@ -1,11 +1,16 @@
 class_name Hint
-extends Reference
+extends RefCounted
 
 signal reset()
 
-var description: String setget set_description
+var description: String:
+	set = set_description
+
 var flags: int
-var pinned: bool setget set_pinned, is_pinned
+
+var pinned: bool:
+	get = is_pinned,
+	set = set_pinned
 
 
 func _to_string() -> String:
@@ -20,8 +25,8 @@ func matches(criteria: String) -> bool:
 	return false
 
 
-func reset() -> void:
-	emit_signal("reset")
+func restart() -> void:
+	reset.emit()
 
 
 func set_description(value: String) -> void:

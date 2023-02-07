@@ -1,20 +1,25 @@
 extends MarginContainer
 
-const COLOR_RUNNING = Color.greenyellow
-const COLOR_PAUSED = Color.gray
-const COLOR_STOPPED = Color.white
+const COLOR_RUNNING = Color.GREEN_YELLOW
+const COLOR_PAUSED = Color.GRAY
+const COLOR_STOPPED = Color.WHITE
 const HOUR_FORMAT: String = "%d:%02d:%02d"
 const MINUTE_FORMAT: String = "%d:%02d"
-const MILLISECOND_FORMAT: String = "%02d"
+const SUBSECOND_FORMAT: String = "%02d"
 
-onready var _model: Stopwatch = Tracker.get_stopwatch()
-onready var _hour_label: Label = $contents/hour
-onready var _subsecond_label: Label = $contents/subsecond
+@onready
+var _model: Stopwatch = Tracker.get_stopwatch()
+
+@onready
+var _hour_label: Label = $Contents/Hour
+
+@onready
+var _subsecond_label: Label = $Contents/Subsecond
 
 
 func _change_label_colors(color: Color = COLOR_STOPPED) -> void:
-	_hour_label.add_color_override("font_color", color)
-	_subsecond_label.add_color_override("font_color", color)
+	_hour_label.add_theme_color_override("font_color", color)
+	_subsecond_label.add_theme_color_override("font_color", color)
 
 
 func _format_hour(time: float) -> String:
@@ -29,7 +34,7 @@ func _format_hour(time: float) -> String:
 
 
 func _format_subsecond(time: float) -> String:
-	return MILLISECOND_FORMAT % [int(fmod(time, 1) * 100)]
+	return SUBSECOND_FORMAT % [int(fmod(time, 1) * 100)]
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -51,8 +56,8 @@ func _on_stopwatch_state_changed(state: int) -> void:
 
 
 func _ready() -> void:
-	_model.connect("state_changed", self, "_on_stopwatch_state_changed")
-	_model.connect("updated", self, "_update_text")
+	_model.state_changed.connect(_on_stopwatch_state_changed)
+	_model.updated.connect(_update_text)
 
 
 func _update_text(time: float) -> void:

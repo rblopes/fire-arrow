@@ -1,5 +1,5 @@
 extends Control
 
 
-func set_icon(data) -> void:
-	$icon.texture = data.get_icon_texture()
+func set_icon(data: Variant) -> void:
+	$Icon.texture = data.get_icon_texture()
