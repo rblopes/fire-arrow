@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8r234eyusci" path="res://src/components/prizes/prizes.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://br3cfk4p5q17s" path="res://src/components/stopwatch/stopwatch.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://ce2t81j6ebgj2" path="res://src/components/songs/songs.tscn" id="5"]
-[ext_resource type="PackedScene" uid="uid://dgvol3k0t0suu" path="res://src/components/hints/hints.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://ef15rxml4bn5" path="res://src/components/hints/hints.tscn" id="7"]
 
 [sub_resource type="Theme" id="1"]
 default_font = ExtResource("1_uggvd")

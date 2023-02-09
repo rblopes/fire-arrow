@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bhnivu8e3akha"]
+
+[ext_resource type="FontFile" uid="uid://dukw70nt6xk7h" path="res://assets/fonts/ibm_plex/IBMPlexSans-Regular.otf" id="1_nqspg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evbfe"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_bottom = 1
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh46g"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 0.6)
+corner_detail = 5
+
+[resource]
+resource_name = "Hint Filter Popup Theme"
+default_font = ExtResource("1_nqspg")
+default_font_size = 12
+ItemList/colors/guide_color = Color(0, 0, 0, 0)
+ItemList/constants/line_separation = 0
+ItemList/constants/v_separation = 0
+LineEdit/styles/focus = SubResource("StyleBoxFlat_evbfe")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_lh46g")
+VBoxContainer/constants/separation = 0

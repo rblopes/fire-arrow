@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://by27scaerjy68"]
+
+[ext_resource type="Script" path="res://src/components/hint_filter_popup/hint_filter_popup.gd" id="1_gfy5l"]
+[ext_resource type="Theme" uid="uid://bhnivu8e3akha" path="res://src/components/hint_filter_popup/theme.tres" id="1_o1kk3"]
+[ext_resource type="PackedScene" uid="uid://vq0tanac731t" path="res://src/components/filtered_list/filtered_list.tscn" id="2_au5vy"]
+
+[node name="HintFilterPopup" type="Popup"]
+visible = true
+theme = ExtResource("1_o1kk3")
+script = ExtResource("1_gfy5l")
+
+[node name="FilteredHintList" parent="." instance=ExtResource("2_au5vy")]
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="filter_updated" from="FilteredHintList" to="." method="_on_filtered_hint_list_filter_updated"]
+[connection signal="item_selected" from="FilteredHintList" to="." method="_on_filtered_hint_list_item_selected"]

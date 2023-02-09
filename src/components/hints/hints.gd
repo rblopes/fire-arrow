@@ -23,7 +23,7 @@ func _get_hint_group_container(key: String) -> PackedScene:
 
 
 func request_hint_group_filter_dialog(hint_group_filter: HintGroupFilter, control: Control) -> void:
-	$FilterDialog.prompt(hint_group_filter, control)
+	$HintFilterPopup.prompt(hint_group_filter, control)
 
 
 func set_hint_groups(value: Array[HintGroup]) -> void:
