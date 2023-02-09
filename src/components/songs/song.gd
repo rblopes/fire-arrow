@@ -1,19 +1,27 @@
 extends Control
 
+var should_autocheck_learned_song: bool = false
+var should_check_in_reverse: bool = false
+
 @export
 var song: Song:
 	set(value):
 		song = value
 		song.changed.connect(_on_song_changed)
-		$Big.texture = song.icon.texture
+		$Big.texture = song.texture
 
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return is_instance_valid(data)
+	return is_instance_valid(data) and data is Song
 
 
-func _drop_data(at_position: Vector2, data: Variant) -> void:
-	owner.assign_song(data, song)
+func _drop_data(at_position: Vector2, dropped_song: Variant) -> void:
+	song.learned_from = dropped_song
+	if should_autocheck_learned_song:
+		if should_check_in_reverse:
+			song.is_checked = true
+		else:
+			dropped_song.is_checked = true
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
@@ -22,11 +30,19 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 
 func _gui_input(event: InputEvent) -> void:
 	if event.is_action_released("ui_mouse_left_button"):
-		owner.toggle_song(song)
+		song.is_checked = not song.is_checked
+		if should_autocheck_learned_song:
+			if song.is_checked and song.learned_from == null:
+				song.learned_from = song
 	if event.is_action_released("ui_mouse_right_button"):
-		owner.unassign_song(song)
+		song.learned_from = null
 
 
 func _on_song_changed() -> void:
 	$Big.material.set_shader_parameter("disabled", song.is_checked)
-	$Small.texture = song.learned_from.icon.texture if song.learned_from is Song else null
+	$Small.texture = song.learned_from.texture if song.learned_from is Song else null
+
+
+func reset() -> void:
+	song.is_checked = false
+	song.learned_from = null

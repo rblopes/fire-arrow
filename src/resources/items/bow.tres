@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dxow04k7krocj"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ykqlwyii8g01"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://cvayfoq1afjfe" path="res://src/resources/icons/items/bow.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_mgjfb"]
+[ext_resource type="Texture2D" uid="uid://d2r41fwtligdp" path="res://src/resources/textures/items/bow.tres" id="2_qdvek"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Bow"
+script = ExtResource("1_mgjfb")
+texture = ExtResource("2_qdvek")
+label = ""

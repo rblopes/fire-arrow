@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dn1myjqx271r0"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_23f8j"]
+[ext_resource type="Texture2D" uid="uid://byrci88ol1gcv" path="res://src/resources/textures/items/hookshot.tres" id="2_sagvo"]
+
+[resource]
+resource_name = "Hookshot"
+script = ExtResource("1_23f8j")
+texture = ExtResource("2_sagvo")
+label = "H"

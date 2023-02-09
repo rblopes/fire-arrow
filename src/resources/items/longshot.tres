@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://eytoev4pmcfl"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_7qp0b"]
+[ext_resource type="Texture2D" uid="uid://qptyau3xrsf8" path="res://src/resources/textures/items/longshot.tres" id="2_av7cv"]
+
+[resource]
+resource_name = "Longshot"
+script = ExtResource("1_7qp0b")
+texture = ExtResource("2_av7cv")
+label = "L"

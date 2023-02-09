@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b8roedgu64yx6"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_sghh6"]
+[ext_resource type="Texture2D" uid="uid://bk4cyubbbajdm" path="res://src/resources/textures/items/golden_scale.tres" id="2_715l5"]
+
+[resource]
+resource_name = "Golden Scale"
+script = ExtResource("1_sghh6")
+texture = ExtResource("2_715l5")
+label = ""

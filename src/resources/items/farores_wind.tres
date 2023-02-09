@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bi0xdq8g1wyqo"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://7bm3xljrd62w"]
 
-[ext_resource type="Resource" uid="uid://d2y4q3nx3sidi" path="res://src/resources/icons/items/farores_wind.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_hff5c"]
+[ext_resource type="Texture2D" uid="uid://bl2nmkjkrx24q" path="res://src/resources/textures/items/farores_wind.tres" id="2_j0nmd"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Farore's Wind"
+script = ExtResource("1_hff5c")
+texture = ExtResource("2_j0nmd")
+label = ""

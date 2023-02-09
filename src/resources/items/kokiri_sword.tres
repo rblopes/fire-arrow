@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://jvqxthyylpyq"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxfphw3ybbepu"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://dmductllml766" path="res://src/resources/icons/items/kokiri_sword.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_32bcm"]
+[ext_resource type="Texture2D" uid="uid://dqeunqs32ebfa" path="res://src/resources/textures/items/kokiri_sword.tres" id="2_x8l41"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Kokiri Sword"
+script = ExtResource("1_32bcm")
+texture = ExtResource("2_x8l41")
+label = ""

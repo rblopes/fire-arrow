@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cvimc0cuhi0gj"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://brexwqml7k6rg"]
 
-[ext_resource type="Resource" uid="uid://ck6s2yu6eh1co" path="res://src/resources/icons/items/mirror_shield.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_3i0nc"]
+[ext_resource type="Texture2D" uid="uid://cwcpiknyve4st" path="res://src/resources/textures/items/mirror_shield.tres" id="2_edy2p"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Mirror Shield"
+script = ExtResource("1_3i0nc")
+texture = ExtResource("2_edy2p")
+label = ""

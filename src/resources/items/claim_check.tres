@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d32tyr2aikyiy"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_vbav7"]
+[ext_resource type="Texture2D" uid="uid://cw25xusu3il5u" path="res://src/resources/textures/items/claim_check.tres" id="2_oeksa"]
+
+[resource]
+resource_name = "Claim Check"
+script = ExtResource("1_vbav7")
+texture = ExtResource("2_oeksa")
+label = ""

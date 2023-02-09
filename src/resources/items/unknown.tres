@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ddvh6gavmffne"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_2oe0j"]
+[ext_resource type="Texture2D" uid="uid://buc206ra0sp63" path="res://assets/ui/material_icons/24dp/help.svg" id="2_jgf4f"]
+
+[resource]
+resource_name = "Unknown"
+script = ExtResource("1_2oe0j")
+texture = ExtResource("2_jgf4f")
+label = ""

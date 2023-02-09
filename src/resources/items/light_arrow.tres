@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dbneqvph7qlyy"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dq8tu4sqjyhh"]
 
-[ext_resource type="Resource" uid="uid://gg2o750cu7v6" path="res://src/resources/icons/items/light_arrow.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_34443"]
+[ext_resource type="Texture2D" uid="uid://b52kerdlwe41i" path="res://src/resources/textures/items/light_arrow.tres" id="2_v00pn"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Light Arrow"
+script = ExtResource("1_34443")
+texture = ExtResource("2_v00pn")
+label = ""

@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://di0tsol2uf5ri"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dqo8ygqpduw47"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://don71rslwembx" path="res://src/resources/icons/items/magic.tres" id="2"]
-[ext_resource type="Resource" uid="uid://ddyxascqmn8nc" path="res://src/resources/icons/items/double_magic.tres" id="3"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_ttduc"]
+[ext_resource type="Texture2D" uid="uid://chnpfa3j6lemi" path="res://src/resources/textures/items/magic.tres" id="2_wm37k"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = true
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2"), ExtResource("3")])
+resource_name = "Magic Meter"
+script = ExtResource("1_ttduc")
+texture = ExtResource("2_wm37k")
+label = "1/2"

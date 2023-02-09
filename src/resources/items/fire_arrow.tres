@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://hi6cjynhd11e"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bxmc7t400orn"]
 
-[ext_resource type="Resource" uid="uid://ds3dhljodh0tm" path="res://src/resources/icons/items/fire_arrow.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_kb0mw"]
+[ext_resource type="Texture2D" uid="uid://bty3kr4shrloi" path="res://src/resources/textures/items/fire_arrow.tres" id="2_yqj16"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Fire Arrow"
+script = ExtResource("1_kb0mw")
+texture = ExtResource("2_yqj16")
+label = ""

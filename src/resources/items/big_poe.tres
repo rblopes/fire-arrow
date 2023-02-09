@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dsqsxabjopuwr"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_adwiw"]
+[ext_resource type="Texture2D" uid="uid://dr7su288h05ic" path="res://src/resources/textures/items/big_poe.tres" id="2_dneay"]
+
+[resource]
+resource_name = "Big Poe"
+script = ExtResource("1_adwiw")
+texture = ExtResource("2_dneay")
+label = ""

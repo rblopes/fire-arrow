@@ -96,3 +96,12 @@ layout_mode = 2
 prize = ExtResource("4")
 
 [connection signal="id_pressed" from="ContextMenu" to="." method="_on_context_menu_id_pressed"]
+[connection signal="context_menu_requested" from="Contents/Icons/LightMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/ForestMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/FireMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/WaterMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/ShadowMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/SpiritMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/KokiriEmerald" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/GoronRuby" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Contents/Icons/ZoraSapphire" to="." method="_on_context_menu_requested"]

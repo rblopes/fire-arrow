@@ -7,23 +7,12 @@ func get_collection(collection_name: String) -> Node:
 	return get_node_or_null(collection_name)
 
 
-func get_prizes_manager() -> Node:
-	return $Prizes
-
-
-func get_songs_manager() -> Node:
-	return $Songs
-
-
 func get_stopwatch() -> Stopwatch:
 	return $Stopwatch as Stopwatch
 
 
 func reset() -> void:
 	$Groups.reset()
-	$Items.reset()
-	$Prizes.reset()
-	$Songs.reset()
 	$Stopwatch.reset()
 
 

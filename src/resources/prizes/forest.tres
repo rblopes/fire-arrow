@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="Prize" load_steps=3 format=3 uid="uid://dajtug56lnfb5"]
 
-[ext_resource type="Resource" uid="uid://bfajksqthufvk" path="res://src/resources/icons/prizes/forest.tres" id="1"]
 [ext_resource type="Script" path="res://src/classes/resources/prize.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cga44ll6g4bus" path="res://src/resources/textures/prizes/forest.tres" id="3_fa5g4"]
 
 [resource]
+resource_name = "Forest Medallion"
 script = ExtResource("2")
-icon = ExtResource("1")
+label = "Forest"
 is_free = false
+texture = ExtResource("3_fa5g4")
+type = 2

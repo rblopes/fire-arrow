@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://x6x75fkpp5a1"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dpvs0b4h7emlu"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://dyh7jmy1hrrp1" path="res://src/resources/icons/items/megaton_hammer.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_45jn1"]
+[ext_resource type="Texture2D" uid="uid://gpys48vbdbk7" path="res://src/resources/textures/items/megaton_hammer.tres" id="2_dxol4"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Megaton Hammer"
+script = ExtResource("1_45jn1")
+texture = ExtResource("2_dxol4")
+label = ""

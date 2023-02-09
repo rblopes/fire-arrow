@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://vh8glq02ats6"]
+[gd_scene load_steps=5 format=3 uid="uid://dl14wvf85r80n"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1"]
 [ext_resource type="Script" path="res://src/components/hint/instances/goal_location_hint.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://ekje1prvljes" path="res://src/components/item_icon_tray/item_icon_tray.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dy2wnkorre36k" path="res://src/components/item_tray/item_tray.tscn" id="3"]
 [ext_resource type="Resource" uid="uid://dnr3bymcow5yf" path="res://src/resources/goals/bosses.tres" id="4"]
 
 [node name="GoalLocationHint" instance=ExtResource("1")]

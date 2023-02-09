@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cghj3w0kbk103"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://pdcdbw3esy0k"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://cty5r22nnlvsi" path="res://src/resources/icons/items/hover_boots.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_iamsn"]
+[ext_resource type="Texture2D" uid="uid://ck2mor63p0lt" path="res://src/resources/textures/items/hover_boots.tres" id="2_tcgs2"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Hover Boots"
+script = ExtResource("1_iamsn")
+texture = ExtResource("2_tcgs2")
+label = ""

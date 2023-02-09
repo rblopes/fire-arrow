@@ -14,6 +14,9 @@ func _load_tracker_layout(mode: String) -> TrackerLayout:
 func _ready() -> void:
 	var tracker_layout := _load_tracker_layout(PreferencesManager.get_value("preset", "mode"))
 	Tracker.setup_hints(tracker_layout)
+	%Prizes.set_drag_and_drop_behaviour(PreferencesManager.get_value("prizes", "check_in_reverse"))
+	%Songs.set_check_behaviour(PreferencesManager.get_value("songs", "autocheck"))
+	%Songs.set_drag_and_drop_behaviour(PreferencesManager.get_value("songs", "check_in_reverse"))
 	%Hints.hint_groups = tracker_layout.groups
 
 
@@ -26,6 +29,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		Tracker.reset_stopwatch()
 	if event.is_action_pressed("ui_reset_tracker"):
 		Tracker.reset()
+		%Items.reset()
+		%Prizes.reset()
+		%Songs.reset()
 	if event.is_action_pressed("take_screenshot"):
 		UiHelper.take_screenshot(self)
 	if event.is_action_pressed("ui_open_data_dir"):

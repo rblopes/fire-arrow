@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c5r5460shkkld"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bvnlfdb4cy4jn"]
 
-[ext_resource type="Resource" uid="uid://grs41q0memii" path="res://src/resources/icons/items/bombchu.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_kav2v"]
+[ext_resource type="Texture2D" uid="uid://ctrtr5kgtbgko" path="res://src/resources/textures/items/bombchu.tres" id="2_to7p7"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Bombchu"
+script = ExtResource("1_kav2v")
+texture = ExtResource("2_to7p7")
+label = ""

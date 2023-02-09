@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="Prize" load_steps=3 format=3 uid="uid://blwtbarafxbe6"]
 
 [ext_resource type="Script" path="res://src/classes/resources/prize.gd" id="1"]
-[ext_resource type="Resource" uid="uid://dvbu25u47ibck" path="res://src/resources/icons/prizes/water.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://bu4mq1soafii6" path="res://src/resources/textures/prizes/water.tres" id="3_vyku3"]
 
 [resource]
+resource_name = "Water Medallion"
 script = ExtResource("1")
-icon = ExtResource("2")
+label = "Water"
 is_free = false
+texture = ExtResource("3_vyku3")
+type = 2

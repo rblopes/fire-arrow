@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://4hj4bindrqha"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b4opuhrhcpr6j"]
 
-[ext_resource type="Resource" uid="uid://cy6t6t6u2o1cn" path="res://src/resources/icons/items/dins_fire.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_8t400"]
+[ext_resource type="Texture2D" uid="uid://sf2n0bqvmdof" path="res://src/resources/textures/items/dins_fire.tres" id="2_tn3hb"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Din's Fire"
+script = ExtResource("1_8t400")
+texture = ExtResource("2_tn3hb")
+label = ""

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://djmc5ww7q6mdt"]
+
+[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="1_hqsne"]
+[ext_resource type="Script" path="res://src/components/item_tray_icon/item_tray_icon.gd" id="2_b42gg"]
+
+[node name="ItemTrayIcon" type="Button"]
+custom_minimum_size = Vector2(20, 20)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = ExtResource("1_hqsne")
+theme_override_styles/hover = ExtResource("1_hqsne")
+theme_override_styles/pressed = ExtResource("1_hqsne")
+theme_override_styles/disabled = ExtResource("1_hqsne")
+theme_override_styles/focus = ExtResource("1_hqsne")
+button_mask = 2
+expand_icon = true
+script = ExtResource("2_b42gg")

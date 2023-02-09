@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://br667ffdnqivl"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_lmdkr"]
+[ext_resource type="Texture2D" uid="uid://de7xrsf0jsf80" path="res://src/resources/textures/items/giants_wallet.tres" id="2_5mprc"]
+
+[resource]
+resource_name = "Giant's Wallet"
+script = ExtResource("1_lmdkr")
+texture = ExtResource("2_5mprc")
+label = "500"

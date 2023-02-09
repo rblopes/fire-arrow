@@ -1,16 +1,13 @@
 extends PanelContainer
 
-@onready
-var songs_manager: Node = Tracker.get_songs_manager()
+
+func reset() -> void:
+	get_tree().call_group("songs", "reset")
 
 
-func assign_song(source: Song, destination: Song) -> void:
-	songs_manager.assign(source, destination)
+func set_check_behaviour(should_autocheck_learned_songs: bool) -> void:
+	get_tree().set_group("songs", "should_autocheck_learned_song", should_autocheck_learned_songs)
 
 
-func toggle_song(song: Song) -> void:
-	songs_manager.toggle(song)
-
-
-func unassign_song(song: Song) -> void:
-	songs_manager.unassign(song)
+func set_drag_and_drop_behaviour(should_check_in_reverse: bool) -> void:
+	get_tree().set_group("songs", "should_check_in_reverse", should_check_in_reverse)

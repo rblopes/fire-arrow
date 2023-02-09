@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="Prize" load_steps=3 format=3 uid="uid://cu2xs8mwxxp5b"]
 
-[ext_resource type="Resource" uid="uid://2jy3msi0qpsd" path="res://src/resources/icons/prizes/zora.tres" id="1"]
 [ext_resource type="Script" path="res://src/classes/resources/prize.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cdgy3ba1adtar" path="res://src/resources/textures/prizes/zora.tres" id="3_gdir0"]
 
 [resource]
+resource_name = "Zora's Sapphire"
 script = ExtResource("2")
-icon = ExtResource("1")
+label = "JJ"
 is_free = false
+texture = ExtResource("3_gdir0")
+type = 1

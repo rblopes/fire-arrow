@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://dfm04wry22dcp" path="res://src/resources/goals/dungeons.tres" id="4"]
 [ext_resource type="FontFile" uid="uid://ju26pld2jcis" path="res://assets/fonts/albert_sans/AlbertSans-Bold.otf" id="4_gm4uw"]
 
-[node name="Prize" type="Control"]
+[node name="Prize" type="Control" groups=["prizes"]]
 clip_contents = true
 custom_minimum_size = Vector2(48, 40)
 layout_mode = 3
@@ -27,7 +27,7 @@ offset_bottom = 32.0
 grow_horizontal = 2
 mouse_default_cursor_shape = 2
 
-[node name="Symbol" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 0
 anchor_top = 1.0

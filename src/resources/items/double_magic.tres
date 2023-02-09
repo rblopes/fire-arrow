@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b2euy80s87xb2"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_j4bxu"]
+[ext_resource type="Texture2D" uid="uid://ut2ea6d04dpb" path="res://src/resources/textures/items/double_magic.tres" id="2_fcbku"]
+
+[resource]
+resource_name = "Magic Meter"
+script = ExtResource("1_j4bxu")
+texture = ExtResource("2_fcbku")
+label = "2/2"

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cw3g2rkwbpnr1"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ckx2jyyi8aldp"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://chtk8i31loueg" path="res://src/resources/icons/items/iron_boots.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_cm2ee"]
+[ext_resource type="Texture2D" uid="uid://c0s2n4r81qut1" path="res://src/resources/textures/items/iron_boots.tres" id="2_1mtks"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Iron Boots"
+script = ExtResource("1_cm2ee")
+texture = ExtResource("2_1mtks")
+label = ""

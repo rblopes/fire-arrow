@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bb0reuuat8taa"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_453ae"]
+[ext_resource type="Texture2D" uid="uid://doxa24pipkuvm" path="res://src/resources/textures/misc/boss_key.tres" id="2_pflhs"]
+
+[resource]
+resource_name = "Boss Key"
+script = ExtResource("1_453ae")
+texture = ExtResource("2_pflhs")
+label = ""

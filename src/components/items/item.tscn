@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://src/components/items/item.gd" id="3"]
 [ext_resource type="FontFile" uid="uid://b8fsj3s5yivp6" path="res://assets/fonts/albert_sans/AlbertSans-Black.otf" id="3_cddpp"]
 
-[node name="Item" type="Control"]
+[node name="Item" type="Control" groups=["items"]]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
 anchors_preset = 0

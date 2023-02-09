@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dri3yb7w5luj0"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cikjg8vdsnct2"]
 
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1"]
-[ext_resource type="Resource" uid="uid://iexf6oaf241l" path="res://src/resources/icons/items/slingshot.tres" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_okw4l"]
+[ext_resource type="Texture2D" uid="uid://cw5k451xpv8tj" path="res://src/resources/textures/items/slingshot.tres" id="2_xxc6n"]
 
 [resource]
-script = ExtResource("1")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("2")])
+resource_name = "Slingshot"
+script = ExtResource("1_okw4l")
+texture = ExtResource("2_xxc6n")
+label = ""

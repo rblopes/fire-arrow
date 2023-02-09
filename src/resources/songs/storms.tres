@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="Song" load_steps=3 format=3 uid="uid://cotw47lxsbtsr"]
 
-[ext_resource type="Resource" uid="uid://cyar2e8sr0vym" path="res://src/resources/icons/songs/storms.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://dqay0gkuj032g" path="res://src/resources/textures/songs/storms.tres" id="1_e1tg4"]
 [ext_resource type="Script" path="res://src/classes/resources/song.gd" id="2"]
 
 [resource]
+resource_name = "Song of Storms"
 script = ExtResource("2")
-icon = ExtResource("1")
+texture = ExtResource("1_e1tg4")

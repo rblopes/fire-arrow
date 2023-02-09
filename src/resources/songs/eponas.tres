@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="Song" load_steps=3 format=3 uid="uid://bwwixvtxp6eaf"]
 
 [ext_resource type="Script" path="res://src/classes/resources/song.gd" id="1"]
-[ext_resource type="Resource" uid="uid://cmyjdwxmvknue" path="res://src/resources/icons/songs/eponas.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://ba3kny7pkpd27" path="res://src/resources/textures/songs/eponas.tres" id="1_ry3pv"]
 
 [resource]
+resource_name = "Epona's Song"
 script = ExtResource("1")
-icon = ExtResource("2")
+texture = ExtResource("1_ry3pv")

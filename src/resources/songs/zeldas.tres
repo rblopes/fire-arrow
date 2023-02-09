@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="Song" load_steps=3 format=3 uid="uid://c03dho6jgbq8k"]
 
 [ext_resource type="Script" path="res://src/classes/resources/song.gd" id="1"]
-[ext_resource type="Resource" uid="uid://ddffglc6otqyv" path="res://src/resources/icons/songs/zeldas.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://brofhd7p4v30r" path="res://src/resources/textures/songs/zeldas.tres" id="1_yq1ah"]
 
 [resource]
+resource_name = "Zelda's Lullaby"
 script = ExtResource("1")
-icon = ExtResource("2")
+texture = ExtResource("1_yq1ah")

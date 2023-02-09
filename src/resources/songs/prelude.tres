@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="Song" load_steps=3 format=3 uid="uid://cwha2co8jhghk"]
 
 [ext_resource type="Script" path="res://src/classes/resources/song.gd" id="1"]
-[ext_resource type="Resource" uid="uid://beajq5yp2ejl8" path="res://src/resources/icons/songs/prelude.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://d1mv7v5kxtbnc" path="res://src/resources/textures/songs/prelude.tres" id="1_w1vqk"]
 
 [resource]
+resource_name = "Prelude of Light"
 script = ExtResource("1")
-icon = ExtResource("2")
+texture = ExtResource("1_w1vqk")

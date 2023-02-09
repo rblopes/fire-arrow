@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cqr0hj71tp1qt"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_kp0dk"]
+[ext_resource type="Texture2D" uid="uid://toyoo2e4hrob" path="res://assets/ui/material_icons/24dp/close.svg" id="2_f6e7v"]
+
+[resource]
+resource_name = "Null"
+script = ExtResource("1_kp0dk")
+texture = ExtResource("2_f6e7v")
+label = ""

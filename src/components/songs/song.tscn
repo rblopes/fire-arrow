@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/components/songs/song.gd" id="1"]
 [ext_resource type="Material" uid="uid://c7cul3sllwsjy" path="res://src/resources/materials/grayscale.tres" id="3"]
 
-[node name="Song" type="Control"]
+[node name="Song" type="Control" groups=["songs"]]
 custom_minimum_size = Vector2(32, 40)
 layout_mode = 3
 anchors_preset = 0

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxximxqa220bn"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dn3gposbfdo0o"]
 
-[ext_resource type="Resource" uid="uid://gbn43yo0f2ly" path="res://src/resources/icons/items/zora_tunic.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_rv25y"]
+[ext_resource type="Texture2D" uid="uid://0useutktjkh5" path="res://src/resources/textures/items/zora_tunic.tres" id="2_ryv54"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("1")])
+resource_name = "Zora Tunic"
+script = ExtResource("1_rv25y")
+texture = ExtResource("2_ryv54")
+label = ""

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://byv65oypit633"]
 
 [ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://vh8glq02ats6" path="res://src/components/hint/instances/goal_location_hint.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dl14wvf85r80n" path="res://src/components/hint/instances/goal_location_hint.tscn" id="2"]
 [ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_uauis"]
 
 [node name="HintGroupRows" instance=ExtResource("1")]

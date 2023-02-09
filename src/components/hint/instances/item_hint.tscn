@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdeddhthqoq6b"]
+[gd_scene load_steps=10 format=3 uid="uid://dnkb68lgkc7vp"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1"]
 [ext_resource type="Script" path="res://src/components/hint/instances/item_hint.gd" id="2"]
-[ext_resource type="Resource" uid="uid://drv0hwnnkgbvu" path="res://src/resources/items/miscellaneous.tres" id="4"]
+[ext_resource type="Resource" uid="uid://ddvh6gavmffne" path="res://src/resources/items/unknown.tres" id="3_e3nx7"]
+[ext_resource type="Resource" uid="uid://cqr0hj71tp1qt" path="res://src/resources/items/null.tres" id="4_bopdv"]
+[ext_resource type="Resource" uid="uid://cpo75kili6jsn" path="res://src/resources/items/small_key.tres" id="5_xf2qh"]
+[ext_resource type="Resource" uid="uid://bb0reuuat8taa" path="res://src/resources/items/boss_key.tres" id="6_bqr76"]
+[ext_resource type="Resource" uid="uid://dllecgkvpogdq" path="res://src/resources/items/bottle.tres" id="7_nxmc8"]
+[ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="8_5jkas"]
+[ext_resource type="Resource" uid="uid://dsqsxabjopuwr" path="res://src/resources/items/big_poe.tres" id="9_4eweq"]
 
 [node name="ItemHint" instance=ExtResource("1")]
 script = ExtResource("2")
-item = ExtResource("4")
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_e3nx7"), ExtResource("4_bopdv"), ExtResource("5_xf2qh"), ExtResource("6_bqr76"), ExtResource("7_nxmc8"), ExtResource("8_5jkas"), ExtResource("9_4eweq")])
 
 [node name="Symbol" type="Label" parent="Contents" index="0"]
 unique_name_in_owner = true

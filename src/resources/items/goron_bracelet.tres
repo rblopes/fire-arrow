@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b67on4pchdp8x"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_ir6s4"]
+[ext_resource type="Texture2D" uid="uid://cvogqlvs804cl" path="res://src/resources/textures/items/goron_bracelet.tres" id="2_efw0s"]
+
+[resource]
+resource_name = "Goron Bracelet"
+script = ExtResource("1_ir6s4")
+texture = ExtResource("2_efw0s")
+label = ""

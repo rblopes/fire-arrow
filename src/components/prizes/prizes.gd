@@ -8,30 +8,26 @@ enum {
 	CLEAN_ALL,
 }
 
-@onready
-var prizes_manager: Node = Tracker.get_prizes_manager()
-
 
 func _on_context_menu_id_pressed(id: int) -> void:
 	match id:
 		UNCHECK_ALL:
-			prizes_manager.uncheck_all()
+			get_tree().call_group("prizes", "uncheck")
 		CLEAN_MEDALLIONS:
-			prizes_manager.clear_medallions()
+			get_tree().call_group("prizes", "clear_label_if", Prize.Type.MEDALLION)
 		CLEAN_STONES:
-			prizes_manager.clear_stones()
+			get_tree().call_group("prizes", "clear_label_if", Prize.Type.JEWEL)
 		CLEAN_ALL:
-			prizes_manager.reset()
+			reset()
 
 
-func _on_prizes_manager_reset() -> void:
-	for node in %Icons.get_children():
-		node.goal.reset()
-
-
-func assign_symbol(source: Prize, destination: Prize) -> void:
-	prizes_manager.assign_label(source, destination)
-
-
-func request_context_menu(at_position: Vector2) -> void:
+func _on_context_menu_requested(at_position: Vector2) -> void:
 	$ContextMenu.popup(Rect2i(at_position, $ContextMenu.size))
+
+
+func reset() -> void:
+	get_tree().call_group("prizes", "reset")
+
+
+func set_drag_and_drop_behaviour(should_check_in_reverse: bool) -> void:
+	get_tree().set_group("prizes", "should_check_in_reverse", should_check_in_reverse)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://jrl4304akqy"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_ds37w"]
+[ext_resource type="Texture2D" uid="uid://go5fea15v47w" path="res://src/resources/textures/items/golden_gauntlets.tres" id="2_byq5g"]
+
+[resource]
+resource_name = "Golden Gauntlets"
+script = ExtResource("1_ds37w")
+texture = ExtResource("2_byq5g")
+label = ""

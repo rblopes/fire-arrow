@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="Prize" load_steps=3 format=3 uid="uid://brog3gbisctbx"]
 
 [ext_resource type="Script" path="res://src/classes/resources/prize.gd" id="1"]
-[ext_resource type="Resource" uid="uid://dvlgr61mnyvkm" path="res://src/resources/icons/prizes/light.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://blni4xnfuh7oe" path="res://src/resources/textures/prizes/light.tres" id="3_igbwo"]
 
 [resource]
+resource_name = "Light Medallion"
 script = ExtResource("1")
-icon = ExtResource("2")
+label = "Pocket"
 is_free = true
+texture = ExtResource("3_igbwo")
+type = 2

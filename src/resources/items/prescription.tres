@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://btmwrf84ep56y"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_2x1g3"]
+[ext_resource type="Texture2D" uid="uid://byfclaqt8ffyk" path="res://src/resources/textures/items/prescription.tres" id="2_n6pgp"]
+
+[resource]
+resource_name = "Prescription"
+script = ExtResource("1_2x1g3")
+texture = ExtResource("2_n6pgp")
+label = ""

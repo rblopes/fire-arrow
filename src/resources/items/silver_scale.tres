@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b6apmn7cks1a"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_rnk3u"]
+[ext_resource type="Texture2D" uid="uid://7x1xukligvdi" path="res://src/resources/textures/items/silver_scale.tres" id="2_icgh7"]
+
+[resource]
+resource_name = "Silver Scale"
+script = ExtResource("1_rnk3u")
+texture = ExtResource("2_icgh7")
+label = ""

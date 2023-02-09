@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbt8f6iv2qema"]
+[gd_scene load_steps=4 format=3 uid="uid://dyjf3ngj884yd"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://ekje1prvljes" path="res://src/components/item_icon_tray/item_icon_tray.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dy2wnkorre36k" path="res://src/components/item_tray/item_tray.tscn" id="2"]
 [ext_resource type="Script" path="res://src/components/hint/instances/woth_location_hint.gd" id="3"]
 
 [node name="WOTHLocationHint" instance=ExtResource("1")]

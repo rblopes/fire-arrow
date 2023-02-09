@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bj8ugvqgti3sj"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://buh1ymbocvv6k"]
 
-[ext_resource type="Resource" uid="uid://dofdkfioqb1dj" path="res://src/resources/icons/items/rutos_letter.tres" id="1"]
-[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="2"]
-[ext_resource type="Resource" uid="uid://d2ddx37656si4" path="res://src/resources/icons/items/bottle.tres" id="3"]
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_311s6"]
+[ext_resource type="Texture2D" uid="uid://cq7ccnulkdoua" path="res://src/resources/textures/items/letter.tres" id="2_hf3ji"]
 
 [resource]
-script = ExtResource("2")
-acts_as_checkbox = true
-uses_label = false
-icons = Array[Resource("res://src/classes/resources/icon.gd")]([ExtResource("3"), ExtResource("1")])
+resource_name = "Ruto's Letter"
+script = ExtResource("1_311s6")
+texture = ExtResource("2_hf3ji")
+label = ""

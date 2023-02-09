@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bxgvbvt26uypv"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_tgxsx"]
+[ext_resource type="Texture2D" uid="uid://gw3xb32w5h80" path="res://src/resources/textures/items/adults_wallet.tres" id="2_xgwob"]
+
+[resource]
+resource_name = "Adult's Wallet"
+script = ExtResource("1_tgxsx")
+texture = ExtResource("2_xgwob")
+label = "200"

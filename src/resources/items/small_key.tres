@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpo75kili6jsn"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_n8jke"]
+[ext_resource type="Texture2D" uid="uid://c2ptn2hioqjc2" path="res://src/resources/textures/misc/key.tres" id="2_0vouh"]
+
+[resource]
+resource_name = "Small Key"
+script = ExtResource("1_n8jke")
+texture = ExtResource("2_0vouh")
+label = ""
