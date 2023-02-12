@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c57pn2qshckct"]
+[gd_scene load_steps=5 format=3 uid="uid://c57pn2qshckct"]
 
 [ext_resource type="Script" path="res://src/global/tracker/tracker.gd" id="1"]
-[ext_resource type="Script" path="res://src/global/tracker/stopwatch.gd" id="52"]
 [ext_resource type="Script" path="res://src/global/tracker/groups.gd" id="54"]
 
 [sub_resource type="GDScript" id="1"]
@@ -31,6 +30,3 @@ script = SubResource("2")
 
 [node name="Groups" type="Node" parent="."]
 script = ExtResource("54")
-
-[node name="Stopwatch" type="Node" parent="."]
-script = ExtResource("52")

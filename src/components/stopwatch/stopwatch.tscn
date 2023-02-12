@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://br3cfk4p5q17s"]
+[gd_scene load_steps=4 format=3 uid="uid://c2u7bx3xvus7p"]
 
 [ext_resource type="Script" path="res://src/components/stopwatch/stopwatch.gd" id="1"]
 [ext_resource type="Theme" uid="uid://rgm3ft1yaxs" path="res://src/components/stopwatch/theme.tres" id="1_a5bll"]
+[ext_resource type="Script" path="res://src/components/stopwatch/model.gd" id="3_v3fr8"]
 
 [node name="Stopwatch" type="MarginContainer"]
 custom_minimum_size = Vector2(0, 32)
@@ -9,6 +10,9 @@ offset_right = 144.0
 offset_bottom = 31.0
 theme = ExtResource("1_a5bll")
 script = ExtResource("1")
+
+[node name="Model" type="Node" parent="."]
+script = ExtResource("3_v3fr8")
 
 [node name="Contents" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -31,3 +35,6 @@ theme_type_variation = &"SubsecondLabel"
 text = "00"
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[connection signal="state_changed" from="Model" to="." method="_on_stopwatch_state_changed"]
+[connection signal="updated" from="Model" to="." method="_update_text"]

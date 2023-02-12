@@ -11,7 +11,7 @@ enum States {
 }
 
 var current_state: int = States.STOPPED
-var elapsed_time: float
+var elapsed_time: float = 0.0
 
 
 func _change_state(state: int) -> void:

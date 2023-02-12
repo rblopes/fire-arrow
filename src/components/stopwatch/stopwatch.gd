@@ -8,7 +8,7 @@ const MINUTE_FORMAT: String = "%d:%02d"
 const SUBSECOND_FORMAT: String = "%02d"
 
 @onready
-var _model: Stopwatch = Tracker.get_stopwatch()
+var _model: Stopwatch = $Model
 
 @onready
 var _hour_label: Label = $Contents/Hour
@@ -39,9 +39,9 @@ func _format_subsecond(time: float) -> String:
 
 func _gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_mouse_left_button"):
-		Tracker.resume_stopwatch()
+		resume()
 	if event.is_action_pressed("ui_mouse_right_button"):
-		Tracker.reset_stopwatch()
+		reset()
 
 
 func _on_stopwatch_state_changed(state: int) -> void:
@@ -55,11 +55,20 @@ func _on_stopwatch_state_changed(state: int) -> void:
 	_update_text(_model.elapsed_time)
 
 
-func _ready() -> void:
-	_model.state_changed.connect(_on_stopwatch_state_changed)
-	_model.updated.connect(_update_text)
-
-
 func _update_text(time: float) -> void:
 	_hour_label.text = _format_hour(time)
 	_subsecond_label.text = _format_subsecond(time)
+
+
+func reset() -> void:
+	_model.reset()
+
+
+func resume() -> void:
+	match _model.current_state:
+		Stopwatch.States.STOPPED:
+			_model.start()
+		Stopwatch.States.RUNNING:
+			_model.pause()
+		Stopwatch.States.PAUSED:
+			_model.resume()

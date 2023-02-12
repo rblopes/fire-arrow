@@ -24,14 +24,15 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_echo():
 		return
 	if event.is_action_pressed("ui_resume_stopwatch"):
-		Tracker.resume_stopwatch()
+		%Stopwatch.resume()
 	if event.is_action_pressed("ui_reset_stopwatch"):
-		Tracker.reset_stopwatch()
+		%Stopwatch.reset()
 	if event.is_action_pressed("ui_reset_tracker"):
 		Tracker.reset()
 		%Items.reset()
 		%Prizes.reset()
 		%Songs.reset()
+		%Stopwatch.reset()
 	if event.is_action_pressed("take_screenshot"):
 		UiHelper.take_screenshot(self)
 	if event.is_action_pressed("ui_open_data_dir"):
