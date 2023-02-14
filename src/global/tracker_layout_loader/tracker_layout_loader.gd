@@ -27,7 +27,7 @@ func parse_counter_params(params: Dictionary) -> CounterHint:
 	return result
 
 
-func parse_hint_group_params(params: Dictionary, tracker_layout: TrackerLayout) -> HintGroup:
+func parse_hint_group_params(params: Dictionary) -> HintGroup:
 	var result := HintGroup.new()
 	for key in params:
 		var value = params.get(key)
@@ -40,7 +40,7 @@ func parse_hint_group_params(params: Dictionary, tracker_layout: TrackerLayout) 
 					result.max_capacity = int(value)
 			"collection":
 				if value is String:
-					result.set_meta("collection", value.strip_edges())
+					result.collection = HintCollections.fetch(value)
 			"filtered_flags":
 				if value is float:
 					result.filtered_flags = int(value)
@@ -59,10 +59,10 @@ func parse_hint_group_params(params: Dictionary, tracker_layout: TrackerLayout) 
 	return result
 
 
-func parse_hint_groups(data: Array, tracker_layout: TrackerLayout) -> Array[HintGroup]:
+func parse_hint_groups(data: Array) -> Array[HintGroup]:
 	var result: Array[HintGroup] = []
 	for params in data:
-		result.append(parse_hint_group_params(params, tracker_layout))
+		result.append(parse_hint_group_params(params))
 	return result
 
 
@@ -92,7 +92,8 @@ func parse_item_params(params: Dictionary) -> ItemHint:
 					result.pinned = value
 			"symbol":
 				if value is String:
-					result.location = Locations.find_by_symbol(value.strip_edges())
+					var hint_collection := HintCollections.fetch("Locations")
+					result.location = hint_collection.find_by_symbol(value.strip_edges())
 	return result
 
 
@@ -103,10 +104,11 @@ func parse_layout_data(data: Dictionary) -> TrackerLayout:
 		match key:
 			"groups":
 				if value is Array:
-					result.groups = parse_hint_groups(value, result)
+					result.groups = parse_hint_groups(value)
 			"hints":
 				if value is Array:
 					result.hints = parse_hints(value)
+					HintCollections.fetch("Hints").set_hints(result.hints)
 	return result
 
 
@@ -117,8 +119,9 @@ func parse_special_location_params(params: Dictionary) -> SpecialLocationHint:
 		match key:
 			"choices":
 				if value is String:
+					var hint_collection := HintCollections.fetch("Locations")
 					for choice in value.strip_edges().split(";"):
-						result.choices.append(Locations.find_by_symbol(choice))
+						result.choices.append(hint_collection.find_by_symbol(choice))
 			"description":
 				if value is String:
 					result.description = value.strip_edges()

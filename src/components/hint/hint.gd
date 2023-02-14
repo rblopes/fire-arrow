@@ -2,7 +2,7 @@ extends Button
 
 signal removal_requested(hint)
 
-var hint: Hint:
+var hint: Hint = null:
 	set = set_hint
 
 
@@ -18,8 +18,10 @@ func _ready() -> void:
 		%Description.text = hint.description
 
 
-func queue_free_on_reset() -> void:
-	pass
+func reset() -> void:
+	if not hint.is_pinned():
+		removal_requested.emit(hint)
+		queue_free()
 
 
 func set_hint(value: Hint) -> void:

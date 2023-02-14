@@ -54,3 +54,5 @@ layout_mode = 2
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 0
 columns = 2
+
+[connection signal="child_entered_tree" from="Layout/Contents/Hints" to="." method="_on_hints_child_entered_tree"]

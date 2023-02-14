@@ -1,31 +1,27 @@
 extends MarginContainer
 
 @onready
-var hint_group_containers: Dictionary = get_meta("hint_group_containers")
-
-var hint_groups: Array[HintGroup]: set = set_hint_groups
+var _hint_group_scenes: Dictionary = get_meta("hint_group_containers")
 
 
-func _fill_hint_groups() -> void:
-	for group in hint_groups:
-		var packed_scene := _get_hint_group_container(group.type)
-		if is_instance_valid(packed_scene):
-			var node := packed_scene.instantiate()
-			$Contents.add_child(node)
-			node.owner = self
-			node.hint_group = group
-		else:
-			push_error("Invalid type '%s' for hint group '%s'." % [group.type, group.name])
+func _get_hint_group_scene(key: String) -> PackedScene:
+	return _hint_group_scenes.get(key)
 
 
-func _get_hint_group_container(key: String) -> PackedScene:
-	return hint_group_containers.get(key)
+func _on_hint_filter_requested(hint_group_filter: HintGroupFilter, host_control: Control) -> void:
+	$HintFilterPopup.prompt(hint_group_filter, host_control)
 
 
-func request_hint_group_filter_dialog(hint_group_filter: HintGroupFilter, control: Control) -> void:
-	$HintFilterPopup.prompt(hint_group_filter, control)
+func reset() -> void:
+	get_tree().call_group("hints", "reset")
 
 
-func set_hint_groups(value: Array[HintGroup]) -> void:
-	hint_groups = value
-	_fill_hint_groups()
+func set_hint_groups(hint_groups: Array[HintGroup]) -> void:
+	for hint_group in hint_groups:
+		var packed_scene := _get_hint_group_scene(hint_group.type)
+		assert(is_instance_valid(packed_scene), "Invalid type '%s' for hint group '%s'." % [hint_group.type, hint_group.name])
+		var node := packed_scene.instantiate()
+		node.hint_filter_requested.connect(_on_hint_filter_requested)
+		$Contents.add_child(node)
+		node.owner = self
+		node.set_hint_group(hint_group)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnkb68lgkc7vp"]
+[gd_scene load_steps=11 format=3 uid="uid://dnkb68lgkc7vp"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1"]
 [ext_resource type="Script" path="res://src/components/hint/instances/item_hint.gd" id="2"]
@@ -10,9 +10,40 @@
 [ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="8_5jkas"]
 [ext_resource type="Resource" uid="uid://dsqsxabjopuwr" path="res://src/resources/items/big_poe.tres" id="9_4eweq"]
 
+[sub_resource type="GDScript" id="GDScript_7nen7"]
+script/source = "extends Node
+
+signal updated(current_item: Item)
+
+var _cursor: int = 0
+var items: Array[Item] = []
+
+
+func _get_item() -> Item:
+	return null if items.is_empty() else items[_cursor]
+
+
+func decrease() -> void:
+	_cursor = wrapi(_cursor - 1, 0, len(items))
+	updated.emit(_get_item())
+
+
+func increase() -> void:
+	_cursor = wrapi(_cursor + 1, 0, len(items))
+	updated.emit(_get_item())
+
+
+func reset() -> void:
+	_cursor = 0
+	updated.emit(_get_item())
+"
+
 [node name="ItemHint" instance=ExtResource("1")]
 script = ExtResource("2")
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_e3nx7"), ExtResource("4_bopdv"), ExtResource("5_xf2qh"), ExtResource("6_bqr76"), ExtResource("7_nxmc8"), ExtResource("8_5jkas"), ExtResource("9_4eweq")])
+
+[node name="State" type="Node" parent="." index="0"]
+script = SubResource("GDScript_7nen7")
 
 [node name="Symbol" type="Label" parent="Contents" index="0"]
 unique_name_in_owner = true
@@ -29,3 +60,5 @@ custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 6
+
+[connection signal="updated" from="State" to="." method="_on_state_updated"]

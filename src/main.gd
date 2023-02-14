@@ -5,6 +5,8 @@ const MODES: Dictionary = {
 	"standard_s6": "res://assets/data/standard_s6.json",
 }
 
+var tracker_layout: TrackerLayout = null
+
 
 func _load_tracker_layout(mode: String) -> TrackerLayout:
 	assert(mode in MODES)
@@ -12,12 +14,11 @@ func _load_tracker_layout(mode: String) -> TrackerLayout:
 
 
 func _ready() -> void:
-	var tracker_layout := _load_tracker_layout(PreferencesManager.get_value("preset", "mode"))
-	Tracker.setup_hints(tracker_layout)
+	tracker_layout = _load_tracker_layout(PreferencesManager.get_value("preset", "mode"))
 	%Prizes.set_drag_and_drop_behaviour(PreferencesManager.get_value("prizes", "check_in_reverse"))
 	%Songs.set_check_behaviour(PreferencesManager.get_value("songs", "autocheck"))
 	%Songs.set_drag_and_drop_behaviour(PreferencesManager.get_value("songs", "check_in_reverse"))
-	%Hints.hint_groups = tracker_layout.groups
+	%Hints.set_hint_groups(tracker_layout.groups)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -28,10 +29,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_reset_stopwatch"):
 		%Stopwatch.reset()
 	if event.is_action_pressed("ui_reset_tracker"):
-		Tracker.reset()
 		%Items.reset()
 		%Prizes.reset()
 		%Songs.reset()
+		%Hints.reset()
 		%Stopwatch.reset()
 	if event.is_action_pressed("take_screenshot"):
 		UiHelper.take_screenshot(self)

@@ -5,15 +5,15 @@ signal hint_added(hint: Hint)
 signal hint_removed(hint: Hint)
 signal reset()
 
-var bg_color: Color
-var collection: Node
-var filtered_flags: int
-var flag: int
-var hints: Array[Hint]
-var max_capacity: int
-var name: String
-var shortcut: Shortcut
-var type: String
+var bg_color: Color = Color.BLACK
+var collection: HintCollection = null
+var filtered_flags: int = 0
+var flag: int = 0
+var hints: Array[Hint] = []
+var max_capacity: int = 0
+var name: String = ""
+var shortcut: Shortcut = null
+var type: String = ""
 
 
 func add_hint(hint: Hint) -> void:
@@ -24,12 +24,7 @@ func add_hint(hint: Hint) -> void:
 
 
 func get_filter() -> HintGroupFilter:
-	var result: Array[Hint] = []
-	for hint in collection.get_hints():
-		if filtered_flags & hint.flags:
-			continue
-		result.append(hint)
-	return HintGroupFilter.new(result, add_hint)
+	return HintGroupFilter.new(collection.filter(func(x): return not filtered_flags & x.flags), add_hint)
 
 
 func is_empty() -> bool:

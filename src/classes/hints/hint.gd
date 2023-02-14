@@ -1,8 +1,6 @@
 class_name Hint
 extends RefCounted
 
-signal reset()
-
 var description: String:
 	set = set_description
 
@@ -23,10 +21,6 @@ func is_pinned() -> bool:
 
 func matches(criteria: String) -> bool:
 	return false
-
-
-func restart() -> void:
-	reset.emit()
 
 
 func set_description(value: String) -> void:

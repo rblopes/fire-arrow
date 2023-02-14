@@ -1,10 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3etqsddca44i"]
+[gd_scene load_steps=4 format=3 uid="uid://d3etqsddca44i"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1"]
 [ext_resource type="Script" path="res://src/components/hint/instances/counter_hint.gd" id="2"]
 
+[sub_resource type="GDScript" id="GDScript_ulotg"]
+script/source = "extends Node
+
+signal updated(formatted_count: String)
+
+var count: int = 0
+var hint: CounterHint = null:
+	set(value):
+		if is_instance_valid(value):
+			hint = value
+			count = hint.min_value
+
+
+func _get_formatted_count(mask: String = \"%02d\") -> String:
+	return mask % [count]
+
+
+func decrease() -> void:
+	count = int(max(hint.min_value, count - hint.increment_by))
+	updated.emit(_get_formatted_count())
+
+
+func increase() -> void:
+	count = int(min(hint.max_value, count + hint.increment_by))
+	updated.emit(_get_formatted_count())
+
+
+func reset() -> void:
+	count = hint.min_value
+	updated.emit(_get_formatted_count())
+"
+
 [node name="CounterHint" instance=ExtResource("1")]
 script = ExtResource("2")
+
+[node name="State" type="Node" parent="." index="0"]
+script = SubResource("GDScript_ulotg")
 
 [node name="Count" type="Label" parent="Contents" index="1"]
 unique_name_in_owner = true
@@ -13,3 +48,5 @@ layout_mode = 2
 theme_type_variation = &"CountLabel"
 horizontal_alignment = 1
 uppercase = true
+
+[connection signal="updated" from="State" to="." method="_on_state_updated"]

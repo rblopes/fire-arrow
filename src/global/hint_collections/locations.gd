@@ -1,6 +1,6 @@
-extends Node
+extends HintCollection
 
-var locations: Dictionary = {
+var _locations: Dictionary = {
 	"BOTW": LocationHint.new("BOTW", "Bottom of the Well"),
 	"DMC": LocationHint.new("DMC", "Death Mountain Crater"),
 	"DMT": LocationHint.new("DMT", "Death Mountain Trail"),
@@ -38,5 +38,9 @@ var locations: Dictionary = {
 }
 
 
+func _enter_tree() -> void:
+	_hints.assign(_locations.values())
+
+
 func find_by_symbol(symbol: String) -> LocationHint:
-	return locations.get(symbol)
+	return _locations.get(symbol)
