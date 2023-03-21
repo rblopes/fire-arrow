@@ -3,11 +3,9 @@
 A cross-platform, simple item and hint display tracker for OoTR, humbly made
 with Godot Engine.
 
-> **Note**: This is a proof-of-concept, at its early stages of
-> development. While I tried my best to make it work without issues, it might
-> still contain some unexpected bugs, **use it at your on risk**!
->
-> Project migration for Godot Engine 4.0 (beta) should begin shortly.
+> **Note**: This is a proof-of-concept, at its early stages of development.
+> While I tried my best to make it work without issues, it might still contain
+> some unexpected bugs, **use it at your on risk**!
 
 
 ## What is it?
@@ -146,13 +144,18 @@ The configuration keys are explained below:
     to "Water Medallion".
 
 - **`preset/mode`**: Changes how hint annotations work and are displayed on the
-  tracker. Currently, two presets are available:
+  tracker. Currently, three presets are available:
+
+  - **`league_s4`**: OoTR League Season 4 custom hints, grouping 3 irrelevant
+    places, 5 goal paths, 8 pinned hints (including 30, 40 and 50 Gold
+    Skulltulas) and up to 9 occasional hints (including separate hints for the
+    ones found in dual-hint gossip stones).
+
+  - **`standard_s6`**: Standard Season 6 settings, allowing 5 goal paths, 7
+    pinned hints and 8 occasional hints.
 
   - **`standard_s5`**: Legacy, Standard Season 5 settings, allowing 3 barren
     places, 5 goal paths, 7 preset pinned hints and 5 occasional hints.
-
-  - **`standard_s6`**: Standard Season 6 settings, allowing 5 goal paths, 7
-    pinned hints and 8 occasional hints. The default one.
 
 
 ## License
