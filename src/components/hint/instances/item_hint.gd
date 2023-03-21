@@ -1,7 +1,9 @@
 extends "../hint.gd"
 
 @export
-var items: Array[Item] = []
+var items: Array[Item] = []:
+	set(value):
+		items = value.duplicate()
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -33,6 +35,8 @@ func _ready() -> void:
 	super()
 	if is_instance_valid(hint):
 		%Symbol.text = hint.get_symbol()
+		if not hint.pinned:
+			items.pop_front() # Remove "unknown" icon.
 	$State.items = items
 	$State.reset()
 
