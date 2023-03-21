@@ -22,7 +22,7 @@
 		},
 		{
 			"bg_color": "#7a5c03",
-			"capacity": 7,
+			"capacity": 9,
 			"collection": "Hints",
 			"filtered_flags": 1,
 			"flag": 1,

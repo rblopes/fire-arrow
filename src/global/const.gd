@@ -9,6 +9,6 @@ const DEFAULT_PREFERENCES := {
 		check_in_reverse = false,
 	},
 	preset = {
-		mode = "standard_s6"
+		mode = "league_s4"
 	}
 }
