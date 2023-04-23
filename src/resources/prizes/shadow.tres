@@ -6,7 +6,7 @@
 [resource]
 resource_name = "Shadow Medallion"
 script = ExtResource("2")
-label = "Shadow"
+label = "SHA"
 is_free = false
 texture = ExtResource("3_4q8kf")
 type = 2

@@ -1,8 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://ce2t81j6ebgj2"]
+[gd_scene load_steps=15 format=3 uid="uid://ce2t81j6ebgj2"]
 
 [ext_resource type="PackedScene" uid="uid://cbklcrwfwq1m5" path="res://src/components/songs/song.tscn" id="2"]
-[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="3"]
-[ext_resource type="FontFile" uid="uid://bpf8gxwfdubvc" path="res://assets/fonts/ibm_plex/IBMPlexSans-SemiBold.otf" id="3_bt285"]
 [ext_resource type="Resource" uid="uid://cotw47lxsbtsr" path="res://src/resources/songs/storms.tres" id="4"]
 [ext_resource type="Resource" uid="uid://dnsx6p2fjiiuw" path="res://src/resources/songs/suns.tres" id="5"]
 [ext_resource type="Resource" uid="uid://bwwixvtxp6eaf" path="res://src/resources/songs/eponas.tres" id="6"]
@@ -17,75 +15,64 @@
 [ext_resource type="Resource" uid="uid://dsswnliqpuf3c" path="res://src/resources/songs/minuet.tres" id="15"]
 [ext_resource type="Script" path="res://src/components/songs/songs.gd" id="16"]
 
-[node name="Songs" type="PanelContainer"]
-offset_right = 202.0
-offset_bottom = 102.0
-theme_override_styles/panel = ExtResource("3")
+[node name="Songs" type="MarginContainer"]
+offset_right = 100.0
+offset_bottom = 166.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("16")
 
-[node name="Contents" type="VBoxContainer" parent="."]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="Heading" type="Label" parent="Contents"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_bt285")
-theme_override_font_sizes/font_size = 12
-text = "SONGS"
-horizontal_alignment = 1
-
-[node name="Icons" type="GridContainer" parent="Contents"]
+[node name="Contents" type="GridContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
-columns = 6
+columns = 3
 
-[node name="ZeldasLullaby" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="ZeldasLullaby" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("8")
 
-[node name="EponasSong" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="EponasSong" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("6")
 
-[node name="SariasSong" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="SariasSong" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("14")
 
-[node name="SunsSong" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="SunsSong" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("5")
 
-[node name="SongOfTime" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="SongOfTime" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("11")
 
-[node name="SongOfStorms" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="SongOfStorms" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("4")
 
-[node name="MinuetOfForest" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="MinuetOfForest" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("15")
 
-[node name="BoleroOfFire" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="BoleroOfFire" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("12")
 
-[node name="SrenadeOfWater" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="SrenadeOfWater" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("13")
 
-[node name="RequiemOfSpirit" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="RequiemOfSpirit" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("10")
 
-[node name="NocturneOfShadow" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="NocturneOfShadow" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("7")
 
-[node name="PreludeOfLight" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="PreludeOfLight" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 song = ExtResource("9")

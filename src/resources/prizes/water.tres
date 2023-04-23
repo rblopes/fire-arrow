@@ -6,7 +6,7 @@
 [resource]
 resource_name = "Water Medallion"
 script = ExtResource("1")
-label = "Water"
+label = "WAT"
 is_free = false
 texture = ExtResource("3_vyku3")
 type = 2

@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("1")
 theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 0
+theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1")
@@ -29,22 +29,21 @@ script = ExtResource("1")
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="Items" parent="Contents" instance=ExtResource("2")]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-
 [node name="Middle" type="HBoxContainer" parent="Contents"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 4
+theme_override_constants/separation = 32
 alignment = 1
+
+[node name="Items" parent="Contents/Middle" instance=ExtResource("2")]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="Songs" parent="Contents/Middle" instance=ExtResource("5")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Prizes" parent="Contents/Middle" instance=ExtResource("3")]
+[node name="Prizes" parent="Contents" instance=ExtResource("3")]
 unique_name_in_owner = true
 layout_mode = 2
 

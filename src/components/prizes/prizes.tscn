@@ -1,9 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bo8r234eyusci"]
+[gd_scene load_steps=12 format=3 uid="uid://bo8r234eyusci"]
 
 [ext_resource type="PackedScene" uid="uid://2euhex2dc44q" path="res://src/components/prizes/prize.tscn" id="1"]
-[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="2"]
 [ext_resource type="Resource" uid="uid://brog3gbisctbx" path="res://src/resources/prizes/light.tres" id="3"]
-[ext_resource type="FontFile" uid="uid://bpf8gxwfdubvc" path="res://assets/fonts/ibm_plex/IBMPlexSans-SemiBold.otf" id="3_hr3ki"]
 [ext_resource type="Resource" uid="uid://cu2xs8mwxxp5b" path="res://src/resources/prizes/zora.tres" id="4"]
 [ext_resource type="Resource" uid="uid://bqqjjkwu08h87" path="res://src/resources/prizes/kokiri.tres" id="5"]
 [ext_resource type="Resource" uid="uid://dajtug56lnfb5" path="res://src/resources/prizes/forest.tres" id="6"]
@@ -14,10 +12,10 @@
 [ext_resource type="Resource" uid="uid://duc64uivx3mdv" path="res://src/resources/prizes/goron.tres" id="11"]
 [ext_resource type="Script" path="res://src/components/prizes/prizes.gd" id="13"]
 
-[node name="Prizes" type="PanelContainer"]
-offset_right = 148.0
-offset_bottom = 144.0
-theme_override_styles/panel = ExtResource("2")
+[node name="Prizes" type="MarginContainer"]
+offset_right = 358.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
 script = ExtResource("13")
 
 [node name="ContextMenu" type="PopupMenu" parent="."]
@@ -39,69 +37,66 @@ item_4/separator = true
 item_5/text = "Clear All"
 item_5/id = 4
 
-[node name="Contents" type="VBoxContainer" parent="."]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="Heading" type="Label" parent="Contents"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_hr3ki")
-theme_override_font_sizes/font_size = 12
-text = "PRIZES"
-horizontal_alignment = 1
-
-[node name="Icons" type="GridContainer" parent="Contents"]
+[node name="Icons" type="GridContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
-columns = 3
+columns = 9
 
-[node name="LightMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="LightMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("3")
 
-[node name="ForestMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="ForestMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("6")
 
-[node name="FireMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="FireMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("8")
 
-[node name="WaterMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="WaterMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("7")
 
-[node name="ShadowMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="ShadowMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("10")
 
-[node name="SpiritMedallion" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="SpiritMedallion" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("9")
 
-[node name="KokiriEmerald" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="KokiriEmerald" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("5")
 
-[node name="GoronRuby" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="GoronRuby" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("11")
 
-[node name="ZoraSapphire" parent="Contents/Icons" instance=ExtResource("1")]
+[node name="ZoraSapphire" parent="Icons" instance=ExtResource("1")]
+custom_minimum_size = Vector2(38, 40)
 layout_mode = 2
 prize = ExtResource("4")
 
 [connection signal="id_pressed" from="ContextMenu" to="." method="_on_context_menu_id_pressed"]
-[connection signal="context_menu_requested" from="Contents/Icons/LightMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/ForestMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/FireMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/WaterMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/ShadowMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/SpiritMedallion" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/KokiriEmerald" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/GoronRuby" to="." method="_on_context_menu_requested"]
-[connection signal="context_menu_requested" from="Contents/Icons/ZoraSapphire" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/LightMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/ForestMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/FireMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/WaterMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/ShadowMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/SpiritMedallion" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/KokiriEmerald" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/GoronRuby" to="." method="_on_context_menu_requested"]
+[connection signal="context_menu_requested" from="Icons/ZoraSapphire" to="." method="_on_context_menu_requested"]

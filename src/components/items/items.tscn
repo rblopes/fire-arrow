@@ -1,7 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://dl17lxvnk5twg"]
+[gd_scene load_steps=36 format=3 uid="uid://dl17lxvnk5twg"]
 
 [ext_resource type="PackedScene" uid="uid://dhe1doq0wpelk" path="res://src/components/items/item.tscn" id="2"]
-[ext_resource type="FontFile" uid="uid://bpf8gxwfdubvc" path="res://assets/fonts/ibm_plex/IBMPlexSans-SemiBold.otf" id="2_jmhkh"]
 [ext_resource type="Script" path="res://src/components/items/items.gd" id="2_mrcjr"]
 [ext_resource type="Resource" uid="uid://cikjg8vdsnct2" path="res://src/resources/items/slingshot.tres" id="5_jwlcv"]
 [ext_resource type="Resource" uid="uid://ue78h4nh7q65" path="res://src/resources/items/bomb.tres" id="6_2iir4"]
@@ -10,7 +9,6 @@
 [ext_resource type="Resource" uid="uid://b4opuhrhcpr6j" path="res://src/resources/items/dins_fire.tres" id="9_8p3y4"]
 [ext_resource type="Resource" uid="uid://brexwqml7k6rg" path="res://src/resources/items/mirror_shield.tres" id="10_05ny3"]
 [ext_resource type="Resource" uid="uid://cxfphw3ybbepu" path="res://src/resources/items/kokiri_sword.tres" id="11_107rs"]
-[ext_resource type="Resource" uid="uid://cjjtg3x3n6km5" path="res://src/resources/items/biggoron_sword.tres" id="12_dt668"]
 [ext_resource type="Resource" uid="uid://dqo8ygqpduw47" path="res://src/resources/items/magic.tres" id="13_788o4"]
 [ext_resource type="Resource" uid="uid://b2euy80s87xb2" path="res://src/resources/items/double_magic.tres" id="14_hrylx"]
 [ext_resource type="Resource" uid="uid://sa21nxa681sj" path="res://src/resources/items/boomerang.tres" id="15_j83d4"]
@@ -19,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://eytoev4pmcfl" path="res://src/resources/items/longshot.tres" id="18_t2tm8"]
 [ext_resource type="Resource" uid="uid://dq8tu4sqjyhh" path="res://src/resources/items/light_arrow.tres" id="19_dk5hm"]
 [ext_resource type="Resource" uid="uid://7bm3xljrd62w" path="res://src/resources/items/farores_wind.tres" id="20_jm21r"]
+[ext_resource type="Resource" uid="uid://4pphcsidwn3b" path="res://src/resources/items/ice_arrow.tres" id="20_w0v24"]
 [ext_resource type="Resource" uid="uid://b67on4pchdp8x" path="res://src/resources/items/goron_bracelet.tres" id="21_r4f77"]
 [ext_resource type="Resource" uid="uid://dgn4imobquiuc" path="res://src/resources/items/silver_gauntlets.tres" id="22_kfaxc"]
 [ext_resource type="Resource" uid="uid://jrl4304akqy" path="res://src/resources/items/golden_gauntlets.tres" id="23_h8hg3"]
@@ -26,7 +25,6 @@
 [ext_resource type="Resource" uid="uid://pdcdbw3esy0k" path="res://src/resources/items/hover_boots.tres" id="25_l8px8"]
 [ext_resource type="Resource" uid="uid://bxgvbvt26uypv" path="res://src/resources/items/adults_wallet.tres" id="26_dvg35"]
 [ext_resource type="Resource" uid="uid://br667ffdnqivl" path="res://src/resources/items/giants_wallet.tres" id="27_fa45x"]
-[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="28"]
 [ext_resource type="Resource" uid="uid://fq0x3rfbkmi3" path="res://src/resources/items/lens_of_truth.tres" id="28_rk2pq"]
 [ext_resource type="Resource" uid="uid://dpvs0b4h7emlu" path="res://src/resources/items/megaton_hammer.tres" id="29_qebks"]
 [ext_resource type="Resource" uid="uid://dllecgkvpogdq" path="res://src/resources/items/bottle.tres" id="30_0pwte"]
@@ -38,134 +36,115 @@
 [ext_resource type="Resource" uid="uid://dn3gposbfdo0o" path="res://src/resources/items/zora_tunic.tres" id="36_6yamp"]
 [ext_resource type="Resource" uid="uid://ckx2jyyi8aldp" path="res://src/resources/items/iron_boots.tres" id="37_dv886"]
 
-[node name="Items" type="PanelContainer"]
-offset_right = 304.0
-offset_bottom = 120.0
-theme_override_styles/panel = ExtResource("28")
+[node name="Items" type="MarginContainer"]
+offset_right = 168.0
+offset_bottom = 168.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("2_mrcjr")
 
-[node name="Contents" type="VBoxContainer" parent="."]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="Heading" type="Label" parent="Contents"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_jmhkh")
-theme_override_font_sizes/font_size = 12
-text = "ITEMS"
-horizontal_alignment = 1
-
-[node name="Icons" type="GridContainer" parent="Contents"]
+[node name="Contents" type="GridContainer" parent="."]
 layout_mode = 2
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
-columns = 9
+columns = 5
 
-[node name="Slingshot" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="Slingshot" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("5_jwlcv")])
 
-[node name="Bomb" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("6_2iir4")])
-
-[node name="Bow" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="Bow" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("7_v2f7q")])
 
-[node name="FireArrow" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="FireArrow" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("8_oq5wr")])
 
-[node name="DinsFire" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="IceArrow" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("9_8p3y4")])
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("20_w0v24")])
 
-[node name="MirrorShield" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("10_05ny3")])
-
-[node name="KokiriSword" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("11_107rs")])
-
-[node name="BiggoronSword" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("12_dt668")])
-
-[node name="MagicMeter" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("13_788o4"), ExtResource("14_hrylx")])
-
-[node name="Boomerang" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("15_j83d4")])
-
-[node name="Bombchu" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("16_xl2wf")])
-
-[node name="ProgressiveHookshot" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("17_tb83v"), ExtResource("18_t2tm8")])
-
-[node name="LightArrow" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="LightArrow" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("19_dk5hm")])
 
-[node name="FaroresWind" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="Boomerang" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("15_j83d4")])
+
+[node name="ProgressiveHookshot" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("17_tb83v"), ExtResource("18_t2tm8")])
+
+[node name="DinsFire" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("9_8p3y4")])
+
+[node name="FaroresWind" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("20_jm21r")])
 
-[node name="ProgressiveStrength" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="MagicMeter" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("21_r4f77"), ExtResource("22_kfaxc"), ExtResource("23_h8hg3")])
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("13_788o4"), ExtResource("14_hrylx")])
 
-[node name="GoronTunic" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="Bomb" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("24_75kue")])
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("6_2iir4")])
 
-[node name="HoverBoots" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("25_l8px8")])
-
-[node name="ProgressiveWallet" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("26_dvg35"), ExtResource("27_fa45x")])
-
-[node name="Placeholder01" type="Control" parent="Contents/Icons"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-
-[node name="LensOfTruth" parent="Contents/Icons" instance=ExtResource("2")]
-layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("28_rk2pq")])
-
-[node name="MegatonHammer" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="MegatonHammer" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("29_qebks")])
 
-[node name="Bottle" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="MirrorShield" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("30_0pwte"), ExtResource("31_so55u")])
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("10_05ny3")])
 
-[node name="TradeQuestItem" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="ProgressiveStrength" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("32_6vdq0"), ExtResource("33_w6h3l")])
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("21_r4f77"), ExtResource("22_kfaxc"), ExtResource("23_h8hg3")])
 
-[node name="ProgressiveScale" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="ProgressiveScale" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("34_l56qe"), ExtResource("35_um2xm")])
 
-[node name="ZoraTunic" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="Bombchu" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("16_xl2wf")])
+
+[node name="TradeQuestItem" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("32_6vdq0"), ExtResource("33_w6h3l")])
+
+[node name="KokiriSword" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("11_107rs")])
+
+[node name="GoronTunic" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("24_75kue")])
+
+[node name="ZoraTunic" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("36_6yamp")])
 
-[node name="IronBoots" parent="Contents/Icons" instance=ExtResource("2")]
+[node name="LensOfTruth" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("28_rk2pq")])
+
+[node name="Bottle" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("30_0pwte"), ExtResource("31_so55u")])
+
+[node name="ProgressiveWallet" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("26_dvg35"), ExtResource("27_fa45x")])
+
+[node name="HoverBoots" parent="Contents" instance=ExtResource("2")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("25_l8px8")])
+
+[node name="IronBoots" parent="Contents" instance=ExtResource("2")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("37_dv886")])
-
-[node name="Placeholder02" type="Control" parent="Contents/Icons"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2

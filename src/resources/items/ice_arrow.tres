@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://4pphcsidwn3b"]
+
+[ext_resource type="Script" path="res://src/classes/resources/item.gd" id="1_v0v7s"]
+[ext_resource type="Texture2D" uid="uid://cps15h6ni3mrx" path="res://src/resources/textures/items/ice_arrow.tres" id="2_sn11m"]
+
+[resource]
+resource_name = "Ice Arrow"
+script = ExtResource("1_v0v7s")
+texture = ExtResource("2_sn11m")
+label = ""

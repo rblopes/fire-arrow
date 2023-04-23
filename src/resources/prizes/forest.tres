@@ -6,7 +6,7 @@
 [resource]
 resource_name = "Forest Medallion"
 script = ExtResource("2")
-label = "Forest"
+label = "FOR"
 is_free = false
 texture = ExtResource("3_fa5g4")
 type = 2

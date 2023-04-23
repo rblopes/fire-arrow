@@ -6,7 +6,7 @@
 [resource]
 resource_name = "Light Medallion"
 script = ExtResource("1")
-label = "Pocket"
+label = "OWN"
 is_free = true
 texture = ExtResource("3_igbwo")
 type = 2

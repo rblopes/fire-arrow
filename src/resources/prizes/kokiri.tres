@@ -6,7 +6,7 @@
 [resource]
 resource_name = "Kokiri's Emerald"
 script = ExtResource("1")
-label = "Deku"
+label = "DKT"
 is_free = false
 texture = ExtResource("3_ifhb0")
 type = 1
