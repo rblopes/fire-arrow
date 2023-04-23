@@ -6,7 +6,7 @@
 			"collection": "Locations",
 			"filtered_flags": 3,
 			"flag": 1,
-			"name": "Irrelevant Places",
+			"name": "Barren Locations",
 			"shortcut": "B",
 			"type": "inline"
 		},
@@ -22,7 +22,7 @@
 		},
 		{
 			"bg_color": "#7a5c03",
-			"capacity": 9,
+			"capacity": 10,
 			"collection": "Hints",
 			"filtered_flags": 1,
 			"flag": 1,
