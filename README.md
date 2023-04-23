@@ -1,4 +1,4 @@
-# Fire Arrow [![Made with Godot 3.5][badge]][godot]
+# Fire Arrow [![Made with Godot 4.0][badge]][godot]
 
 A cross-platform, simple item and hint display tracker for OoTR, humbly made
 with Godot Engine.
@@ -109,8 +109,9 @@ folder for you:
 - On Linux: `$HOME/.local/share/Fire Arrow`
 - On Windows: `%APPDATA%\Fire Arrow`
 
-At the moment, it can only be changed by editing its contents manually. You need
-to run and quit the program at least once to create it.
+> NOTE: For the time being, app settings can only be changed by editing its
+> settings file manually. You'll need to run and quit the app at least once to
+> create and customize it. This behaviour will be improved on later releases.
 
 The configuration keys are explained below:
 
@@ -163,5 +164,5 @@ The configuration keys are explained below:
 [MIT](LICENSE.md).
 
 
-[badge]: https://flat.badgen.net/badge/made%20with/Godot%203.5/478cbf
+[badge]: https://flat.badgen.net/badge/made%20with/Godot%204.0/478cbf
 [godot]: https://godotengine.org/
