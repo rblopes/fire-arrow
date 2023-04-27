@@ -34,7 +34,8 @@ func _drop_data(at_position: Vector2, dropped_prize: Variant) -> void:
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	return UiHelper.set_icon_drag_preview_for(self, prize)
+	UiHelper.set_drag_preview_for(self, prize)
+	return prize
 
 
 func _gui_input(event: InputEvent) -> void:

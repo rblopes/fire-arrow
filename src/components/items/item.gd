@@ -8,7 +8,9 @@ var _state := State.new(items)
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	return UiHelper.set_icon_drag_preview_for(self, _state.get_item())
+	var data := _state.get_item()
+	UiHelper.set_drag_preview_for(self, data)
+	return data
 
 
 func _gui_input(event: InputEvent) -> void:

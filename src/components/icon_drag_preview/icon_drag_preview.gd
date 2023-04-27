@@ -1,5 +1,5 @@
 extends Control
 
-
-func set_icon(data: Variant) -> void:
-	$Icon.texture = data.texture
+var texture: Texture2D:
+	set(value):
+		$Icon.texture = value

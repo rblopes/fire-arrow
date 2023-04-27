@@ -2,11 +2,11 @@ extends Node
 
 const SCREENSHOT_FILENAME_FORMAT_MASK := "%04d-%02d-%02d %02d-%02d-%02d.png"
 
-@onready
-var icon_drag_preview_scene: PackedScene = get_meta("icon_drag_preview_scene")
-
 @export
 var screenshot_output_path: String = ""
+
+@onready
+var _icon_drag_preview_scene: PackedScene = get_meta("icon_drag_preview_scene")
 
 
 func _get_screenshot_filename() -> String:
@@ -40,11 +40,10 @@ func get_shortcut(key_combination: String) -> Shortcut:
 	return result
 
 
-func set_icon_drag_preview_for(host_control: Control, data: Variant) -> Variant:
-	var result: Control = icon_drag_preview_scene.instantiate()
-	host_control.set_drag_preview(result)
-	result.set_icon(data)
-	return data
+func set_drag_preview_for(control: Control, data: Variant) -> void:
+	var preview: Control = _icon_drag_preview_scene.instantiate()
+	preview.texture = data.texture if "texture" in data else null
+	control.set_drag_preview(preview)
 
 
 func take_screenshot(node: Node) -> void:

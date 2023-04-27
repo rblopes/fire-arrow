@@ -25,7 +25,8 @@ func _drop_data(at_position: Vector2, dropped_song: Variant) -> void:
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	return UiHelper.set_icon_drag_preview_for(self, song)
+	UiHelper.set_drag_preview_for(self, song)
+	return song
 
 
 func _gui_input(event: InputEvent) -> void:
