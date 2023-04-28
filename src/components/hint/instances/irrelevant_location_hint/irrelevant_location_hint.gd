@@ -1,4 +1,4 @@
-extends "../hint.gd"
+extends "../../hint.gd"
 
 
 func _ready() -> void:

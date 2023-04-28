@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://3v0u74fq4qnd"]
+
+[ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1_t27y7"]
+[ext_resource type="Script" path="res://src/components/hint/instances/special_hint/special_location_hint.gd" id="2_y45c4"]
+[ext_resource type="Script" path="res://src/components/hint/instances/special_hint/state.gd" id="3_dhgva"]
+
+[node name="SpecialLocationHint" instance=ExtResource("1_t27y7")]
+script = ExtResource("2_y45c4")
+
+[node name="State" type="Node" parent="." index="0"]
+script = ExtResource("3_dhgva")
+
+[node name="Symbol" type="Label" parent="Contents" index="1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_type_variation = &"SymbolLabel"
+horizontal_alignment = 1
+uppercase = true

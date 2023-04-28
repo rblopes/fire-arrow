@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ef15rxml4bn5"]
 
 [ext_resource type="Script" path="res://src/components/hints/hints.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://lge8dg1r2ng2" path="res://src/components/hint_group/hint_groups/hint_group_inline.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://cq8gfuqu5vc46" path="res://src/components/hint_group/hint_groups/hint_group_grid.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://byv65oypit633" path="res://src/components/hint_group/hint_groups/hint_group_rows.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://ctf2mejv2vw6" path="res://src/components/hint_group/hint_groups/hint_group_inline.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bhnoqdptiun21" path="res://src/components/hint_group/hint_groups/hint_group_grid.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://csuig0v2kkwej" path="res://src/components/hint_group/hint_groups/hint_group_rows.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://by27scaerjy68" path="res://src/components/hint_filter_popup/hint_filter_popup.tscn" id="5_5ac2p"]
 
 [node name="Hints" type="MarginContainer"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://lge8dg1r2ng2"]
+[gd_scene load_steps=4 format=3 uid="uid://ctf2mejv2vw6"]
 
 [ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://ym61an7n1p3t" path="res://src/components/hint/instances/irrelevant_location_hint.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bpqyq1ctfudq2" path="res://src/components/hint/instances/irrelevant_location_hint/irrelevant_location_hint.tscn" id="2"]
 [ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_2hsc6"]
 
 [node name="HintGroupInline" instance=ExtResource("1")]

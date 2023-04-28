@@ -1,4 +1,4 @@
-extends "../hint.gd"
+extends "../../hint.gd"
 
 @export
 var items: Array[Item] = []:

@@ -1,4 +1,4 @@
-extends "../hint.gd"
+extends "../../hint.gd"
 
 
 func _can_drop_data(at_position: Vector2, data) -> bool:

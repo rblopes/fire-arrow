@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://behqbs1yxappg"]
+
+[ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1_xe4u2"]
+[ext_resource type="Script" path="res://src/components/hint/instances/goal_location_hint/goal_location_hint.gd" id="2_x7dhq"]
+[ext_resource type="Resource" uid="uid://dnr3bymcow5yf" path="res://src/resources/goals/bosses.tres" id="3_4wpsd"]
+[ext_resource type="PackedScene" uid="uid://dy2wnkorre36k" path="res://src/components/item_tray/item_tray.tscn" id="4_qd4og"]
+
+[node name="GoalLocationHint" instance=ExtResource("1_xe4u2")]
+script = ExtResource("2_x7dhq")
+goal = ExtResource("3_4wpsd")
+
+[node name="ItemTray" parent="Contents" index="1" instance=ExtResource("4_qd4og")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Goal" type="Label" parent="Contents" index="2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_type_variation = &"GoalLabel"
+horizontal_alignment = 1
+clip_text = true
+uppercase = true
