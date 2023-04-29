@@ -95,14 +95,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "GF",
-				"description": "Archery 1000 Pt."
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "GF",
-				"description": "Archery 1500 Pt."
+				"description": "Horseback Archery",
+				"icons": 2
 			}
 		},
 		{
@@ -130,13 +124,6 @@
 			"type": "item",
 			"params": {
 				"symbol": "GY",
-				"description": "Composer's Grave"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "GY",
 				"description": "ReDead Grave"
 			}
 		},
@@ -144,7 +131,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "GY",
-				"description": "Sun's Song Check"
+				"description": "Royal Family Tomb",
+				"icons": 2
 			}
 		},
 		{
@@ -173,14 +161,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "IC",
-				"description": "Iron Boots Chest"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "IC",
-				"description": "Serenade Check"
+				"description": "Final Treasures",
+				"icons": 2
 			}
 		},
 		{
@@ -240,21 +222,15 @@
 			"type": "item",
 			"params": {
 				"symbol": "LH",
+				"description": "Bean Destinations",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LH",
 				"description": "Diving Experiment"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "LH",
-				"description": "Fishing Pond (Adult)"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "LH",
-				"description": "Lab Observatory"
 			}
 		},
 		{
@@ -297,14 +273,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "MKT",
-				"description": "Bombchu's Prize #1"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "MKT",
-				"description": "Bombchu's Prize #2"
+				"description": "Bombchu Bowling",
+				"icons": 2
 			}
 		},
 		{
@@ -332,14 +302,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "SPI",
-				"description": "Mirror Shield Chest"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "SPI",
-				"description": "Silver Gauntlets Chest"
+				"description": "Colossus Hands",
+				"icons": 2
 			}
 		},
 		{
@@ -360,14 +324,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "WAT",
-				"description": "Longshot Chest"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "WAT",
-				"description": "River Chest"
+				"description": "Past Dark Link",
+				"icons": 2
 			}
 		},
 		{
@@ -388,7 +346,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "ZR",
-				"description": "Frogs in the Rain"
+				"description": "Frogs in a Storm"
 			}
 		},
 		{

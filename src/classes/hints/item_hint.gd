@@ -3,6 +3,10 @@ extends Hint
 
 var location: LocationHint
 
+var icons: int = 1:
+	set(value):
+		icons = clampi(value, 1, 3)
+
 
 func get_symbol() -> String:
 	return location.symbol if is_instance_valid(location) else ""

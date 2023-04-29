@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmqtb5hv0ffjm"]
+
+[ext_resource type="Texture2D" uid="uid://c2ptn2hioqjc2" path="res://src/resources/textures/misc/key.tres" id="1_cyhy0"]
+[ext_resource type="Script" path="res://src/components/hint/instances/item_hint/icon_button.gd" id="1_kuhwj"]
+
+[node name="IconButton" type="Button"]
+custom_minimum_size = Vector2(20, 20)
+theme_type_variation = &"IconButton"
+icon = ExtResource("1_cyhy0")
+expand_icon = true
+script = ExtResource("1_kuhwj")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://do7itlhlw3k7i"]
+[gd_scene load_steps=13 format=3 uid="uid://do7itlhlw3k7i"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1_rmkau"]
 [ext_resource type="Script" path="res://src/components/hint/instances/item_hint/item_hint.gd" id="2_qp4p1"]
@@ -10,29 +10,25 @@
 [ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="8_fpro4"]
 [ext_resource type="Resource" uid="uid://dsqsxabjopuwr" path="res://src/resources/items/big_poe.tres" id="9_cwpbn"]
 [ext_resource type="Resource" uid="uid://cjjtg3x3n6km5" path="res://src/resources/items/biggoron_sword.tres" id="10_rgf2g"]
-[ext_resource type="Script" path="res://src/components/hint/instances/item_hint/state.gd" id="11_ti7v0"]
+[ext_resource type="Script" path="res://src/components/hint/instances/item_hint/icons.gd" id="12_cohnm"]
+[ext_resource type="PackedScene" uid="uid://dmqtb5hv0ffjm" path="res://src/components/hint/instances/item_hint/icon_button.tscn" id="12_oq5g6"]
 
 [node name="ItemHint" instance=ExtResource("1_rmkau")]
 script = ExtResource("2_qp4p1")
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_0q6va"), ExtResource("4_jexki"), ExtResource("5_lq1ju"), ExtResource("6_2torb"), ExtResource("7_jf8ej"), ExtResource("8_fpro4"), ExtResource("9_cwpbn"), ExtResource("10_rgf2g")])
 
-[node name="State" type="Node" parent="." index="0"]
-script = ExtResource("11_ti7v0")
-
 [node name="Symbol" type="Label" parent="Contents" index="0"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(36, 0)
+custom_minimum_size = Vector2(34, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"SymbolLabel"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Item" type="TextureRect" parent="Contents" index="2"]
+[node name="Icons" type="HBoxContainer" parent="Contents" index="2"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-expand_mode = 1
-stretch_mode = 6
-
-[connection signal="updated" from="State" to="." method="_on_state_updated"]
+theme_override_constants/separation = 0
+script = ExtResource("12_cohnm")
+metadata/icon_button = ExtResource("12_oq5g6")

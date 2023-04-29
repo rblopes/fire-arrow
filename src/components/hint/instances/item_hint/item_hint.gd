@@ -3,7 +3,16 @@ extends "../../hint.gd"
 @export
 var items: Array[Item] = []:
 	set(value):
+		assert(len(value) > 0)
 		items = value.duplicate()
+
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	return hint.icons == 1 and is_instance_valid(data) and (data is Item or data is Prize or data is Song)
+
+
+func _drop_data(at_position: Vector2, data: Variant) -> void:
+	%Icons.set_icon(data)
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -12,23 +21,9 @@ func _gui_input(event: InputEvent) -> void:
 			removal_requested.emit(hint)
 			queue_free()
 		elif event.is_action_pressed("ui_mouse_button_cycle_backward"):
-			$State.decrease()
+			%Icons.cycle_icons_backward()
 		elif event.is_action_pressed("ui_mouse_button_cycle_forward"):
-			$State.increase()
-
-
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return data is Item or data is Song or data is Prize
-
-
-func _drop_data(at_position: Vector2, data: Variant) -> void:
-	if is_instance_valid(data):
-		%Item.texture = data.texture
-
-
-func _on_state_updated(current_item: Item) -> void:
-	if is_instance_valid(current_item):
-		%Item.texture = current_item.texture
+			%Icons.cycle_icons_forward()
 
 
 func _ready() -> void:
@@ -37,13 +32,13 @@ func _ready() -> void:
 		%Symbol.text = hint.get_symbol()
 		if not hint.pinned:
 			items.pop_front() # Remove "unknown" icon.
-	$State.items = items
-	$State.reset()
+		%Icons.add_icon_buttons(hint.icons, items)
+		%Icons.reset()
 
 
 func reset() -> void:
 	if hint.is_pinned():
-		$State.reset()
+		%Icons.reset()
 	else:
 		removal_requested.emit(hint)
 		queue_free()

@@ -87,6 +87,9 @@ func parse_item_params(params: Dictionary) -> ItemHint:
 			"description":
 				if value is String:
 					result.description = value.strip_edges()
+			"icons":
+				if value is float:
+					result.icons = int(value)
 			"is_pinned":
 				if value is bool:
 					result.pinned = value
