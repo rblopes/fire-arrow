@@ -44,6 +44,10 @@ func _on_song_changed() -> void:
 	$Small.texture = song.learned_from.texture if song.learned_from is Song else null
 
 
+func _ready() -> void:
+	reset()
+
+
 func reset() -> void:
 	song.is_checked = false
 	song.learned_from = null

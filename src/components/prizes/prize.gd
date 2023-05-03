@@ -60,6 +60,10 @@ func _on_prize_changed() -> void:
 		goal.reset()
 
 
+func _ready() -> void:
+	reset()
+
+
 func clear_label_if(type: Prize.Type) -> void:
 	if prize.type == type:
 		prize.assigned_label = Prize.UNDEFINED_LABEL
