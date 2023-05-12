@@ -81,7 +81,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "GC",
-				"description": "Maze Left Chest"
+				"description": "Maze Left"
 			}
 		},
 		{
@@ -103,7 +103,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "GTG",
-				"description": "Final Chest"
+				"description": "Last Chest"
 			}
 		},
 		{
@@ -117,7 +117,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "GV",
-				"description": "Chest Behind Rocks"
+				"description": "Behind Rocks"
 			}
 		},
 		{
@@ -154,14 +154,14 @@
 			"type": "item",
 			"params": {
 				"symbol": "HW",
-				"description": "Wasteland Chest"
+				"description": "Below Guide"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
 				"symbol": "IC",
-				"description": "Final Treasures",
+				"description": "Wolfos Room",
 				"icons": 2
 			}
 		},
@@ -169,7 +169,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "JJ",
-				"description": "Boomerang Chest"
+				"description": "Stingers Room"
 			}
 		},
 		{
@@ -183,7 +183,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "KAK",
-				"description": "30 Gold Skulltulas",
+				"description": "30/40/50 GS",
+				"icons": 3,
 				"is_pinned": true
 			}
 		},
@@ -191,30 +192,14 @@
 			"type": "item",
 			"params": {
 				"symbol": "KAK",
-				"description": "40 Gold Skulltulas",
-				"is_pinned": true
+				"description": "Collecting Cuccos"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
 				"symbol": "KAK",
-				"description": "50 Gold Skulltulas",
-				"is_pinned": true
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "KAK",
-				"description": "Anju's Cuccos"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "KAK",
-				"description": "Nocturne Check",
+				"description": "Instead Nocturne",
 				"is_pinned": true
 			}
 		},
@@ -222,7 +207,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "LH",
-				"description": "Bean Destinations",
+				"description": "Bean Stops",
 				"icons": 2
 			}
 		},
@@ -259,7 +244,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "LW",
-				"description": "Target in the Woods"
+				"description": "Target"
 			}
 		},
 		{
@@ -273,7 +258,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "MKT",
-				"description": "Bombchu Bowling",
+				"description": "Bombchu Alley",
 				"icons": 2
 			}
 		},
@@ -310,14 +295,14 @@
 			"type": "item",
 			"params": {
 				"symbol": "WAT",
-				"description": "Boss Key Chest"
+				"description": "Boss Key Room"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
 				"symbol": "WAT",
-				"description": "Central Pillar Chest"
+				"description": "Central Pillar"
 			}
 		},
 		{
@@ -332,7 +317,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "ZD",
-				"description": "King Zora Thawed"
+				"description": "K. Zora Thawed"
 			}
 		},
 		{
