@@ -1,7 +1,7 @@
 extends HintCollection
 
 var _locations: Dictionary = {
-	"BOTW": LocationHint.new("BOTW", "Bottom of the Well"),
+	"BTW": LocationHint.new("BTW", "Bottom of the Well"),
 	"DMC": LocationHint.new("DMC", "Death Mountain Crater"),
 	"DMT": LocationHint.new("DMT", "Death Mountain Trail"),
 	"COL": LocationHint.new("COL", "Desert Colossus"),

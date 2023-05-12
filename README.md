@@ -81,7 +81,7 @@ As expected, using Fire Arrow should be quick and simple:
 
 | Symbol | Name                     | Symbol | Name                     |
 |:------:|--------------------------|:------:|--------------------------|
-| `BOTW` | Bottom of the Well       | `JJ`   | Inside Jabu-Jabu's Belly |
+| `BTW`  | Bottom of the Well       | `JJ`   | Inside Jabu-Jabu's Belly |
 | `DMC`  | Death Mountain Crater    | `DKT`  | Inside the Deku Tree     |
 | `DMT`  | Death Mountain Trail     | `KAK`  | Kakariko Village         |
 | `COL`  | Desert Colossus          | `KF`   | Kokiri Forest            |
