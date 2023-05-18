@@ -15,15 +15,15 @@ metadata/_edit_pinned_properties_ = [&"custom_minimum_size", &"metadata/hint_but
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Heading" type="Label" parent="Layout" index="0"]
+[node name="HeaderButton" type="Button" parent="Layout" index="0"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
-theme_type_variation = &"HintGroupHeadingLabel"
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"HintGroupHeadingButton"
 text = "HEADER"
-horizontal_alignment = 1
 clip_text = true
-uppercase = true
 
 [node name="Contents" type="MarginContainer" parent="Layout" index="1"]
 layout_mode = 2
@@ -45,3 +45,5 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 0
+
+[connection signal="pressed" from="Layout/HeaderButton" to="." method="_on_header_button_pressed"]

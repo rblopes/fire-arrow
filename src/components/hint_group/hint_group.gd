@@ -51,20 +51,11 @@ func _toggle_placeholder() -> void:
 	%Placeholder.visible = hint_group.is_empty()
 
 
-func _unhandled_key_input(event: InputEvent) -> void:
-	if event.is_echo():
-		return
-	if hint_group.is_full():
-		return
-	if hint_group.shortcut is Shortcut:
-		if event.is_pressed() and hint_group.shortcut.matches_event(event):
-			hint_filter_requested.emit(hint_group.get_filter(), self)
-
-
 func set_hint_group(value: HintGroup) -> void:
 	if is_instance_valid(value):
 		hint_group = value
-		%Heading.text = hint_group.name
+		%HeaderButton.text = hint_group.name.to_upper()
+		%HeaderButton.shortcut = hint_group.shortcut
 		add_theme_stylebox_override("panel", get_theme_stylebox("panel").duplicate())
 		get_theme_stylebox("panel").bg_color = hint_group.bg_color
 		hint_group.hint_added.connect(_on_hint_added)
@@ -76,3 +67,7 @@ func _on_hints_child_entered_tree(hint_button: Button) -> void:
 	var hint: Hint = hint_button.hint
 	if hint is SpecialLocationHint:
 		hint_button.pressed.connect(func(): hint_filter_requested.emit(hint_button.get_filter(), hint_button))
+
+
+func _on_header_button_pressed() -> void:
+	hint_filter_requested.emit(hint_group.get_filter(), self)
