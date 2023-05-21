@@ -2,7 +2,8 @@ class_name Hint
 extends RefCounted
 
 var description: String:
-	set = set_description
+	set(value):
+		description = value.strip_edges()
 
 var flags: int
 
@@ -21,10 +22,6 @@ func is_pinned() -> bool:
 
 func matches(criteria: String) -> bool:
 	return false
-
-
-func set_description(value: String) -> void:
-	description = value.strip_edges()
 
 
 func set_pinned(value: bool) -> void:
