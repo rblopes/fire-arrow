@@ -46,9 +46,9 @@ func set_drag_preview_for(control: Control, data: Variant) -> void:
 	control.set_drag_preview(preview)
 
 
-func take_screenshot(node: Node) -> void:
+func take_screenshot(viewport: Viewport) -> void:
 	if not DirAccess.dir_exists_absolute(screenshot_output_path):
 		if DirAccess.make_dir_recursive_absolute(screenshot_output_path) != OK:
 			return
-	var image := node.get_viewport().get_texture().get_image()
+	var image := viewport.get_texture().get_image()
 	image.save_png(screenshot_output_path.path_join(_get_screenshot_filename()))

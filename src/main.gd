@@ -35,7 +35,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		%Hints.reset()
 		%Stopwatch.reset()
 	if event.is_action_pressed("take_screenshot"):
-		UiHelper.take_screenshot(self)
+		UiHelper.take_screenshot(get_window())
 	if event.is_action_pressed("ui_open_data_dir"):
 		OS.shell_open(OS.get_user_data_dir())
 	if event.is_action_pressed("ui_quit"):
