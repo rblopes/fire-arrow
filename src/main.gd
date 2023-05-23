@@ -18,7 +18,7 @@ func _ready() -> void:
 	%Prizes.set_drag_and_drop_behaviour(PreferencesManager.get_value("prizes", "check_in_reverse"))
 	%Songs.set_check_behaviour(PreferencesManager.get_value("songs", "autocheck"))
 	%Songs.set_drag_and_drop_behaviour(PreferencesManager.get_value("songs", "check_in_reverse"))
-	%Hints.set_hint_groups(tracker_layout.groups)
+	%Hints.add_hint_groups(tracker_layout.groups)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
