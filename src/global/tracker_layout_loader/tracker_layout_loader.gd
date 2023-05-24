@@ -27,42 +27,14 @@ func parse_counter_params(params: Dictionary) -> CounterHint:
 	return result
 
 
-func parse_hint_group_params(params: Dictionary) -> HintGroup:
-	var result := HintGroup.new()
-	for key in params:
-		var value = params.get(key)
-		match key:
-			"bg_color":
-				if value is String and value.is_valid_html_color():
-					result.bg_color = Color(value)
-			"capacity":
-				if value is float:
-					result.max_capacity = int(value)
-			"collection":
-				if value is String:
-					result.collection = HintCollections.fetch(value)
-			"filtered_flags":
-				if value is float:
-					result.filtered_flags = int(value)
-			"flag":
-				if value is float:
-					result.flag = int(value)
-			"name":
-				if value is String:
-					result.name = value.strip_edges()
-			"shortcut":
-				if value is String:
-					result.shortcut = UiHelper.get_shortcut(value.strip_edges())
-			"type":
-				if value is String:
-					result.type = value.strip_edges()
-	return result
-
-
 func parse_hint_groups(data: Array) -> Array[HintGroup]:
 	var result: Array[HintGroup] = []
 	for params in data:
-		result.append(parse_hint_group_params(params))
+		match params:
+			{"type": "locations", "properties": var properties}:
+				result.append(parse_location_hint_group_params(properties))
+			{"type": "miscellaneous", "properties": var properties}:
+				result.append(parse_miscellaneous_hint_group_params(properties))
 	return result
 
 
@@ -112,6 +84,58 @@ func parse_layout_data(data: Dictionary) -> TrackerLayout:
 				if value is Array:
 					result.hints = parse_hints(value)
 					HintCollections.fetch("Hints").set_hints(result.hints)
+	return result
+
+
+func parse_location_hint_group_params(params: Dictionary) -> LocationHintGroup:
+	var result := LocationHintGroup.new(HintCollections.fetch("Locations"))
+	for key in params:
+		var value = params.get(key)
+		match key:
+			"applied_flag":
+				if value is float:
+					result.applied_flag = int(value)
+			"background_color":
+				if value is String and value.is_valid_html_color():
+					result.background_color = Color(value)
+			"capacity":
+				if value is float:
+					result.max_capacity = int(value)
+			"filtered_flags":
+				if value is float:
+					result.filtered_flags = int(value)
+			"name":
+				if value is String:
+					result.name = value.strip_edges()
+			"shortcut":
+				if value is String:
+					result.shortcut = UiHelper.get_shortcut(value.strip_edges())
+			"style":
+				if value is String:
+					result.style = value.strip_edges()
+	return result
+
+
+func parse_miscellaneous_hint_group_params(params: Dictionary) -> MiscellaneousHintGroup:
+	var result := MiscellaneousHintGroup.new(HintCollections.fetch("Hints"))
+	for key in params:
+		var value = params.get(key)
+		match key:
+			"background_color":
+				if value is String and value.is_valid_html_color():
+					result.background_color = Color(value)
+			"capacity":
+				if value is float:
+					result.max_capacity = int(value)
+			"name":
+				if value is String:
+					result.name = value.strip_edges()
+			"shortcut":
+				if value is String:
+					result.shortcut = UiHelper.get_shortcut(value.strip_edges())
+			"style":
+				if value is String:
+					result.style = value.strip_edges()
 	return result
 
 

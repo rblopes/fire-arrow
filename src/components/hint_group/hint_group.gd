@@ -18,7 +18,7 @@ func _ready() -> void:
 		%HeaderButton.text = hint_group.name.to_upper()
 		%HeaderButton.shortcut = hint_group.shortcut
 		add_theme_stylebox_override("panel", get_theme_stylebox("panel").duplicate())
-		get_theme_stylebox("panel").bg_color = hint_group.bg_color
+		get_theme_stylebox("panel").bg_color = hint_group.background_color
 		_fill_pinned_hints()
 
 
@@ -29,8 +29,9 @@ func _add_hint_button(hint: Hint) -> void:
 
 
 func _fill_pinned_hints() -> void:
-	for hint in hint_group.collection.filter(func(x): return x.is_pinned()):
-		hint_group.add_hint(hint)
+	if hint_group is MiscellaneousHintGroup:
+		for hint in hint_group.collection.filter(func(x): return x.is_pinned()):
+			hint_group.add_hint(hint)
 
 
 func _get_hint_button_scene(hint: Hint) -> PackedScene:
@@ -55,8 +56,9 @@ func _on_hint_added(hint: Hint) -> void:
 
 
 func _on_hint_button_removal_requested(hint: Hint) -> void:
-	if is_instance_valid(hint) and not hint.is_pinned():
-		hint_group.remove_hint(hint)
+	if is_instance_valid(hint):
+		if not (hint is MiscellaneousHint and hint.is_pinned()):
+			hint_group.remove_hint(hint)
 
 
 func _on_hint_removed(_hint: Hint) -> void:

@@ -7,8 +7,8 @@ var hint: Hint = null:
 
 
 func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if not hint.is_pinned() and event.is_action_released("ui_mouse_right_button"):
+	if event.is_action_released("ui_mouse_right_button"):
+		if not (hint is MiscellaneousHint and hint.is_pinned()):
 			removal_requested.emit(hint)
 			queue_free()
 
@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 func reset() -> void:
-	if not hint.is_pinned():
+	if not (hint is MiscellaneousHint and hint.is_pinned()):
 		removal_requested.emit(hint)
 		queue_free()
 

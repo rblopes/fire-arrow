@@ -1,34 +1,38 @@
 {
 	"groups": [
 		{
-			"bg_color": "#800000",
-			"capacity": 3,
-			"collection": "Locations",
-			"filtered_flags": 3,
-			"flag": 1,
-			"name": "Barren Locations",
-			"shortcut": "B",
-			"type": "inline"
+			"type": "locations",
+			"properties": {
+				"applied_flag": 1,
+				"background_color": "#800000",
+				"capacity": 3,
+				"filtered_flags": 3,
+				"name": "Barren Locations",
+				"shortcut": "B",
+				"style": "inline"
+			}
 		},
 		{
-			"bg_color": "#191970",
-			"capacity": 5,
-			"collection": "Locations",
-			"filtered_flags": 1,
-			"flag": 2,
-			"name": "Path to Goal",
-			"shortcut": "G",
-			"type": "goal"
+			"type": "locations",
+			"properties": {
+				"applied_flag": 2,
+				"background_color": "#191970",
+				"capacity": 5,
+				"filtered_flags": 1,
+				"name": "Path to Goal",
+				"shortcut": "G",
+				"style": "goal"
+			}
 		},
 		{
-			"bg_color": "#7a5c03",
-			"capacity": 10,
-			"collection": "Hints",
-			"filtered_flags": 1,
-			"flag": 1,
-			"name": "Hints",
-			"shortcut": "H",
-			"type": "hints"
+			"type": "miscellaneous",
+			"properties": {
+				"background_color": "#7a5c03",
+				"capacity": 7,
+				"name": "Hints",
+				"shortcut": "H",
+				"style": "hints"
+			}
 		}
 	],
 	"hints": [

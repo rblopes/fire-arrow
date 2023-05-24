@@ -3,7 +3,7 @@ extends "../../hint.gd"
 
 func _gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_mouse_right_button"):
-		hint.location = null
+		$State.reset()
 
 
 func _on_state_updated(symbol: String) -> void:

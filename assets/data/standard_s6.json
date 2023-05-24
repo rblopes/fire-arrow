@@ -1,24 +1,26 @@
 {
 	"groups": [
 		{
-			"bg_color": "#191970",
-			"capacity": 5,
-			"collection": "Locations",
-			"filtered_flags": 0,
-			"flag": 0,
-			"name": "Path to Goal",
-			"shortcut": "G",
-			"type": "goal"
+			"type": "locations",
+			"properties": {
+				"applied_flag": 0,
+				"background_color": "#191970",
+				"capacity": 5,
+				"filtered_flags": 0,
+				"name": "Path to Goal",
+				"shortcut": "G",
+				"style": "goal"
+			}
 		},
 		{
-			"bg_color": "#7a5c03",
-			"capacity": 8,
-			"collection": "Hints",
-			"filtered_flags": 1,
-			"flag": 1,
-			"name": "Hints",
-			"shortcut": "H",
-			"type": "hints"
+			"type": "miscellaneous",
+			"properties": {
+				"background_color": "#7a5c03",
+				"capacity": 8,
+				"name": "Hints",
+				"shortcut": "H",
+				"style": "hints"
+			}
 		}
 	],
 	"hints": [

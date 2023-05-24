@@ -2,14 +2,12 @@ extends Node
 
 signal updated(symbol: String)
 
-const UNDEFINED_SYMBOL: String = "N/D"
-
 var _location: LocationHint = null
 var hint: SpecialLocationHint = null
 
 
 func _get_symbol() -> String:
-	return _location.symbol if is_instance_valid(_location) else UNDEFINED_SYMBOL
+	return _location.symbol if is_instance_valid(_location) else LocationHint.UNDEFINED_SYMBOL
 
 
 func _set_location(p_location: LocationHint) -> void:
