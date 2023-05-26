@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://nt3j3h8kxaoh"]
+
+[ext_resource type="Script" path="res://src/components/hint_group/instances/inline_hint_group/location_symbol_button.gd" id="1_4c8rk"]
+[ext_resource type="FontFile" uid="uid://d26cuq53f6ygv" path="res://assets/fonts/ibm_plex/IBMPlexSansCondensed-Bold.otf" id="1_rcrlv"]
+[ext_resource type="StyleBox" uid="uid://bk6j0uqtoeher" path="res://src/resources/styleboxes/symbol.tres" id="2_uph5j"]
+[ext_resource type="StyleBox" uid="uid://d1lu6ohxe806i" path="res://src/resources/styleboxes/empty.tres" id="3_2hfo4"]
+
+[node name="LocationSymbolButton" type="Button" groups=["hints"]]
+custom_minimum_size = Vector2(36, 20)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"LocationSymbolButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rcrlv")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("2_uph5j")
+theme_override_styles/hover = ExtResource("2_uph5j")
+theme_override_styles/pressed = ExtResource("2_uph5j")
+theme_override_styles/disabled = ExtResource("2_uph5j")
+theme_override_styles/focus = ExtResource("3_2hfo4")
+button_mask = 2
+script = ExtResource("1_4c8rk")

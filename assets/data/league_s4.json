@@ -4,8 +4,8 @@
 			"type": "locations",
 			"properties": {
 				"applied_flag": 1,
-				"background_color": "#800000",
 				"capacity": 3,
+				"color": "#ff8080",
 				"filtered_flags": 3,
 				"name": "Barren Locations",
 				"shortcut": "B",
@@ -16,19 +16,19 @@
 			"type": "locations",
 			"properties": {
 				"applied_flag": 2,
-				"background_color": "#191970",
 				"capacity": 5,
+				"color": "#80b3ff",
 				"filtered_flags": 1,
 				"name": "Path to Goal",
 				"shortcut": "G",
-				"style": "goal"
+				"style": "stacked"
 			}
 		},
 		{
 			"type": "miscellaneous",
 			"properties": {
-				"background_color": "#7a5c03",
 				"capacity": 7,
+				"color": "#f2f2f2",
 				"name": "Hints",
 				"shortcut": "H",
 				"style": "hints"

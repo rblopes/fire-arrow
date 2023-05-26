@@ -4,19 +4,19 @@
 			"type": "locations",
 			"properties": {
 				"applied_flag": 0,
-				"background_color": "#191970",
 				"capacity": 5,
+				"color": "#80b3ff",
 				"filtered_flags": 0,
 				"name": "Path to Goal",
 				"shortcut": "G",
-				"style": "goal"
+				"style": "stacked"
 			}
 		},
 		{
 			"type": "miscellaneous",
 			"properties": {
-				"background_color": "#7a5c03",
 				"capacity": 8,
+				"color": "#f2f2f2",
 				"name": "Hints",
 				"shortcut": "H",
 				"style": "hints"

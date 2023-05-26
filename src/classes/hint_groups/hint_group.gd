@@ -5,8 +5,8 @@ signal hint_added(hint: Hint)
 signal hint_removed(hint: Hint)
 signal cleared()
 
-var background_color: Color = Color.BLACK
 var collection: HintCollection = null
+var color: Color = Color.BLACK
 var hints: Array[Hint] = []
 var max_capacity: int = 0
 var name: String = ""

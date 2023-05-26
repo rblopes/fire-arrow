@@ -19,7 +19,7 @@ metadata/_edit_pinned_properties_ = [&"metadata/hint_button_scenes"]
 
 [node name="Layout" type="VBoxContainer" parent="." index="0"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 2
 
 [node name="HeaderButton" type="Button" parent="Layout" index="0"]
 unique_name_in_owner = true
@@ -52,7 +52,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = 0
+theme_override_constants/v_separation = 2
 columns = 2
 
 [connection signal="pressed" from="Layout/HeaderButton" to="." method="_on_header_button_pressed"]

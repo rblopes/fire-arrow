@@ -1,19 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://csuig0v2kkwej"]
+[gd_scene load_steps=4 format=3 uid="uid://bb4seeumg1cww"]
 
-[ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://behqbs1yxappg" path="res://src/components/hint/instances/goal_location_hint/goal_location_hint.tscn" id="2"]
-[ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_uauis"]
+[ext_resource type="PackedScene" uid="uid://11u6al88r8at" path="res://src/components/hint_group/hint_group.tscn" id="1_q6c1q"]
+[ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_ud51r"]
+[ext_resource type="PackedScene" uid="uid://nt3j3h8kxaoh" path="res://src/components/hint_group/instances/inline_hint_group/location_symbol_button.tscn" id="3_1dadr"]
 
-[node name="HintGroupRows" instance=ExtResource("1")]
-custom_minimum_size = Vector2(0, 40)
+[node name="InlineHintGroup" instance=ExtResource("1_q6c1q")]
 metadata/hint_button_scenes = {
-ExtResource("2_uauis"): ExtResource("2")
+ExtResource("2_ud51r"): ExtResource("3_1dadr")
 }
-metadata/_edit_pinned_properties_ = [&"custom_minimum_size", &"metadata/hint_button_scenes"]
+metadata/_edit_pinned_properties_ = [&"metadata/hint_button_scenes"]
 
-[node name="Layout" type="VBoxContainer" parent="." index="0"]
+[node name="Layout" type="HBoxContainer" parent="." index="0"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 2
 
 [node name="HeaderButton" type="Button" parent="Layout" index="0"]
 unique_name_in_owner = true
@@ -23,11 +22,11 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme_type_variation = &"HintGroupHeadingButton"
 text = "HEADER"
-clip_text = true
 
 [node name="Contents" type="MarginContainer" parent="Layout" index="1"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 3
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
@@ -35,16 +34,19 @@ theme_override_constants/margin_bottom = 0
 
 [node name="Placeholder" type="Label" parent="Layout/Contents" index="0"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 16)
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_type_variation = &"PlaceholderLabel"
 text = "NONE YET"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Hints" type="VBoxContainer" parent="Layout/Contents" index="1"]
+[node name="Hints" type="HBoxContainer" parent="Layout/Contents" index="1"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/separation = 0
+size_flags_horizontal = 6
+theme_override_constants/separation = 4
+alignment = 1
 
 [connection signal="pressed" from="Layout/HeaderButton" to="." method="_on_header_button_pressed"]
 [connection signal="child_entered_tree" from="Layout/Contents/Hints" to="." method="_on_hints_child_entered_tree"]

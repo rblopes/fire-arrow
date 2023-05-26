@@ -1,17 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://ef15rxml4bn5"]
+[gd_scene load_steps=8 format=3 uid="uid://ef15rxml4bn5"]
 
 [ext_resource type="Script" path="res://src/components/hints/hints.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://ctf2mejv2vw6" path="res://src/components/hint_group/hint_groups/hint_group_inline.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://bhnoqdptiun21" path="res://src/components/hint_group/hint_groups/hint_group_grid.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://csuig0v2kkwej" path="res://src/components/hint_group/hint_groups/hint_group_rows.tscn" id="4"]
+[ext_resource type="Theme" uid="uid://4nhrucx1egac" path="res://src/components/hints/theme.tres" id="1_m4m35"]
+[ext_resource type="PackedScene" uid="uid://bhnoqdptiun21" path="res://src/components/hint_group/instances/grid_hint_group/grid_hint_group.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://csuig0v2kkwej" path="res://src/components/hint_group/instances/stacked_hint_group/stacked_hint_group.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://by27scaerjy68" path="res://src/components/hint_filter_popup/hint_filter_popup.tscn" id="5_5ac2p"]
+[ext_resource type="PackedScene" uid="uid://bb4seeumg1cww" path="res://src/components/hint_group/instances/inline_hint_group/inline_hint_group.tscn" id="6_7kc6u"]
 [ext_resource type="Script" path="res://src/components/hints/contents.gd" id="6_t0e82"]
 
-[node name="Hints" type="MarginContainer"]
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 0
-theme_override_constants/margin_bottom = 0
+[node name="Hints" type="PanelContainer"]
+theme = ExtResource("1_m4m35")
+theme_type_variation = &"HintsContainer"
 script = ExtResource("1")
 
 [node name="HintFilterPopup" parent="." instance=ExtResource("5_5ac2p")]
@@ -19,12 +18,12 @@ visible = false
 
 [node name="Contents" type="VBoxContainer" parent="."]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 4
 script = ExtResource("6_t0e82")
 metadata/hint_group_scenes = {
-"goal": ExtResource("4"),
 "hints": ExtResource("3"),
-"inline": ExtResource("2")
+"inline": ExtResource("6_7kc6u"),
+"stacked": ExtResource("4")
 }
 
 [connection signal="child_entered_tree" from="Contents" to="." method="_on_contents_child_entered_tree"]

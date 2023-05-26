@@ -9,6 +9,9 @@
 script = ExtResource("2_x7dhq")
 goal = ExtResource("3_4wpsd")
 
+[node name="Description" parent="Contents" index="0"]
+theme_type_variation = &"GoalLocationHintButtonDescriptionLabel"
+
 [node name="ItemTray" parent="Contents" index="1" instance=ExtResource("4_qd4og")]
 unique_name_in_owner = true
 layout_mode = 2

@@ -95,12 +95,12 @@ func parse_location_hint_group_params(params: Dictionary) -> LocationHintGroup:
 			"applied_flag":
 				if value is float:
 					result.applied_flag = int(value)
-			"background_color":
-				if value is String and value.is_valid_html_color():
-					result.background_color = Color(value)
 			"capacity":
 				if value is float:
 					result.max_capacity = int(value)
+			"color":
+				if value is String and value.is_valid_html_color():
+					result.color = Color(value)
 			"filtered_flags":
 				if value is float:
 					result.filtered_flags = int(value)
@@ -121,12 +121,12 @@ func parse_miscellaneous_hint_group_params(params: Dictionary) -> MiscellaneousH
 	for key in params:
 		var value = params.get(key)
 		match key:
-			"background_color":
-				if value is String and value.is_valid_html_color():
-					result.background_color = Color(value)
 			"capacity":
 				if value is float:
 					result.max_capacity = int(value)
+			"color":
+				if value is String and value.is_valid_html_color():
+					result.color = Color(value)
 			"name":
 				if value is String:
 					result.name = value.strip_edges()

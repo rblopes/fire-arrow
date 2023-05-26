@@ -1,4 +1,4 @@
-extends MarginContainer
+extends PanelContainer
 
 
 func add_hint_groups(hint_groups: Array[HintGroup]) -> void:

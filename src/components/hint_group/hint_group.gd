@@ -14,11 +14,12 @@ var _hint_button_scenes: Dictionary = get_meta("hint_button_scenes")
 
 
 func _ready() -> void:
+	theme = theme.duplicate()
 	if is_instance_valid(hint_group):
+		theme.set_goal_location_hint_button_description_label_font_color(hint_group.color)
+		theme.set_hint_group_heading_button_font_colors(hint_group.color)
 		%HeaderButton.text = hint_group.name.to_upper()
 		%HeaderButton.shortcut = hint_group.shortcut
-		add_theme_stylebox_override("panel", get_theme_stylebox("panel").duplicate())
-		get_theme_stylebox("panel").bg_color = hint_group.background_color
 		_fill_pinned_hints()
 
 
