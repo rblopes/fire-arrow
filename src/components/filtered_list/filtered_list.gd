@@ -55,7 +55,9 @@ func clear() -> void:
 func update_list(items: Array[Variant]) -> void:
 	$List.clear()
 	for item in items:
-		$List.set_item_metadata($List.add_item(str(item)), item)
+		var i: int = $List.add_item(str(item))
+		$List.set_item_metadata(i, item)
+		$List.set_item_tooltip(i, " ")
 	if $List.item_count > 0:
 		$List.select(0)
 		$List.ensure_current_is_visible.call_deferred()
