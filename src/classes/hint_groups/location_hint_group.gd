@@ -32,4 +32,4 @@ func clear() -> void:
 
 
 func _get_filter_helper() -> Array[Hint]:
-	return collection.filter(func(x): return not x.has_flags(filtered_flags))
+	return Locations.get_without_flags(filtered_flags)

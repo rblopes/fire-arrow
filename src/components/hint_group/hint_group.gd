@@ -31,7 +31,7 @@ func _add_hint_button(hint: Hint) -> void:
 
 func _fill_pinned_hints() -> void:
 	if hint_group is MiscellaneousHintGroup:
-		for hint in hint_group.collection.filter(func(x): return x.is_pinned()):
+		for hint in Hints.get_pinned_hints():
 			hint_group.add_hint(hint)
 
 

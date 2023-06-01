@@ -8,7 +8,7 @@ func load_layout(file_path: String) -> TrackerLayout:
 
 
 func parse_counter_params(params: Dictionary) -> CounterHint:
-	var result := CounterHint.new()
+	var result := Hints.create_counter_hint()
 	for key in params:
 		var value = params.get(key)
 		match key:
@@ -52,7 +52,7 @@ func parse_hints(data: Array) -> Array[Hint]:
 
 
 func parse_item_params(params: Dictionary) -> ItemHint:
-	var result := ItemHint.new()
+	var result := Hints.create_item_hint()
 	for key in params:
 		var value = params.get(key)
 		match key:
@@ -67,8 +67,7 @@ func parse_item_params(params: Dictionary) -> ItemHint:
 					result.pinned = value
 			"symbol":
 				if value is String:
-					var hint_collection := HintCollections.fetch("Locations")
-					result.location = hint_collection.find_by_symbol(value.strip_edges())
+					result.location = Locations.find_by_symbol(value.strip_edges())
 	return result
 
 
@@ -83,12 +82,11 @@ func parse_layout_data(data: Dictionary) -> TrackerLayout:
 			"hints":
 				if value is Array:
 					result.hints = parse_hints(value)
-					HintCollections.fetch("Hints").set_hints(result.hints)
 	return result
 
 
 func parse_location_hint_group_params(params: Dictionary) -> LocationHintGroup:
-	var result := LocationHintGroup.new(HintCollections.fetch("Locations"))
+	var result := LocationHintGroup.new()
 	for key in params:
 		var value = params.get(key)
 		match key:
@@ -117,7 +115,7 @@ func parse_location_hint_group_params(params: Dictionary) -> LocationHintGroup:
 
 
 func parse_miscellaneous_hint_group_params(params: Dictionary) -> MiscellaneousHintGroup:
-	var result := MiscellaneousHintGroup.new(HintCollections.fetch("Hints"))
+	var result := MiscellaneousHintGroup.new()
 	for key in params:
 		var value = params.get(key)
 		match key:
@@ -140,15 +138,14 @@ func parse_miscellaneous_hint_group_params(params: Dictionary) -> MiscellaneousH
 
 
 func parse_special_location_params(params: Dictionary) -> SpecialLocationHint:
-	var result := SpecialLocationHint.new()
+	var result := Hints.create_special_location_hint()
 	for key in params:
 		var value = params.get(key)
 		match key:
 			"choices":
 				if value is String:
-					var hint_collection := HintCollections.fetch("Locations")
 					for choice in value.strip_edges().split(";"):
-						result.choices.append(hint_collection.find_by_symbol(choice))
+						result.choices.append(Locations.find_by_symbol(choice))
 			"description":
 				if value is String:
 					result.description = value.strip_edges()

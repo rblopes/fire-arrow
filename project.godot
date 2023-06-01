@@ -21,7 +21,8 @@ config/preferences_path="user://preferences.cfg"
 [autoload]
 
 JsonFile="*res://src/global/json_file.gd"
-HintCollections="*res://src/global/hint_collections/hint_collections.tscn"
+Locations="*res://src/global/locations.gd"
+Hints="*res://src/global/hints.gd"
 TrackerLayoutLoader="*res://src/global/tracker_layout_loader/tracker_layout_loader.tscn"
 Const="*res://src/global/const.gd"
 PreferencesManager="*res://src/global/preferences_manager.gd"

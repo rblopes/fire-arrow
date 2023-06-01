@@ -5,17 +5,12 @@ signal hint_added(hint: Hint)
 signal hint_removed(hint: Hint)
 signal cleared()
 
-var collection: HintCollection = null
 var color: Color = Color.BLACK
 var hints: Array[Hint] = []
 var max_capacity: int = 0
 var name: String = ""
 var shortcut: Shortcut = null
 var style: String = ""
-
-
-func _init(p_collection: HintCollection) -> void:
-	collection = p_collection
 
 
 func add_hint(hint: Hint) -> void:
