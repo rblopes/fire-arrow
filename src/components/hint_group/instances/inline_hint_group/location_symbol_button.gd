@@ -1,7 +1,5 @@
 extends Button
 
-signal removal_requested(hint)
-
 var hint: LocationHint = null:
 	set(value):
 		if is_instance_valid(value):
@@ -18,5 +16,4 @@ func _pressed() -> void:
 
 
 func reset() -> void:
-	removal_requested.emit(hint)
 	queue_free()

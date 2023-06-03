@@ -56,21 +56,21 @@ func _on_hint_added(hint: Hint) -> void:
 		_set_placeholder_visibility(false)
 
 
-func _on_hint_button_removal_requested(hint: Hint) -> void:
-	if is_instance_valid(hint):
-		if not (hint is MiscellaneousHint and hint.is_pinned()):
-			hint_group.remove_hint(hint)
-
-
 func _on_hint_removed(_hint: Hint) -> void:
 	_set_placeholder_visibility(hint_group.is_empty())
 
 
 func _on_hints_child_entered_tree(button: Button) -> void:
 	button.owner = self
-	button.removal_requested.connect(_on_hint_button_removal_requested)
 	if button.hint is SpecialLocationHint:
 		button.pressed.connect(func(): hint_filter_requested.emit(button.get_filter(), button))
+
+
+func _on_hints_child_exiting_tree(node: Node) -> void:
+	var hint: Hint = node.hint if "hint" in node else null
+	if is_instance_valid(hint):
+		if not (hint is MiscellaneousHint and hint.is_pinned()):
+			hint_group.remove_hint(hint)
 
 
 func _set_placeholder_visibility(value: bool) -> void:

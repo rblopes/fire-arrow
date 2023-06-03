@@ -18,7 +18,6 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("ui_mouse_right_button") and not hint.is_pinned():
-			removal_requested.emit(hint)
 			queue_free()
 		elif event.is_action_pressed("ui_mouse_button_cycle_backward"):
 			%Icons.cycle_icons_backward()
@@ -40,5 +39,4 @@ func reset() -> void:
 	if hint.is_pinned():
 		%Icons.reset()
 	else:
-		removal_requested.emit(hint)
 		queue_free()

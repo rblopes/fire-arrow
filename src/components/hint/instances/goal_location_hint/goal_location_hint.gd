@@ -11,7 +11,6 @@ var goal: Goal:
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("ui_mouse_right_button"):
-			removal_requested.emit(hint)
 			queue_free()
 		elif event.is_action_pressed("ui_mouse_button_cycle_backward"):
 			goal.cycle_backward()

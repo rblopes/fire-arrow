@@ -1,7 +1,5 @@
 extends Button
 
-signal removal_requested(hint)
-
 var hint: Hint = null:
 	set = set_hint
 
@@ -9,7 +7,6 @@ var hint: Hint = null:
 func _gui_input(event: InputEvent) -> void:
 	if event.is_action_released("ui_mouse_right_button"):
 		if not (hint is MiscellaneousHint and hint.is_pinned()):
-			removal_requested.emit(hint)
 			queue_free()
 
 
@@ -20,7 +17,6 @@ func _ready() -> void:
 
 func reset() -> void:
 	if not (hint is MiscellaneousHint and hint.is_pinned()):
-		removal_requested.emit(hint)
 		queue_free()
 
 
