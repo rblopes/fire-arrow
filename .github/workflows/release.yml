@@ -5,7 +5,7 @@ on:
     tags: v0.*
 
 env:
-  GODOT_RELEASE: 4.0.2
+  GODOT_RELEASE: 4.0.3
 
 jobs:
   release:

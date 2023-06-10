@@ -11,7 +11,7 @@ with Godot Engine.
 ## What is it?
 
 This is a small, item and hint display tracker, intended to aid on OoTR games,
-friendly races and matches of the "Standard" randomizer category.
+friendly races and matches of the "Standard" category.
 
 It contains the usual features found in similar trackers, including:
 
@@ -66,8 +66,7 @@ As expected, using Fire Arrow should be quick and simple:
 |:------------------:|---------------------------------------|
 | <kbd>B</kbd>       | Add irrelevant (barren) location      |
 | <kbd>G</kbd>       | Add goal location                     |
-| <kbd>H</kbd>       | Add hint                              |
-| <kbd>A</kbd>       | Set adult spawn location              |
+| <kbd>H</kbd>       | Add item hint                         |
 | <kbd>C</kbd>       | Set child spawn location              |
 | <kbd>F12</kbd>     | Take screenshot                       |
 | <kbd>F4</kbd>      | Start, pause and resume the stopwatch |
@@ -109,7 +108,7 @@ folder for you:
 - On Linux: `$HOME/.local/share/Fire Arrow`
 - On Windows: `%APPDATA%\Fire Arrow`
 
-> NOTE: For the time being, app settings can only be changed by editing its
+> **NOTE**: For the time being, app settings can only be changed by editing its
 > settings file manually. You'll need to run and quit the app at least once to
 > create and customize it. This behaviour will be improved on later releases.
 
@@ -154,9 +153,6 @@ The configuration keys are explained below:
 
   - **`standard_s6`**: Standard Season 6 settings, allowing 5 goal paths, 7
     pinned hints and 8 occasional hints.
-
-  - **`standard_s5`**: Legacy, Standard Season 5 settings, allowing 3 barren
-    places, 5 goal paths, 7 preset pinned hints and 5 occasional hints.
 
 
 ## License
