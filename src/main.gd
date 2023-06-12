@@ -1,6 +1,7 @@
 extends MarginContainer
 
 const MODES: Dictionary = {
+	"brasil_s1": "res://assets/data/brasil_s1.json",
 	"league_s4": "res://assets/data/league_s4.json",
 	"standard_s6": "res://assets/data/standard_s6.json",
 }

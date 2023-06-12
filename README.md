@@ -144,7 +144,11 @@ The configuration keys are explained below:
     to "Water Medallion".
 
 - **`preset/mode`**: Changes how hint annotations work and are displayed on the
-  tracker. Currently, three presets are available:
+  tracker. Currently, the following presets are available:
+
+  - **`brasil_s1`**: "Copa do Brasil de OoTR" hints, with 3 barren locations,
+    5 paths to rewards, 9 pinned hints and capacity for up to 7 occasional hints
+    (either single or dual hints).
 
   - **`league_s4`**: OoTR League Season 4 custom hints, grouping 3 irrelevant
     places, 5 goal paths, 8 pinned hints (including 30, 40 and 50 Gold
