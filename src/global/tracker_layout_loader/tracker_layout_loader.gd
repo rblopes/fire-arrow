@@ -1,7 +1,15 @@
 extends Node
 
+@onready
+var _modes: Dictionary = get_meta("modes")
 
-func load_layout(file_path: String) -> TrackerLayout:
+
+func load_builtin_layout(layout_name: String) -> TrackerLayout:
+	var result := parse_layout_data(_get_builtin_layout(layout_name).data)
+	return result
+
+
+func load_layout_from_file(file_path: String) -> TrackerLayout:
 	var result := parse_layout_data(JsonFile.load_json(file_path, {}))
 	result.file_path = file_path
 	return result
@@ -153,3 +161,8 @@ func parse_special_location_params(params: Dictionary) -> SpecialLocationHint:
 				if value is String:
 					result.shortcut = UiHelper.get_shortcut(value.strip_edges())
 	return result
+
+
+func _get_builtin_layout(layout_name: String) -> JSON:
+	assert(layout_name in _modes, "Invalid preset name")
+	return _modes.get(layout_name)

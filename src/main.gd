@@ -1,21 +1,10 @@
 extends MarginContainer
 
-const MODES: Dictionary = {
-	"brasil_s1": "res://assets/data/brasil_s1.json",
-	"league_s4": "res://assets/data/league_s4.json",
-	"standard_s6": "res://assets/data/standard_s6.json",
-}
-
 var tracker_layout: TrackerLayout = null
 
 
-func _load_tracker_layout(mode: String) -> TrackerLayout:
-	assert(mode in MODES)
-	return TrackerLayoutLoader.load_layout(MODES.get(mode))
-
-
 func _ready() -> void:
-	tracker_layout = _load_tracker_layout(PreferencesManager.get_value("preset", "mode"))
+	tracker_layout = TrackerLayoutLoader.load_builtin_layout(PreferencesManager.get_value("preset", "mode"))
 	%Prizes.set_drag_and_drop_behaviour(PreferencesManager.get_value("prizes", "check_in_reverse"))
 	%Songs.set_check_behaviour(PreferencesManager.get_value("songs", "autocheck"))
 	%Songs.set_drag_and_drop_behaviour(PreferencesManager.get_value("songs", "check_in_reverse"))
