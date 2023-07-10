@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v0.3.1
+
+- Added "Copa do Brasil de OoTR" preset
+
+
 # v0.3
 
 - Reworked UI theming of the hints area with a "dark" theme, variants planned
