@@ -21,12 +21,11 @@ config/preferences_path="user://preferences.cfg"
 [autoload]
 
 JsonFile="*res://src/global/json_file.gd"
+UiHelper="*res://src/global/ui_helper/ui_helper.tscn"
+Settings="*res://src/global/settings.gd"
+TrackerLayoutLoader="*res://src/global/tracker_layout_loader/tracker_layout_loader.tscn"
 Locations="*res://src/global/locations.gd"
 Hints="*res://src/global/hints.gd"
-TrackerLayoutLoader="*res://src/global/tracker_layout_loader/tracker_layout_loader.tscn"
-Const="*res://src/global/const.gd"
-PreferencesManager="*res://src/global/preferences_manager.gd"
-UiHelper="*res://src/global/ui_helper/ui_helper.tscn"
 
 [debug]
 

@@ -1,24 +1,10 @@
 extends Node
 
-const SCREENSHOT_FILENAME_FORMAT_MASK := "%04d-%02d-%02d %02d-%02d-%02d.png"
-
-@export
-var screenshot_output_path: String = ""
-
 @onready
 var _icon_drag_preview_scene: PackedScene = get_meta("icon_drag_preview_scene")
 
-
-func _get_screenshot_filename() -> String:
-	var dt := Time.get_datetime_dict_from_system()
-	return SCREENSHOT_FILENAME_FORMAT_MASK % [
-		dt.year,
-		dt.month,
-		dt.day,
-		dt.hour,
-		dt.minute,
-		dt.second,
-	]
+@onready
+var _screenshot_outdir: String = Settings.get_value("screenshots", "outdir")
 
 
 func get_shortcut(key_combination: String) -> Shortcut:
@@ -42,13 +28,17 @@ func get_shortcut(key_combination: String) -> Shortcut:
 
 func set_drag_preview_for(control: Control, data: Variant) -> void:
 	var preview: Control = _icon_drag_preview_scene.instantiate()
-	preview.texture = data.texture if "texture" in data else null
+	preview.texture = data.get("texture")
 	control.set_drag_preview(preview)
 
 
 func take_screenshot(viewport: Viewport) -> void:
-	if not DirAccess.dir_exists_absolute(screenshot_output_path):
-		if DirAccess.make_dir_recursive_absolute(screenshot_output_path) != OK:
+	if not DirAccess.dir_exists_absolute(_screenshot_outdir):
+		if DirAccess.make_dir_recursive_absolute(_screenshot_outdir) != OK:
 			return
 	var image := viewport.get_texture().get_image()
-	image.save_png(screenshot_output_path.path_join(_get_screenshot_filename()))
+	image.save_png(_screenshot_outdir.path_join(_get_screenshot_filename()))
+
+
+func _get_screenshot_filename() -> String:
+	return str(Time.get_datetime_string_from_system(false, true).replace(":", '-'), ".png")
