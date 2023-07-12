@@ -40,6 +40,11 @@ func _ready() -> void:
 	_add_location("ZR", "Zora's River")
 
 
+func clear_all() -> void:
+	for location in _locations.values():
+		location.clear_flags()
+
+
 func get_without_flags(flags: int) -> Array[Hint]:
 	var result: Array[Hint] = []
 	result.assign(_locations.values().filter(func(x): return not x.has_flags(flags)))

@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://8e53x5eij6u2"]
+
+[ext_resource type="FontFile" uid="uid://3djjltpektvx" path="res://assets/fonts/ibm_plex/IBMPlexSans-Bold.otf" id="1_e6fvk"]
+[ext_resource type="FontFile" uid="uid://dukw70nt6xk7h" path="res://assets/fonts/ibm_plex/IBMPlexSans-Regular.otf" id="1_ye6xx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60kic"]
+resource_name = "Empty"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a63xx"]
+resource_name = "Empty"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qi6gl"]
+resource_name = "Empty"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hde0w"]
+resource_name = "Empty"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0ii3"]
+resource_name = "Empty"
+
+[resource]
+default_font = ExtResource("1_ye6xx")
+default_font_size = 12
+HBoxContainer/constants/separation = 2
+MenuButton/styles/disabled = SubResource("StyleBoxEmpty_60kic")
+MenuButton/styles/focus = SubResource("StyleBoxEmpty_a63xx")
+MenuButton/styles/hover = SubResource("StyleBoxEmpty_qi6gl")
+MenuButton/styles/normal = SubResource("StyleBoxEmpty_hde0w")
+MenuButton/styles/pressed = SubResource("StyleBoxEmpty_x0ii3")
+TitleLabel/base_type = &"Label"
+TitleLabel/fonts/font = ExtResource("1_e6fvk")

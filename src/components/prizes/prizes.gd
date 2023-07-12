@@ -25,8 +25,8 @@ func _on_context_menu_id_pressed(id: int) -> void:
 			reset()
 
 
-func _on_context_menu_requested(at_position: Vector2) -> void:
-	$ContextMenu.popup(Rect2i(at_position, $ContextMenu.size))
+func _on_context_menu_requested(at_position: Vector2i) -> void:
+	$ContextMenu.popup(Rect2i($"/root".get_window().get_position() + at_position, $ContextMenu.size))
 
 
 func apply_settings() -> void:

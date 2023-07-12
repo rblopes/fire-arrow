@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1jfgaet2p3ae"]
+[gd_scene load_steps=10 format=3 uid="uid://b1jfgaet2p3ae"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://cniqyxx5xprrh" path="res://assets/fonts/ibm_plex/IBMPlexSans-Text.otf" id="1_uggvd"]
 [ext_resource type="PackedScene" uid="uid://dl17lxvnk5twg" path="res://src/components/items/items.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://bo8r234eyusci" path="res://src/components/prizes/prizes.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://ccwvcyv5rxxxh" path="res://src/ui/components/header_bar/header_bar.tscn" id="3_0wg2t"]
 [ext_resource type="PackedScene" uid="uid://c2u7bx3xvus7p" path="res://src/components/stopwatch/stopwatch.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://ce2t81j6ebgj2" path="res://src/components/songs/songs.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://ef15rxml4bn5" path="res://src/components/hints/hints.tscn" id="7"]
@@ -28,6 +29,10 @@ script = ExtResource("1")
 [node name="Contents" type="VBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 4
+
+[node name="HeaderBar" parent="Contents" instance=ExtResource("3_0wg2t")]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="Middle" type="HBoxContainer" parent="Contents"]
 layout_mode = 2
@@ -59,3 +64,5 @@ theme = SubResource("1")
 [node name="Stopwatch" parent="Contents" instance=ExtResource("4")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[connection signal="command_requested" from="Contents/HeaderBar" to="." method="_on_header_bar_command_requested"]

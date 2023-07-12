@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccwvcyv5rxxxh"]
+
+[ext_resource type="Script" path="res://src/ui/components/header_bar/header_bar.gd" id="1_ckle6"]
+[ext_resource type="Theme" uid="uid://8e53x5eij6u2" path="res://src/ui/components/header_bar/theme.tres" id="1_cubjq"]
+[ext_resource type="Texture2D" uid="uid://cfs7uldqmec4m" path="res://assets/ui/material_icons/18dp/menu.svg" id="3_uybs3"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ouj11"]
+device = -1
+shift_pressed = true
+physical_keycode = 4194341
+
+[sub_resource type="Shortcut" id="Shortcut_nrq03"]
+events = [SubResource("InputEventKey_ouj11")]
+
+[node name="HeaderBar" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+offset_right = 23.0
+offset_bottom = 18.0
+theme = ExtResource("1_cubjq")
+script = ExtResource("1_ckle6")
+
+[node name="Menu" type="MenuButton" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nrq03")
+icon = ExtResource("3_uybs3")
+icon_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_type_variation = &"TitleLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

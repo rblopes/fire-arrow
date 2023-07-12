@@ -1,18 +1,32 @@
 extends Node
 
+signal loaded(tracker_layout: TrackerLayout)
+
 @onready
 var _modes: Dictionary = get_meta("modes")
 
 
-func load_builtin_layout(layout_name: String) -> TrackerLayout:
-	var result := parse_layout_data(_get_builtin_layout(layout_name).data)
+func get_builtin_presets_info() -> Array[Dictionary]:
+	var result: Array[Dictionary] = []
+	for key in _modes:
+		var preset: JSON = _modes[key]
+		result.append({"preset_name": key, "title": preset.data.get("title")})
 	return result
 
 
-func load_layout_from_file(file_path: String) -> TrackerLayout:
+func load_builtin_layout(layout_name: String) -> void:
+	var data = _get_builtin_layout(layout_name).data
+	Locations.clear_all()
+	Hints.clear()
+	loaded.emit(parse_layout_data(data))
+
+
+func load_layout_from_file(file_path: String) -> void:
+	Locations.clear_all()
+	Hints.clear()
 	var result := parse_layout_data(JsonFile.load_json(file_path, {}))
 	result.file_path = file_path
-	return result
+	loaded.emit(result)
 
 
 func parse_counter_params(params: Dictionary) -> CounterHint:
@@ -90,6 +104,9 @@ func parse_layout_data(data: Dictionary) -> TrackerLayout:
 			"hints":
 				if value is Array:
 					result.hints = parse_hints(value)
+			"title":
+				if value is String:
+					result.title = value
 	return result
 
 

@@ -11,7 +11,7 @@ with Godot Engine.
 ## What is it?
 
 This is a small, item and hint display tracker, intended to aid on OoTR games,
-friendly races and matches of the "Standard" category.
+friendly races and competitive matches of the "Standard" category.
 
 It contains the usual features found in similar trackers, including:
 
@@ -25,7 +25,7 @@ It contains the usual features found in similar trackers, including:
 
 ### Quick guide
 
-As expected, using Fire Arrow should be quick and simple:
+As expected, using Fire Arrow should be a quick and simple task:
 
 - Use the mouse to click an item, song or prize icon to highlight (activate)
   it; drag and drop any of these icons over the hints below.
@@ -36,23 +36,38 @@ As expected, using Fire Arrow should be quick and simple:
 - You can also drag and drop prize icons over one another to change their
   labelled dungeons (this feature can also be tweaked, see below).
 
-- Enter location and gossip stone hints using the keyboard. Each kind has its
-  own keyboard shortcut and grouping. Miscellaneous hints (including "always",
-  "sometimes", generic counters and spawn locations) are grouped together.
+- Enter location and gossip stone hints using the keyboard or clicking the name
+  of the hint category. Miscellaneous hints (including "always", "sometimes",
+  generic counters and spawn locations) are grouped together.
 
-  When you start entering hints, a short filter list will appear, just keep on
-  typing until you find the entry you need: it has "fuzzy search", so you don't
-  have to type the exactly text. Use the arrows and the Enter key to select and
-  choose the desired location name or hint.
+  When you start entering hints, a short filtered list will appear. Just type
+  a few letters and select what you need: it has "fuzzy search", so you don't
+  need to type the exact match. Use the arrows keys and the Enter key to select
+  and choose the desired location name or hint.
 
   To remove a hint, click it with the right mouse button. You can also interact
   with hints using the mouse wheel in a few places, just try it!
 
-  > **Note**: At the moment, it is only possible to start annotating hints using
-  > the keyboard. That will change on future revisions of the tracker.
-
 - Finally, you can start, pause, resume and reset the stopwatch at the bottom
   using the mouse or the keyboard.
+
+
+### Available hint presets
+
+Currently, a curated list of hint annotation presets come bundled with the
+tracker:
+
+- **Copa do Brasil de OoTR**: with 3 barren locations, 5 paths to rewards, 9
+  pinned hints and capacity for up to 7 occasional hints (either single or dual
+  hints).
+
+- **OoTR League (Season 4)**: 3 irrelevant places, 5 goal paths, 8 pinned hints
+  and up to 9 occasional hints (either single or dual hints).
+
+- **Standard (Season 6)**, allowing 5 goal paths, 7 pinned hints and 8
+  occasional hints.
+
+Use the "Presets" command of the app menu to switch to any option.
 
 
 ### Keyboard shortcuts
@@ -62,18 +77,20 @@ As expected, using Fire Arrow should be quick and simple:
 > Retroarch) with unintended consequences. Pay careful attention when using the
 > tracker, as it only responds to actions while its window is focused.
 
-| Keyboard Shortcut  | Function                              |
-|:------------------:|---------------------------------------|
-| <kbd>B</kbd>       | Add irrelevant (barren) location      |
-| <kbd>G</kbd>       | Add goal location                     |
-| <kbd>H</kbd>       | Add item hint                         |
-| <kbd>C</kbd>       | Set child spawn location              |
-| <kbd>F12</kbd>     | Take screenshot                       |
-| <kbd>F4</kbd>      | Start, pause and resume the stopwatch |
-| <kbd>Ctrl+F4</kbd> | Reset the stopwatch                   |
-| <kbd>Ctrl+F2</kbd> | Reset the tracker                     |
-| <kbd>Ctrl+O</kbd>  | Open the app data folder              |
-| <kbd>Ctrl+Q</kbd>  | Quit the app                          |
+| Keyboard Shortcut    | Function                              |
+|:--------------------:|---------------------------------------|
+| <kbd>Shift+F10</kbd> | App menu                              |
+| <kbd>B</kbd>         | Add irrelevant (barren) location      |
+| <kbd>G</kbd>         | Add goal location                     |
+| <kbd>H</kbd>         | Add item hint                         |
+| <kbd>C</kbd>         | Set child spawn location              |
+| <kbd>F12</kbd>       | Take screenshot                       |
+| <kbd>F4</kbd>        | Start, pause and resume the stopwatch |
+| <kbd>Ctrl+F4</kbd>   | Reset the stopwatch                   |
+| <kbd>Ctrl+F2</kbd>   | Reset the tracker                     |
+| <kbd>Ctrl+D</kbd>    | Open settings dialog                  |
+| <kbd>Ctrl+O</kbd>    | Open the app data folder              |
+| <kbd>Ctrl+Q</kbd>    | Quit the app                          |
 
 
 ### Location symbol reference
@@ -101,16 +118,16 @@ As expected, using Fire Arrow should be quick and simple:
 
 ### Configuration
 
+> **NOTE**: At the moment, some app settings can only be changed by editing its
+> settings file manually. You'll need to run and quit the app at least once to
+> create and customize it. This behaviour will be improved on later releases.
+
 Settings are kept in a `preferences.cfg` file, located inside the application
 data folder. Typing <kbd>Ctrl+O</kbd> while the app is running will open that
 folder for you:
 
-- On Linux: `$HOME/.local/share/Fire Arrow`
-- On Windows: `%APPDATA%\Fire Arrow`
-
-> **NOTE**: For the time being, app settings can only be changed by editing its
-> settings file manually. You'll need to run and quit the app at least once to
-> create and customize it. This behaviour will be improved on later releases.
+- On Linux: `$HOME/.local/share/fire-arrow`
+- On Windows: `%APPDATA%\fire-arrow`
 
 The configuration keys are explained below:
 
@@ -142,21 +159,6 @@ The configuration keys are explained below:
     assign the dungeon of the former on to the latter, e.g. dragging the "Goron
     Ruby" and dropping over the "Water Medallion" will assign "Dodongo's Cavern"
     to "Water Medallion".
-
-- **`preset/mode`**: Changes how hint annotations work and are displayed on the
-  tracker. Currently, the following presets are available:
-
-  - **`brasil_s1`**: "Copa do Brasil de OoTR" hints, with 3 barren locations,
-    5 paths to rewards, 9 pinned hints and capacity for up to 7 occasional hints
-    (either single or dual hints).
-
-  - **`league_s4`**: OoTR League Season 4 custom hints, grouping 3 irrelevant
-    places, 5 goal paths, 8 pinned hints (including 30, 40 and 50 Gold
-    Skulltulas) and up to 9 occasional hints (including separate hints for the
-    ones found in dual-hint gossip stones).
-
-  - **`standard_s6`**: Standard Season 6 settings, allowing 5 goal paths, 7
-    pinned hints and 8 occasional hints.
 
 
 ## License

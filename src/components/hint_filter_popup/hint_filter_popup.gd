@@ -25,6 +25,7 @@ func _on_popup_hide() -> void:
 func prompt(hint_group_filter: HintGroupFilter, control: Control) -> void:
 	_hint_group_filter = hint_group_filter
 	popup(Rect2i(
+		Vector2($"/root".get_window().get_position()) +
 		control.get_global_rect().position - Vector2(0, 128),
 		Vector2(control.size.x, 128)
 	))

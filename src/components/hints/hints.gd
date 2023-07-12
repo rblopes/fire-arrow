@@ -6,6 +6,11 @@ func add_hint_groups(hint_groups: Array[HintGroup]) -> void:
 		$Contents.add_hint_group(hint_group)
 
 
+func clear_hint_groups() -> void:
+	for node in $Contents.get_children():
+		node.queue_free()
+
+
 func reset() -> void:
 	get_tree().call_group("hints", "reset")
 
