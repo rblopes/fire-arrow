@@ -9,6 +9,7 @@ enum MenuId {
 	RESET_STOPWATCH,
 	RESET_TRACKER,
 	TAKE_SCREENSHOT,
+	OPEN_SCREENSHOT_FOLDER,
 	OPEN_DATA_FOLDER,
 	SETTINGS,
 	QUIT,
@@ -36,6 +37,8 @@ func _on_menu_index_pressed(index: int, menu: PopupMenu) -> void:
 			command_requested.emit("reset_tracker")
 		MenuId.TAKE_SCREENSHOT:
 			command_requested.emit("take_screenshot")
+		MenuId.OPEN_SCREENSHOT_FOLDER:
+			command_requested.emit("open_screenshot_folder")
 		MenuId.OPEN_DATA_FOLDER:
 			command_requested.emit("open_data_folder")
 		MenuId.SETTINGS:
@@ -57,14 +60,14 @@ func _setup_menu(menu: PopupMenu) -> void:
 	menu.add_item("Reset Stopwatch", MenuId.RESET_STOPWATCH, KEY_MASK_CTRL | KEY_F4)
 	@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")
 	menu.add_item("Reset Tracker", MenuId.RESET_TRACKER, KEY_MASK_CTRL | KEY_F2)
-	@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")
-	menu.add_item("Take Screenshot", MenuId.TAKE_SCREENSHOT, KEY_F12)
 	menu.add_separator()
 	#-----------------------------------------------------------------------------
 	@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")
-	menu.add_item("Open Data Folder", MenuId.OPEN_DATA_FOLDER, KEY_MASK_CTRL | KEY_O)
-	#@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")
-	#menu.add_item("Settings...", MenuId.SETTINGS, KEY_MASK_CTRL | KEY_D)
+	menu.add_item("Take Screenshot", MenuId.TAKE_SCREENSHOT, KEY_F12)
+	menu.add_item("Open Screenshot Folder", MenuId.OPEN_SCREENSHOT_FOLDER)
+	menu.add_item("Open Data Folder", MenuId.OPEN_DATA_FOLDER)
+	@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")
+	menu.add_item("Settings...", MenuId.SETTINGS, KEY_MASK_CTRL | KEY_D)
 	menu.add_separator()
 	#-----------------------------------------------------------------------------
 	@warning_ignore("int_as_enum_without_cast", "int_as_enum_without_match")

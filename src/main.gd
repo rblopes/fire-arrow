@@ -31,11 +31,19 @@ func _on_header_bar_command_requested(command: String, metadata: Variant = null)
 			%Hints.reset()
 			%Stopwatch.reset()
 		"take_screenshot":
-			UiHelper.take_screenshot(get_window())
+			var outdir: String = Settings.get_value("screenshots", "outdir")
+			if Settings.is_default_screenshot_outdir(outdir) and not DirAccess.dir_exists_absolute(outdir):
+				if DirAccess.make_dir_absolute(outdir) != OK:
+					return
+			UiHelper.take_screenshot(outdir, get_window())
+		"open_screenshot_folder":
+			var outdir: String = Settings.get_value("screenshots", "outdir")
+			if DirAccess.dir_exists_absolute(outdir):
+				OS.shell_open(ProjectSettings.globalize_path(outdir))
 		"open_data_folder":
 			OS.shell_open(OS.get_user_data_dir())
 		"settings":
-			pass
+			Settings.show_dialog()
 		"quit":
 			Settings.save()
 			get_tree().quit()

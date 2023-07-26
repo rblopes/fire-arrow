@@ -22,7 +22,7 @@ config/preferences_path="user://preferences.cfg"
 
 JsonFile="*res://src/global/json_file.gd"
 UiHelper="*res://src/global/ui_helper/ui_helper.tscn"
-Settings="*res://src/global/settings.gd"
+Settings="*res://src/global/settings/settings.tscn"
 TrackerLayoutLoader="*res://src/global/tracker_layout_loader/tracker_layout_loader.tscn"
 Locations="*res://src/global/locations.gd"
 Hints="*res://src/global/hints.gd"

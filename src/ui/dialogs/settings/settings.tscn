@@ -1,0 +1,150 @@
+[gd_scene load_steps=6 format=3 uid="uid://bh57vevqvh0fy"]
+
+[ext_resource type="Theme" uid="uid://cyi0uaovva14g" path="res://src/ui/dialogs/settings/theme.tres" id="1_8tgry"]
+[ext_resource type="Texture2D" uid="uid://doha8j6lt3q4n" path="res://assets/ui/material_icons/18dp/folder_special.svg" id="2_sjidk"]
+[ext_resource type="Script" path="res://src/ui/dialogs/settings/settings.gd" id="2_w77kf"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_76fnd"]
+device = -1
+physical_keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_454o6"]
+events = [SubResource("InputEventKey_76fnd")]
+
+[node name="Settings" type="Window"]
+title = "Settings"
+size = Vector2i(450, 400)
+wrap_controls = true
+transient = true
+exclusive = true
+unresizable = true
+min_size = Vector2i(450, 400)
+max_size = Vector2i(450, 400)
+theme = ExtResource("1_8tgry")
+script = ExtResource("2_w77kf")
+
+[node name="FolderDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+size = Vector2i(800, 400)
+ok_button_text = "Select Current Folder"
+mode_overrides_title = false
+file_mode = 2
+access = 2
+
+[node name="Contents" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ContentsContainer"
+
+[node name="Layout" type="VBoxContainer" parent="Contents"]
+layout_mode = 2
+theme_type_variation = &"LayoutVBoxContainer"
+
+[node name="SongOptions" type="VBoxContainer" parent="Contents/Layout"]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Contents/Layout/SongOptions"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Songs"
+
+[node name="AllowDragAndDropSongs" type="CheckBox" parent="Contents/Layout/SongOptions"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Drag-and-drop icons over other songs"
+
+[node name="AutocheckSongs" type="CheckBox" parent="Contents/Layout/SongOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Highlight icons with drag-and-drop"
+
+[node name="CheckSongsInReverse" type="CheckBox" parent="Contents/Layout/SongOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Assign small icons in reverse"
+
+[node name="PrizeOptions" type="VBoxContainer" parent="Contents/Layout"]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Contents/Layout/PrizeOptions"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Prizes"
+
+[node name="AllowDragAndDropPrizes" type="CheckBox" parent="Contents/Layout/PrizeOptions"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Drag-and-drop icons over other prizes"
+
+[node name="CheckPrizesInReverse" type="CheckBox" parent="Contents/Layout/PrizeOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Drag-and-drop icons assign dungeon labels in reverse"
+
+[node name="StopwatchOptions" type="VBoxContainer" parent="Contents/Layout"]
+visible = false
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Contents/Layout/StopwatchOptions"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Stopwatch"
+
+[node name="EnableStopwatch" type="CheckBox" parent="Contents/Layout/StopwatchOptions"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Whether or not to use the embedded stopwatch.
+
+(It's OK to use Livesplit, I'll understand...)"
+text = "Enable/disable the stopwatch"
+
+[node name="ScreenshotOptions" type="VBoxContainer" parent="Contents/Layout"]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Contents/Layout/ScreenshotOptions"]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Screenshots"
+
+[node name="Combo" type="HBoxContainer" parent="Contents/Layout/ScreenshotOptions"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Contents/Layout/ScreenshotOptions/Combo"]
+layout_mode = 2
+text = "Output Folder"
+
+[node name="OutDir" type="LineEdit" parent="Contents/Layout/ScreenshotOptions/Combo"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+
+[node name="ChooseFolder" type="Button" parent="Contents/Layout/ScreenshotOptions/Combo"]
+layout_mode = 2
+icon = ExtResource("2_sjidk")
+flat = true
+
+[node name="Actions" type="HBoxContainer" parent="Contents/Layout"]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 2
+
+[node name="Close" type="Button" parent="Contents/Layout/Actions"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_454o6")
+shortcut_in_tooltip = false
+text = "Close"
+
+[connection signal="close_requested" from="." to="." method="hide"]
+[connection signal="dir_selected" from="FolderDialog" to="." method="_on_folder_dialog_dir_selected"]
+[connection signal="pressed" from="Contents/Layout/ScreenshotOptions/Combo/ChooseFolder" to="." method="_on_choose_folder_pressed"]
+[connection signal="pressed" from="Contents/Layout/Actions/Close" to="." method="hide"]

@@ -3,9 +3,6 @@ extends Node
 @onready
 var _icon_drag_preview_scene: PackedScene = get_meta("icon_drag_preview_scene")
 
-@onready
-var _screenshot_outdir: String = Settings.get_value("screenshots", "outdir")
-
 
 func get_shortcut(key_combination: String) -> Shortcut:
 	var result := Shortcut.new()
@@ -32,12 +29,11 @@ func set_drag_preview_for(control: Control, data: Variant) -> void:
 	control.set_drag_preview(preview)
 
 
-func take_screenshot(viewport: Viewport) -> void:
-	if not DirAccess.dir_exists_absolute(_screenshot_outdir):
-		if DirAccess.make_dir_recursive_absolute(_screenshot_outdir) != OK:
-			return
+func take_screenshot(dir: String, viewport: Viewport) -> void:
+	if not DirAccess.dir_exists_absolute(dir):
+		return
 	var image := viewport.get_texture().get_image()
-	image.save_png(_screenshot_outdir.path_join(_get_screenshot_filename()))
+	image.save_png(dir.path_join(_get_screenshot_filename()))
 
 
 func _get_screenshot_filename() -> String:

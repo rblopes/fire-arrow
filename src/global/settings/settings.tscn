@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://8a4ymthcfryn"]
+
+[ext_resource type="Script" path="res://src/global/settings/settings.gd" id="1_5alxo"]
+[ext_resource type="PackedScene" uid="uid://bh57vevqvh0fy" path="res://src/ui/dialogs/settings/settings.tscn" id="2_mwuks"]
+
+[node name="Settings" type="Node"]
+script = ExtResource("1_5alxo")
+
+[node name="Dialog" parent="." instance=ExtResource("2_mwuks")]
+visible = false
+
+[connection signal="setting_changed" from="Dialog" to="." method="_on_dialog_setting_changed"]

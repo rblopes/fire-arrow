@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cyi0uaovva14g"]
+
+[ext_resource type="FontFile" uid="uid://bpf8gxwfdubvc" path="res://assets/fonts/ibm_plex/IBMPlexSans-SemiBold.otf" id="1_xolne"]
+[ext_resource type="FontFile" uid="uid://dukw70nt6xk7h" path="res://assets/fonts/ibm_plex/IBMPlexSans-Regular.otf" id="2_m7m2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1i86"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[resource]
+default_font = ExtResource("2_m7m2r")
+default_font_size = 14
+ContentsContainer/base_type = &"PanelContainer"
+ContentsContainer/styles/panel = SubResource("StyleBoxFlat_g1i86")
+HBoxContainer/constants/separation = 4
+HeadingLabel/base_type = &"Label"
+HeadingLabel/fonts/font = ExtResource("1_xolne")
+LayoutVBoxContainer/base_type = &"VBoxContainer"
+LayoutVBoxContainer/constants/separation = 4
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+VBoxContainer/constants/separation = 0
