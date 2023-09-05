@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://src/global/tracker_layout_loader/tracker_layout_loader.gd" id="1"]
 [ext_resource type="JSON" path="res://assets/data/brasil_s1.json" id="2"]
-[ext_resource type="JSON" path="res://assets/data/league_s4.json" id="3"]
+[ext_resource type="JSON" path="res://assets/data/league.json" id="3"]
 [ext_resource type="JSON" path="res://assets/data/standard_s6.json" id="4"]
 
 [node name="tracker_layout_loader" type="Node"]
 script = ExtResource("1")
 metadata/modes = {
 "brasil_s1": ExtResource("2"),
-"league_s4": ExtResource("3"),
+"league": ExtResource("3"),
 "standard_s6": ExtResource("4")
 }

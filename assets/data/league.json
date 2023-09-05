@@ -1,5 +1,5 @@
 {
-	"title": "OoTR League (S4)",
+	"title": "OoTR League (S5)",
 	"groups": [
 		{
 			"type": "locations",
@@ -41,7 +41,7 @@
 			"type": "counter",
 			"params": {
 				"description": "Collected Skulltulas",
-				"increment_by": 10,
+				"increment_by": 5,
 				"max_value": 50
 			}
 		},
@@ -85,20 +85,6 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GC",
-				"description": "Maze Left"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "GC",
-				"description": "Spinning Pot"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
 				"symbol": "GF",
 				"description": "Horseback Archery",
 				"icons": 2
@@ -108,21 +94,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "GTG",
-				"description": "Last Chest"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "GTG",
 				"description": "Underwater Rupees"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "GV",
-				"description": "Behind Rocks"
 			}
 		},
 		{
@@ -144,7 +116,8 @@
 			"type": "item",
 			"params": {
 				"symbol": "HC",
-				"description": "Great Fairy"
+				"description": "Great Fairies",
+				"icons": 2
 			}
 		},
 		{
@@ -166,7 +139,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "IC",
-				"description": "Wolfos Room",
+				"description": "White Wolfos",
 				"icons": 2
 			}
 		},
@@ -174,14 +147,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "JJ",
-				"description": "Stingers Room"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "KAK",
-				"description": "20 Gold Skulltulas"
+				"description": "Stingers"
 			}
 		},
 		{
@@ -226,13 +192,6 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LH",
-				"description": "Shooting the Sun"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
 				"symbol": "LW",
 				"description": "Skull Kid"
 			}
@@ -271,21 +230,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "MKT",
-				"description": "Treasure Chest Game"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "OGC",
-				"description": "Great Fairy"
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "SHA",
-				"description": "Burning Skull"
+				"description": "Treasure Box Shop"
 			}
 		},
 		{
@@ -294,13 +239,6 @@
 				"symbol": "SPI",
 				"description": "Colossus Hands",
 				"icons": 2
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "WAT",
-				"description": "Boss Key Room"
 			}
 		},
 		{
@@ -322,6 +260,14 @@
 			"type": "item",
 			"params": {
 				"symbol": "ZD",
+				"description": "Diving & Torches",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZD",
 				"description": "K. Zora Thawed"
 			}
 		},
@@ -336,15 +282,15 @@
 			"type": "item",
 			"params": {
 				"symbol": "ZR",
-				"description": "Frogs in a Storm"
+				"description": "Frogs Final Reward",
+				"is_pinned": true
 			}
 		},
 		{
 			"type": "item",
 			"params": {
 				"symbol": "ZR",
-				"description": "Frogs Final Reward",
-				"is_pinned": true
+				"description": "Frogs in a Storm"
 			}
 		}
 	]

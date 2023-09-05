@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.1
+- Updated "League" settings preset
+
+
 ## v0.4.0
 
 - Added a "Header Bar", showing the currently selected hint preset and a app
