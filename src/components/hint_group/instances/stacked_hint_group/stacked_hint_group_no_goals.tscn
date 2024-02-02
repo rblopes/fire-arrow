@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfh5xe41eokwq"]
+
+[ext_resource type="PackedScene" uid="uid://csuig0v2kkwej" path="res://src/components/hint_group/instances/stacked_hint_group/stacked_hint_group.tscn" id="1_mmne1"]
+[ext_resource type="Script" path="res://src/classes/hints/location_hint.gd" id="2_knniw"]
+[ext_resource type="PackedScene" uid="uid://n5lfrmywnqb8" path="res://src/components/hint/instances/woth_location_hint/woth_location_hint.tscn" id="3_usfa2"]
+
+[node name="StackedHintGroupNoGoals" instance=ExtResource("1_mmne1")]
+metadata/hint_button_scenes = {
+ExtResource("2_knniw"): ExtResource("3_usfa2")
+}

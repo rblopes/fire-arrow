@@ -60,11 +60,18 @@ As expected, using Fire Arrow should be quick and simple:
 Currently, the following list of hint annotation presets are bundled with the
 tracker:
 
+- **Tournament of Truth**: up to 4 barren locations, 5 paths to rewards, 7
+  pinned hints and capacity for up to 10 occasional hints (either single or dual
+  hints).
+
+- **Scrubs Tournament (Season 5)**: 3 barren locations, 5 "Way of the
+  Hero" locations, 9 pinned hints and capacity for up to 7 occasional hints.
+
 - **Copa do Brasil de OoTR**: with 3 barren locations, 5 paths to rewards, 9
   pinned hints and capacity for up to 7 occasional hints (either single or dual
   hints).
 
-- **OoTR League (Season 4)**: 3 irrelevant places, 5 goal paths, 8 pinned hints
+- **OoTR League (Season 5)**: 3 irrelevant places, 5 goal paths, 8 pinned hints
   and up to 9 occasional hints (either single or dual hints).
 
 - **Standard (Season 6)**, allowing 5 goal paths, 7 pinned hints and 8

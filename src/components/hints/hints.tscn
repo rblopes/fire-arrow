@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ef15rxml4bn5"]
+[gd_scene load_steps=9 format=3 uid="uid://ef15rxml4bn5"]
 
 [ext_resource type="Script" path="res://src/components/hints/hints.gd" id="1"]
 [ext_resource type="Theme" uid="uid://4nhrucx1egac" path="res://src/components/hints/theme.tres" id="1_m4m35"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://by27scaerjy68" path="res://src/components/hint_filter_popup/hint_filter_popup.tscn" id="5_5ac2p"]
 [ext_resource type="PackedScene" uid="uid://bb4seeumg1cww" path="res://src/components/hint_group/instances/inline_hint_group/inline_hint_group.tscn" id="6_7kc6u"]
 [ext_resource type="Script" path="res://src/components/hints/contents.gd" id="6_t0e82"]
+[ext_resource type="PackedScene" uid="uid://cfh5xe41eokwq" path="res://src/components/hint_group/instances/stacked_hint_group/stacked_hint_group_no_goals.tscn" id="8_0t64r"]
 
 [node name="Hints" type="PanelContainer"]
 theme = ExtResource("1_m4m35")
@@ -23,7 +24,8 @@ script = ExtResource("6_t0e82")
 metadata/hint_group_scenes = {
 "hints": ExtResource("3"),
 "inline": ExtResource("6_7kc6u"),
-"stacked": ExtResource("4")
+"stacked": ExtResource("4"),
+"stacked_no_goals": ExtResource("8_0t64r")
 }
 
 [connection signal="child_entered_tree" from="Contents" to="." method="_on_contents_child_entered_tree"]

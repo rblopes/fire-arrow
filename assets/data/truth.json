@@ -1,0 +1,349 @@
+{
+	"title": "Tournament of Truth",
+	"groups": [
+		{
+			"type": "locations",
+			"properties": {
+				"applied_flag": 1,
+				"capacity": 4,
+				"color": "#ff8080",
+				"filtered_flags": 3,
+				"name": "Barren Locations",
+				"shortcut": "B",
+				"style": "inline"
+			}
+		},
+		{
+			"type": "locations",
+			"properties": {
+				"applied_flag": 2,
+				"capacity": 5,
+				"color": "#80b3ff",
+				"filtered_flags": 1,
+				"name": "Path to Goal",
+				"shortcut": "G",
+				"style": "stacked"
+			}
+		},
+		{
+			"type": "miscellaneous",
+			"properties": {
+				"capacity": 10,
+				"color": "#f2f2f2",
+				"name": "Hints",
+				"shortcut": "H",
+				"style": "hints"
+			}
+		}
+	],
+	"hints": [
+		{
+			"type": "counter",
+			"params": {
+				"description": "Collected Skulltulas",
+				"increment_by": 5,
+				"max_value": 50
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "BTW",
+				"description": "Dead Hand",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "DMT",
+				"description": "Biggoron",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "FIR",
+				"description": "Above Pierre"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "FIR",
+				"description": "Pierre & Flare Dancer",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GC",
+				"description": "Darunia & Skull Kid",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GC",
+				"description": "Darunia"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GF",
+				"description": "Horseback Archery",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GTG",
+				"description": "Underwater Rupees"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GV",
+				"description": "Crate & Waterfall",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GY",
+				"description": "Royal Family Tomb",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "GY",
+				"description": "ReDead Grave"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HC",
+				"description": "Great Fairy"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HF",
+				"description": "Ocarina of Time",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "HW",
+				"description": "Phantom Guide"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "IC",
+				"description": "Instead Serenade"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "IC",
+				"description": "White Wolfos",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "JJ",
+				"description": "Stingers"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "20 Gold Skulltula"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "30, 40 & 50 GS",
+				"icons": 3,
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "Collecting Cuccos"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "KAK",
+				"description": "Instead Nocturne",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LH",
+				"description": "Bean Stops",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LH",
+				"description": "Fishing Pond",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Mask of Truth",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Skull Kid"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Skull Mask"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "LW",
+				"description": "Target"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "MKT",
+				"description": "Big Poes"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "MKT",
+				"description": "Treasure Box Shop"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "OGC",
+				"description": "Great Fairy"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SPI",
+				"description": "Colossus Hands",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "SPI",
+				"description": "Crawl Space",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "Central Pillar"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "Past Dark Link",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "WAT",
+				"description": "River Chest"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZD",
+				"description": "Diving & Torches",
+				"icons": 2
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZD",
+				"description": "K. Zora Thawed"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZF",
+				"description": "At the Bottom"
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZR",
+				"description": "Frogs Final Reward",
+				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"symbol": "ZR",
+				"description": "Frogs in the Rain"
+			}
+		}
+	]
+}

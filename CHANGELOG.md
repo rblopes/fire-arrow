@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## HEAD
+- Added "Scrubs (S5)" preset
+- Added "Tournament of Truth" preset
 - Updated project to Godot Engine 4.2
 
 

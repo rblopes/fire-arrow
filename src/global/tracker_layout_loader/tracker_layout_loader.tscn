@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bag3nwy7r3uin"]
+[gd_scene load_steps=7 format=3 uid="uid://bag3nwy7r3uin"]
 
 [ext_resource type="Script" path="res://src/global/tracker_layout_loader/tracker_layout_loader.gd" id="1"]
 [ext_resource type="JSON" path="res://assets/data/brasil_s1.json" id="2"]
 [ext_resource type="JSON" path="res://assets/data/league.json" id="3"]
 [ext_resource type="JSON" path="res://assets/data/standard_s6.json" id="4"]
+[ext_resource type="JSON" path="res://assets/data/scrubs.json" id="5_gcqtw"]
+[ext_resource type="JSON" path="res://assets/data/truth.json" id="6_rop2o"]
 
 [node name="tracker_layout_loader" type="Node"]
 script = ExtResource("1")
 metadata/modes = {
 "brasil_s1": ExtResource("2"),
 "league": ExtResource("3"),
-"standard_s6": ExtResource("4")
+"scrubs": ExtResource("5_gcqtw"),
+"standard_s6": ExtResource("4"),
+"truth": ExtResource("6_rop2o")
 }
