@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## HEAD
+- Updated project to Godot Engine 4.2
+
+
 ## v0.4.1
 - Updated "League" settings preset
 

@@ -1,12 +1,13 @@
-# Fire Arrow [![Made with Godot 4.0][badge]][godot]
+# Fire Arrow [![Made with Godot 4.2][badge]][godot]
 
 A simple item and hint display tracker for OoTR, humbly made with Godot Engine.
 Available for Windows and Linux.
 
 > **Note**: While I tried my best to make this app bug-free, it might still
-> contain some. **Using this tracker for races is not recommended yet.** Please
-> familiarize yourself with the tracker and test it carefully. If you happen to
-> find any bugs, I kindly ask you to file an issue report as soon as possible.
+> contain some. **Using this tracker for races is not recommended yet.** Please,
+> familiarize yourself with the tracker's interface and test it thoroughly. If
+> you happen to find any bugs, I kindly ask you to file an issue report as soon
+> as possible.
 
 
 ## What is it?
@@ -26,10 +27,10 @@ It contains the usual features found in similar trackers, including:
 
 ### Quick guide
 
-As expected, using Fire Arrow should be a quick and simple task:
+As expected, using Fire Arrow should be quick and simple:
 
 - Use the mouse to click an item, song or prize icon to highlight it; drag and
-  drop any of these icons over hints below.
+  drop any of these icons over any hints below.
 
 - Drag and drop a song icon over another one to highlight what song you just got
   instead (this can be tweaked through the "Settings" dialog).
@@ -38,7 +39,7 @@ As expected, using Fire Arrow should be a quick and simple task:
   labelled dungeons (this can be tweaked through the "Settings" dialog), or use
   the mouse wheel to rotate its options.
 
-- Enter location and gossip stone hints using the keyboard or clicking the name
+- Enter locations and gossip stone hints using the keyboard or clicking the name
   of the hint category. Miscellaneous hints (including "always", "sometimes",
   generic counters and spawn locations) are grouped together.
 
@@ -123,5 +124,5 @@ Use the "Presets" command of the app menu to switch to any option.
 [MIT](LICENSE.md).
 
 
-[badge]: https://flat.badgen.net/badge/made%20with/Godot%204.0/478cbf
+[badge]: https://flat.badgen.net/badge/made%20with/Godot%204.2/478cbf
 [godot]: https://godotengine.org/
