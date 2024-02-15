@@ -39,4 +39,4 @@ func clear() -> void:
 
 
 func _get_filter_helper() -> Array[Hint]:
-	return Hints.filter(func(x): return not x in hints and (x is ItemHint and not x.location.is_barren()))
+	return Hints.filter(func(x): return not x in hints and (x is ItemHint and not x.locations.any(func(hint): return hint.is_barren())))

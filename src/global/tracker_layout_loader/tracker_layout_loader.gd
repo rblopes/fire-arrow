@@ -87,9 +87,9 @@ func parse_item_params(params: Dictionary) -> ItemHint:
 			"is_pinned":
 				if value is bool:
 					result.pinned = value
-			"symbol":
-				if value is String:
-					result.location = Locations.find_by_symbol(value.strip_edges())
+			"locations":
+				if value is Array:
+					result.locations.append_array(value.map(func(s: String): return Locations.find_by_symbol(s.strip_edges())))
 	return result
 
 

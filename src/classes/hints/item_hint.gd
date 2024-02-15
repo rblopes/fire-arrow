@@ -3,8 +3,8 @@ extends MiscellaneousHint
 ## Displays an in-game hint received from a gossip stone, with information about where items and
 ## songs can be found.
 
-## The location of this hint, displayed by the tracker as its symbol beside the description.
-var location: LocationHint
+## The locations this hint refers to. The symbol of the first location is displayed beside its description.
+var locations: Array[LocationHint] = []
 
 ## How many placeholders to display inside this hint.
 var icons: int = 1:
@@ -17,7 +17,9 @@ func _to_string() -> String:
 
 
 func get_symbol() -> String:
-	return location.symbol if is_instance_valid(location) else LocationHint.UNDEFINED_SYMBOL
+	if locations.is_empty() or not is_instance_valid(locations.front()):
+		return LocationHint.UNDEFINED_SYMBOL
+	return locations.front().symbol
 
 
 func is_pinned() -> bool:

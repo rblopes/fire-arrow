@@ -64,63 +64,81 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "COL",
+				"locations": [
+					"COL"
+				],
 				"description": "Instead of Requiem"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "DMC",
+				"locations": [
+					"DMC"
+				],
 				"description": "Instead of Bolero"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "DMT",
+				"locations": [
+					"DMT"
+				],
 				"description": "Biggoron"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "FIR",
+				"locations": [
+					"FIR"
+				],
 				"description": "Above Flare Dancer"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "FIR",
+				"locations": [
+					"FIR"
+				],
 				"description": "Above Pierre"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GC",
+				"locations": [
+					"GC"
+				],
 				"description": "Darunia"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GC",
+				"locations": [
+					"GC"
+				],
 				"description": "Leftmost Chest"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GC",
+				"locations": [
+					"GC"
+				],
 				"description": "Spinning Pot"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GF",
+				"locations": [
+					"GF"
+				],
 				"description": "Horseback Archery",
 				"is_pinned": true
 			}
@@ -128,70 +146,90 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GTG",
+				"locations": [
+					"GTG"
+				],
 				"description": "Maze Final"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GTG",
+				"locations": [
+					"GTG"
+				],
 				"description": "Underwater Rupees"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GV",
+				"locations": [
+					"GV"
+				],
 				"description": "Behind Rocks"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GY",
+				"locations": [
+					"GY"
+				],
 				"description": "Composer's Grave Song"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GY",
+				"locations": [
+					"GY"
+				],
 				"description": "Flames in Composer's Grave"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "GY",
+				"locations": [
+					"GY"
+				],
 				"description": "ReDead Grave"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "HC",
+				"locations": [
+					"HC"
+				],
 				"description": "Great Fairy"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "HF",
+				"locations": [
+					"HF"
+				],
 				"description": "Ocarina of Time"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "HW",
+				"locations": [
+					"HW"
+				],
 				"description": "Haunted Wasteland"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "IC",
+				"locations": [
+					"IC"
+				],
 				"description": "Iron Boots Chest",
 				"is_pinned": true
 			}
@@ -199,7 +237,9 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "KAK",
+				"locations": [
+					"KAK"
+				],
 				"description": "20/30 GS",
 				"icons": 2,
 				"is_pinned": true
@@ -208,42 +248,54 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "KAK",
+				"locations": [
+					"KAK"
+				],
 				"description": "Cuccos"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "KAK",
+				"locations": [
+					"KAK"
+				],
 				"description": "Instead of Nocturne"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LH",
+				"locations": [
+					"LH"
+				],
 				"description": "Diving Experiment"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LH",
+				"locations": [
+					"LH"
+				],
 				"description": "Shooting the Sun"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LW",
+				"locations": [
+					"LW"
+				],
 				"description": "Skull Kid"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LW",
+				"locations": [
+					"LW"
+				],
 				"description": "Skull Mask",
 				"is_pinned": true
 			}
@@ -251,28 +303,36 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "LW",
+				"locations": [
+					"LW"
+				],
 				"description": "Target"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "MKT",
+				"locations": [
+					"MKT"
+				],
 				"description": "Big Poes"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "MKT",
+				"locations": [
+					"MKT"
+				],
 				"description": "Treasure Box Shop"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "OGC",
+				"locations": [
+					"OGC"
+				],
 				"description": "Great Fairy",
 				"is_pinned": true
 			}
@@ -280,70 +340,90 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "SFM",
+				"locations": [
+					"SFM"
+				],
 				"description": "Minuet Song"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "SHA",
+				"locations": [
+					"SHA"
+				],
 				"description": "Burning Skull"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "SPI",
+				"locations": [
+					"SPI"
+				],
 				"description": "Left Hand"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "SPI",
+				"locations": [
+					"SPI"
+				],
 				"description": "Right Hand"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "WAT",
+				"locations": [
+					"WAT"
+				],
 				"description": "Boss Key Chest"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "WAT",
+				"locations": [
+					"WAT"
+				],
 				"description": "Central Pillar"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "WAT",
+				"locations": [
+					"WAT"
+				],
 				"description": "River"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "ZD",
+				"locations": [
+					"ZD"
+				],
 				"description": "K. Zora Thawed"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "ZF",
+				"locations": [
+					"ZF"
+				],
 				"description": "Icy Waters"
 			}
 		},
 		{
 			"type": "item",
 			"params": {
-				"symbol": "ZR",
+				"locations": [
+					"ZR"
+				],
 				"description": "Frogs Final Reward",
 				"is_pinned": true
 			}
@@ -351,7 +431,9 @@
 		{
 			"type": "item",
 			"params": {
-				"symbol": "ZR",
+				"locations": [
+					"ZR"
+				],
 				"description": "Frogs in the Rain"
 			}
 		}
