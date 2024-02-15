@@ -1,11 +1,11 @@
 {
-	"title": "OoTR League (S5)",
+	"title": "OoTR League (S6)",
 	"groups": [
 		{
 			"type": "locations",
 			"properties": {
 				"applied_flag": 1,
-				"capacity": 3,
+				"capacity": 4,
 				"color": "#ff8080",
 				"filtered_flags": 3,
 				"name": "Barren Locations",
@@ -28,7 +28,7 @@
 		{
 			"type": "miscellaneous",
 			"properties": {
-				"capacity": 7,
+				"capacity": 10,
 				"color": "#f2f2f2",
 				"name": "Hints",
 				"shortcut": "H",
@@ -154,7 +154,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "KAK",
-				"description": "30/40/50 GS",
+				"description": "30, 40 & 50 GS",
 				"icons": 3,
 				"is_pinned": true
 			}
@@ -180,13 +180,6 @@
 				"symbol": "LH",
 				"description": "Bean Stops",
 				"icons": 2
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"symbol": "LH",
-				"description": "Diving Experiment"
 			}
 		},
 		{
@@ -290,7 +283,7 @@
 			"type": "item",
 			"params": {
 				"symbol": "ZR",
-				"description": "Frogs in a Storm"
+				"description": "Frogs in the Rain"
 			}
 		}
 	]

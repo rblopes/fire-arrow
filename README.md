@@ -71,7 +71,7 @@ tracker:
   pinned hints and capacity for up to 7 occasional hints (either single or dual
   hints).
 
-- **OoTR League (Season 5)**: 3 irrelevant places, 5 goal paths, 8 pinned hints
+- **OoTR League (Season 6)**: 4 irrelevant places, 5 goal paths, 8 pinned hints
   and up to 9 occasional hints (either single or dual hints).
 
 - **Standard (Season 6)**, allowing 5 goal paths, 7 pinned hints and 8
