@@ -152,7 +152,7 @@
 				"locations": [
 					"GV"
 				],
-				"description": "Ledges",
+				"description": "Crate & Waterfall",
 				"icons": 2
 			}
 		},
@@ -209,7 +209,7 @@
 				"locations": [
 					"IC"
 				],
-				"description": "Wolfos Room",
+				"description": "White Wolfos",
 				"icons": 2
 			}
 		},
@@ -219,7 +219,7 @@
 				"locations": [
 					"JJ"
 				],
-				"description": "Stingers Chest"
+				"description": "Stingers"
 			}
 		},
 		{
@@ -237,7 +237,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "30/40/50 GS",
+				"description": "30, 40 & 50 GS",
 				"is_pinned": true,
 				"icons": 3
 			}
@@ -475,7 +475,7 @@
 				"locations": [
 					"ZR"
 				],
-				"description": "Frogs in a Storm"
+				"description": "Frogs in the Rain"
 			}
 		}
 	]

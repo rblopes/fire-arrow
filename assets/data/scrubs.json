@@ -67,7 +67,7 @@
 				"locations": [
 					"COL"
 				],
-				"description": "Instead of Requiem"
+				"description": "Instead Requiem"
 			}
 		},
 		{
@@ -76,7 +76,7 @@
 				"locations": [
 					"DMC"
 				],
-				"description": "Instead of Bolero"
+				"description": "Instead Bolero"
 			}
 		},
 		{
@@ -221,7 +221,7 @@
 				"locations": [
 					"HW"
 				],
-				"description": "Haunted Wasteland"
+				"description": "Phantom Guide"
 			}
 		},
 		{
@@ -240,7 +240,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "20/30 GS",
+				"description": "20 & 30 GS",
 				"icons": 2,
 				"is_pinned": true
 			}
@@ -251,7 +251,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Cuccos"
+				"description": "Collecting Cuccos"
 			}
 		},
 		{
@@ -260,7 +260,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Instead of Nocturne"
+				"description": "Instead Nocturne"
 			}
 		},
 		{
@@ -343,7 +343,7 @@
 				"locations": [
 					"SFM"
 				],
-				"description": "Minuet Song"
+				"description": "Instead Minuet"
 			}
 		},
 		{
@@ -397,7 +397,7 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "River"
+				"description": "River Chest"
 			}
 		},
 		{
@@ -415,7 +415,7 @@
 				"locations": [
 					"ZF"
 				],
-				"description": "Icy Waters"
+				"description": "At the Bottom"
 			}
 		},
 		{
