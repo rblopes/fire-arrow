@@ -1,16 +1,16 @@
-extends Control
+extends "../icon.gd"
 
 signal context_menu_requested(at_position: Vector2)
 
 @export
-var goal: Goal:
+var goal: Goal = null:
 	set(value):
 		if is_instance_valid(value):
 			goal = value.duplicate()
 			goal.changed.connect(_on_goal_changed)
 
 @export
-var prize: Prize:
+var prize: Prize = null:
 	set(value):
 		if is_instance_valid(value):
 			prize = value
@@ -58,10 +58,6 @@ func _on_prize_changed() -> void:
 	$Label.text = prize.assigned_label
 	if prize.assigned_label == Prize.UNDEFINED_LABEL:
 		goal.reset()
-
-
-func _ready() -> void:
-	reset()
 
 
 func clear_label_if(type: Prize.Type) -> void:

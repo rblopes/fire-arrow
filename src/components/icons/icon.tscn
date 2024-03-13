@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bteikuv2paakj"]
+
+[ext_resource type="Script" path="res://src/components/icons/icon.gd" id="1_cd26e"]
+
+[node name="Icon" type="Control" groups=["icons"]]
+custom_minimum_size = Vector2(32, 40)
+layout_mode = 3
+anchors_preset = 0
+mouse_default_cursor_shape = 2
+script = ExtResource("1_cd26e")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5

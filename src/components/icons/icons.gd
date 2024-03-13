@@ -12,6 +12,4 @@ func apply_settings() -> void:
 
 
 func reset() -> void:
-	get_tree().call_group("items", "reset")
-	get_tree().call_group("prizes", "reset")
-	get_tree().call_group("songs", "reset")
+	get_tree().call_group("icons", "reset")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://djmo6vxj0kwbb"]
+
+[ext_resource type="PackedScene" uid="uid://bteikuv2paakj" path="res://src/components/icons/icon.tscn" id="1_6s3l6"]
+[ext_resource type="Script" path="res://src/components/icons/instances/prize_icon.gd" id="2_bwktu"]
+[ext_resource type="Material" uid="uid://c7cul3sllwsjy" path="res://src/resources/materials/grayscale.tres" id="2_hxiyk"]
+[ext_resource type="Resource" uid="uid://dfm04wry22dcp" path="res://src/resources/goals/dungeons.tres" id="3_s8hmx"]
+[ext_resource type="FontFile" uid="uid://ju26pld2jcis" path="res://assets/fonts/albert_sans/AlbertSans-Bold.otf" id="4_0drpr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23nb2"]
+content_margin_left = 2.0
+content_margin_top = 0.0
+content_margin_right = 2.0
+content_margin_bottom = 0.0
+
+[node name="PrizeIcon" groups=["prizes"] instance=ExtResource("1_6s3l6")]
+script = ExtResource("2_bwktu")
+goal = ExtResource("3_s8hmx")
+prize = null
+
+[node name="Icon" parent="." index="0"]
+material = ExtResource("2_hxiyk")
+
+[node name="Label" type="Label" parent="." index="1"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.937255, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0.376471, 0.439216, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("4_0drpr")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_23nb2")
+text = "N/D"
+horizontal_alignment = 1
+vertical_alignment = 2
+uppercase = true

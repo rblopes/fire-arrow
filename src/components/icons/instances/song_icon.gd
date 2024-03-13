@@ -1,14 +1,15 @@
-extends Control
+extends "../icon.gd"
 
 var should_autocheck_learned_song: bool = false
 var should_check_in_reverse: bool = false
 
 @export
-var song: Song:
+var song: Song = null:
 	set(value):
-		song = value
-		song.changed.connect(_on_song_changed)
-		$Big.texture = song.texture
+		if is_instance_valid(value):
+			song = value
+			song.changed.connect(_on_song_changed)
+			$Icon.texture = song.texture
 
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
@@ -40,12 +41,8 @@ func _gui_input(event: InputEvent) -> void:
 
 
 func _on_song_changed() -> void:
-	$Big.material.set_shader_parameter("disabled", song.is_checked)
-	$Small.texture = song.learned_from.texture if song.learned_from is Song else null
-
-
-func _ready() -> void:
-	reset()
+	$Icon.material.set_shader_parameter("disabled", song.is_checked)
+	$SmallIcon.texture = song.learned_from.texture if song.learned_from is Song else null
 
 
 func reset() -> void:

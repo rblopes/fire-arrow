@@ -1,6 +1,5 @@
 [gd_scene load_steps=58 format=3 uid="uid://defd23np0hl0o"]
 
-[ext_resource type="PackedScene" uid="uid://dhe1doq0wpelk" path="res://src/components/icons/item.tscn" id="1_agd7l"]
 [ext_resource type="Script" path="res://src/components/icons/icons.gd" id="1_rves8"]
 [ext_resource type="Resource" uid="uid://cikjg8vdsnct2" path="res://src/resources/items/slingshot.tres" id="2_0420q"]
 [ext_resource type="Resource" uid="uid://ykqlwyii8g01" path="res://src/resources/items/bow.tres" id="3_n5srn"]
@@ -34,7 +33,6 @@
 [ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="31_jyupa"]
 [ext_resource type="Resource" uid="uid://pdcdbw3esy0k" path="res://src/resources/items/hover_boots.tres" id="32_ju434"]
 [ext_resource type="Resource" uid="uid://ckx2jyyi8aldp" path="res://src/resources/items/iron_boots.tres" id="33_wx288"]
-[ext_resource type="PackedScene" uid="uid://cbklcrwfwq1m5" path="res://src/components/icons/song.tscn" id="34_qycat"]
 [ext_resource type="Resource" uid="uid://c03dho6jgbq8k" path="res://src/resources/songs/zeldas.tres" id="35_eglo8"]
 [ext_resource type="Resource" uid="uid://bwwixvtxp6eaf" path="res://src/resources/songs/eponas.tres" id="36_bjtdi"]
 [ext_resource type="Resource" uid="uid://c5n4iwmsgbsn0" path="res://src/resources/songs/sarias.tres" id="37_tbejm"]
@@ -47,7 +45,6 @@
 [ext_resource type="Resource" uid="uid://7ffsswl5wp12" path="res://src/resources/songs/requiem.tres" id="44_xmtpy"]
 [ext_resource type="Resource" uid="uid://bhymxqw353ba1" path="res://src/resources/songs/nocturne.tres" id="45_q70ae"]
 [ext_resource type="Resource" uid="uid://cwha2co8jhghk" path="res://src/resources/songs/prelude.tres" id="46_w3qs2"]
-[ext_resource type="PackedScene" uid="uid://2euhex2dc44q" path="res://src/components/icons/prize.tscn" id="47_341pt"]
 [ext_resource type="Resource" uid="uid://brog3gbisctbx" path="res://src/resources/prizes/light.tres" id="48_hf86j"]
 [ext_resource type="Resource" uid="uid://dajtug56lnfb5" path="res://src/resources/prizes/forest.tres" id="49_5kn8x"]
 [ext_resource type="Resource" uid="uid://pmsepvencob4" path="res://src/resources/prizes/fire.tres" id="50_7m37t"]
@@ -57,6 +54,9 @@
 [ext_resource type="Resource" uid="uid://bqqjjkwu08h87" path="res://src/resources/prizes/kokiri.tres" id="54_2muvi"]
 [ext_resource type="Resource" uid="uid://duc64uivx3mdv" path="res://src/resources/prizes/goron.tres" id="55_3kbfv"]
 [ext_resource type="Resource" uid="uid://cu2xs8mwxxp5b" path="res://src/resources/prizes/zora.tres" id="56_ua2xg"]
+[ext_resource type="PackedScene" uid="uid://cu3b6m0irv1js" path="res://src/components/icons/instances/item_icon.tscn" id="58_5a37o"]
+[ext_resource type="PackedScene" uid="uid://do0a5iumcbndu" path="res://src/components/icons/instances/song_icon.tscn" id="58_fvtn7"]
+[ext_resource type="PackedScene" uid="uid://djmo6vxj0kwbb" path="res://src/components/icons/instances/prize_icon.tscn" id="58_q5yex"]
 
 [node name="Icons" type="GridContainer"]
 offset_right = 40.0
@@ -66,182 +66,182 @@ theme_override_constants/v_separation = 4
 columns = 9
 script = ExtResource("1_rves8")
 
-[node name="Slingshot" parent="." instance=ExtResource("1_agd7l")]
+[node name="Slingshot" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("2_0420q")])
 
-[node name="Bow" parent="." instance=ExtResource("1_agd7l")]
+[node name="Bow" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_n5srn")])
 
-[node name="FireArrow" parent="." instance=ExtResource("1_agd7l")]
+[node name="FireArrow" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("4_tsbd1")])
 
-[node name="DinsFire" parent="." instance=ExtResource("1_agd7l")]
+[node name="DinsFire" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("5_y7nfj")])
 
-[node name="MagicMeter" parent="." instance=ExtResource("1_agd7l")]
+[node name="MagicMeter" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("6_8d53v"), ExtResource("7_mlyfw")])
 
-[node name="ProgressiveWallet" parent="." instance=ExtResource("1_agd7l")]
+[node name="ProgressiveWallet" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("8_ec5uh"), ExtResource("9_788g4")])
 
-[node name="ProgressiveScale" parent="." instance=ExtResource("1_agd7l")]
+[node name="ProgressiveScale" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("22_ojyjr"), ExtResource("23_08glr")])
 
-[node name="ZoraTunic" parent="." instance=ExtResource("1_agd7l")]
+[node name="ZoraTunic" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("28_3souy")])
 
-[node name="IronBoots" parent="." instance=ExtResource("1_agd7l")]
+[node name="IronBoots" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("33_wx288")])
 
-[node name="Boomerang" parent="." instance=ExtResource("1_agd7l")]
+[node name="Boomerang" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("12_tscq7")])
 
-[node name="ProgressiveHookshot" parent="." instance=ExtResource("1_agd7l")]
+[node name="ProgressiveHookshot" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("13_6ah5g"), ExtResource("14_jkt0r")])
 
-[node name="IceArrow" parent="." instance=ExtResource("1_agd7l")]
+[node name="IceArrow" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("10_ga17s")])
 
-[node name="FaroresWind" parent="." instance=ExtResource("1_agd7l")]
+[node name="FaroresWind" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("15_qdmjm")])
 
-[node name="KokiriSword" parent="." instance=ExtResource("1_agd7l")]
+[node name="KokiriSword" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("26_rcrqp")])
 
-[node name="MirrorShield" parent="." instance=ExtResource("1_agd7l")]
+[node name="MirrorShield" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("18_t7tmn")])
 
-[node name="ProgressiveStrength" parent="." instance=ExtResource("1_agd7l")]
+[node name="ProgressiveStrength" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("19_ysgks"), ExtResource("20_u8d0g"), ExtResource("21_syft0")])
 
-[node name="GoronTunic" parent="." instance=ExtResource("1_agd7l")]
+[node name="GoronTunic" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("27_kkssv")])
 
-[node name="HoverBoots" parent="." instance=ExtResource("1_agd7l")]
+[node name="HoverBoots" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("32_ju434")])
 
-[node name="Bomb" parent="." instance=ExtResource("1_agd7l")]
+[node name="Bomb" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("16_rekba")])
 
-[node name="MegatonHammer" parent="." instance=ExtResource("1_agd7l")]
+[node name="MegatonHammer" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("17_i3w2p")])
 
-[node name="LightArrow" parent="." instance=ExtResource("1_agd7l")]
+[node name="LightArrow" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("11_vu2ed")])
 
-[node name="ZeldasLullaby" parent="." instance=ExtResource("34_qycat")]
+[node name="ZeldasLullaby" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("35_eglo8")
 
-[node name="EponasSong" parent="." instance=ExtResource("34_qycat")]
+[node name="EponasSong" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("36_bjtdi")
 
-[node name="SariasSong" parent="." instance=ExtResource("34_qycat")]
+[node name="SariasSong" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("37_tbejm")
 
-[node name="SunsSong" parent="." instance=ExtResource("34_qycat")]
+[node name="SunsSong" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("38_nup5a")
 
-[node name="SongOfTime" parent="." instance=ExtResource("34_qycat")]
+[node name="SongOfTime" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("39_b5ycc")
 
-[node name="SongOfStorms" parent="." instance=ExtResource("34_qycat")]
+[node name="SongOfStorms" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("40_f4omt")
 
-[node name="LensOfTruth" parent="." instance=ExtResource("1_agd7l")]
+[node name="LensOfTruth" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("29_6qefx")])
 
-[node name="Bottle" parent="." instance=ExtResource("1_agd7l")]
+[node name="Bottle" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("30_0b0ng"), ExtResource("31_jyupa")])
 
-[node name="TradeQuestItem" parent="." instance=ExtResource("1_agd7l")]
+[node name="TradeQuestItem" parent="." instance=ExtResource("58_5a37o")]
 layout_mode = 2
 items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("24_sqn5j"), ExtResource("25_exe6d")])
 
-[node name="MinuetOfForest" parent="." instance=ExtResource("34_qycat")]
+[node name="MinuetOfForest" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("41_h6frv")
 
-[node name="BoleroOfFire" parent="." instance=ExtResource("34_qycat")]
+[node name="BoleroOfFire" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("42_quwy0")
 
-[node name="SerenadeOfWater" parent="." instance=ExtResource("34_qycat")]
+[node name="SerenadeOfWater" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("43_csd4t")
 
-[node name="RequiemOfSpirit" parent="." instance=ExtResource("34_qycat")]
+[node name="RequiemOfSpirit" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("44_xmtpy")
 
-[node name="NocturneOfShadow" parent="." instance=ExtResource("34_qycat")]
+[node name="NocturneOfShadow" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("45_q70ae")
 
-[node name="PreludeOfLight" parent="." instance=ExtResource("34_qycat")]
+[node name="PreludeOfLight" parent="." instance=ExtResource("58_fvtn7")]
 layout_mode = 2
 song = ExtResource("46_w3qs2")
 
-[node name="LightMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="LightMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("48_hf86j")
 
-[node name="ForestMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="ForestMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("49_5kn8x")
 
-[node name="FireMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="FireMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("50_7m37t")
 
-[node name="WaterMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="WaterMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("51_3ho3i")
 
-[node name="ShadowMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="ShadowMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("52_dm72i")
 
-[node name="SpiritMedallion" parent="." instance=ExtResource("47_341pt")]
+[node name="SpiritMedallion" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("53_ufa8n")
 
-[node name="KokiriEmerald" parent="." instance=ExtResource("47_341pt")]
+[node name="KokiriEmerald" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("54_2muvi")
 
-[node name="GoronRuby" parent="." instance=ExtResource("47_341pt")]
+[node name="GoronRuby" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("55_3kbfv")
 
-[node name="ZoraSapphire" parent="." instance=ExtResource("47_341pt")]
+[node name="ZoraSapphire" parent="." instance=ExtResource("58_q5yex")]
 layout_mode = 2
 prize = ExtResource("56_ua2xg")
