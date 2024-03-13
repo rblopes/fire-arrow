@@ -35,7 +35,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="Placeholder" type="Label" parent="Layout/Contents" index="0"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 16)
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_type_variation = &"PlaceholderLabel"
 text = "NONE YET"
