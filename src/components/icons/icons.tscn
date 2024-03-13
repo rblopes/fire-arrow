@@ -1,0 +1,247 @@
+[gd_scene load_steps=58 format=3 uid="uid://defd23np0hl0o"]
+
+[ext_resource type="PackedScene" uid="uid://dhe1doq0wpelk" path="res://src/components/icons/item.tscn" id="1_agd7l"]
+[ext_resource type="Script" path="res://src/components/icons/icons.gd" id="1_rves8"]
+[ext_resource type="Resource" uid="uid://cikjg8vdsnct2" path="res://src/resources/items/slingshot.tres" id="2_0420q"]
+[ext_resource type="Resource" uid="uid://ykqlwyii8g01" path="res://src/resources/items/bow.tres" id="3_n5srn"]
+[ext_resource type="Resource" uid="uid://bxmc7t400orn" path="res://src/resources/items/fire_arrow.tres" id="4_tsbd1"]
+[ext_resource type="Resource" uid="uid://b4opuhrhcpr6j" path="res://src/resources/items/dins_fire.tres" id="5_y7nfj"]
+[ext_resource type="Resource" uid="uid://dqo8ygqpduw47" path="res://src/resources/items/magic.tres" id="6_8d53v"]
+[ext_resource type="Resource" uid="uid://b2euy80s87xb2" path="res://src/resources/items/double_magic.tres" id="7_mlyfw"]
+[ext_resource type="Resource" uid="uid://bxgvbvt26uypv" path="res://src/resources/items/adults_wallet.tres" id="8_ec5uh"]
+[ext_resource type="Resource" uid="uid://br667ffdnqivl" path="res://src/resources/items/giants_wallet.tres" id="9_788g4"]
+[ext_resource type="Resource" uid="uid://4pphcsidwn3b" path="res://src/resources/items/ice_arrow.tres" id="10_ga17s"]
+[ext_resource type="Resource" uid="uid://dq8tu4sqjyhh" path="res://src/resources/items/light_arrow.tres" id="11_vu2ed"]
+[ext_resource type="Resource" uid="uid://sa21nxa681sj" path="res://src/resources/items/boomerang.tres" id="12_tscq7"]
+[ext_resource type="Resource" uid="uid://dn1myjqx271r0" path="res://src/resources/items/hookshot.tres" id="13_6ah5g"]
+[ext_resource type="Resource" uid="uid://eytoev4pmcfl" path="res://src/resources/items/longshot.tres" id="14_jkt0r"]
+[ext_resource type="Resource" uid="uid://7bm3xljrd62w" path="res://src/resources/items/farores_wind.tres" id="15_qdmjm"]
+[ext_resource type="Resource" uid="uid://ue78h4nh7q65" path="res://src/resources/items/bomb.tres" id="16_rekba"]
+[ext_resource type="Resource" uid="uid://dpvs0b4h7emlu" path="res://src/resources/items/megaton_hammer.tres" id="17_i3w2p"]
+[ext_resource type="Resource" uid="uid://brexwqml7k6rg" path="res://src/resources/items/mirror_shield.tres" id="18_t7tmn"]
+[ext_resource type="Resource" uid="uid://b67on4pchdp8x" path="res://src/resources/items/goron_bracelet.tres" id="19_ysgks"]
+[ext_resource type="Resource" uid="uid://dgn4imobquiuc" path="res://src/resources/items/silver_gauntlets.tres" id="20_u8d0g"]
+[ext_resource type="Resource" uid="uid://jrl4304akqy" path="res://src/resources/items/golden_gauntlets.tres" id="21_syft0"]
+[ext_resource type="Resource" uid="uid://b6apmn7cks1a" path="res://src/resources/items/silver_scale.tres" id="22_ojyjr"]
+[ext_resource type="Resource" uid="uid://b8roedgu64yx6" path="res://src/resources/items/golden_scale.tres" id="23_08glr"]
+[ext_resource type="Resource" uid="uid://btmwrf84ep56y" path="res://src/resources/items/prescription.tres" id="24_sqn5j"]
+[ext_resource type="Resource" uid="uid://d32tyr2aikyiy" path="res://src/resources/items/claim_check.tres" id="25_exe6d"]
+[ext_resource type="Resource" uid="uid://cxfphw3ybbepu" path="res://src/resources/items/kokiri_sword.tres" id="26_rcrqp"]
+[ext_resource type="Resource" uid="uid://cs7deybkb6tfn" path="res://src/resources/items/goron_tunic.tres" id="27_kkssv"]
+[ext_resource type="Resource" uid="uid://dn3gposbfdo0o" path="res://src/resources/items/zora_tunic.tres" id="28_3souy"]
+[ext_resource type="Resource" uid="uid://fq0x3rfbkmi3" path="res://src/resources/items/lens_of_truth.tres" id="29_6qefx"]
+[ext_resource type="Resource" uid="uid://dllecgkvpogdq" path="res://src/resources/items/bottle.tres" id="30_0b0ng"]
+[ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="31_jyupa"]
+[ext_resource type="Resource" uid="uid://pdcdbw3esy0k" path="res://src/resources/items/hover_boots.tres" id="32_ju434"]
+[ext_resource type="Resource" uid="uid://ckx2jyyi8aldp" path="res://src/resources/items/iron_boots.tres" id="33_wx288"]
+[ext_resource type="PackedScene" uid="uid://cbklcrwfwq1m5" path="res://src/components/icons/song.tscn" id="34_qycat"]
+[ext_resource type="Resource" uid="uid://c03dho6jgbq8k" path="res://src/resources/songs/zeldas.tres" id="35_eglo8"]
+[ext_resource type="Resource" uid="uid://bwwixvtxp6eaf" path="res://src/resources/songs/eponas.tres" id="36_bjtdi"]
+[ext_resource type="Resource" uid="uid://c5n4iwmsgbsn0" path="res://src/resources/songs/sarias.tres" id="37_tbejm"]
+[ext_resource type="Resource" uid="uid://dnsx6p2fjiiuw" path="res://src/resources/songs/suns.tres" id="38_nup5a"]
+[ext_resource type="Resource" uid="uid://da4u8jomr64ye" path="res://src/resources/songs/time.tres" id="39_b5ycc"]
+[ext_resource type="Resource" uid="uid://cotw47lxsbtsr" path="res://src/resources/songs/storms.tres" id="40_f4omt"]
+[ext_resource type="Resource" uid="uid://dsswnliqpuf3c" path="res://src/resources/songs/minuet.tres" id="41_h6frv"]
+[ext_resource type="Resource" uid="uid://cn0soj6g6bis7" path="res://src/resources/songs/bolero.tres" id="42_quwy0"]
+[ext_resource type="Resource" uid="uid://dw1whcocbuw0j" path="res://src/resources/songs/serenade.tres" id="43_csd4t"]
+[ext_resource type="Resource" uid="uid://7ffsswl5wp12" path="res://src/resources/songs/requiem.tres" id="44_xmtpy"]
+[ext_resource type="Resource" uid="uid://bhymxqw353ba1" path="res://src/resources/songs/nocturne.tres" id="45_q70ae"]
+[ext_resource type="Resource" uid="uid://cwha2co8jhghk" path="res://src/resources/songs/prelude.tres" id="46_w3qs2"]
+[ext_resource type="PackedScene" uid="uid://2euhex2dc44q" path="res://src/components/icons/prize.tscn" id="47_341pt"]
+[ext_resource type="Resource" uid="uid://brog3gbisctbx" path="res://src/resources/prizes/light.tres" id="48_hf86j"]
+[ext_resource type="Resource" uid="uid://dajtug56lnfb5" path="res://src/resources/prizes/forest.tres" id="49_5kn8x"]
+[ext_resource type="Resource" uid="uid://pmsepvencob4" path="res://src/resources/prizes/fire.tres" id="50_7m37t"]
+[ext_resource type="Resource" uid="uid://blwtbarafxbe6" path="res://src/resources/prizes/water.tres" id="51_3ho3i"]
+[ext_resource type="Resource" uid="uid://df6tar1b0c3ph" path="res://src/resources/prizes/shadow.tres" id="52_dm72i"]
+[ext_resource type="Resource" uid="uid://d3bnyh5fnuslf" path="res://src/resources/prizes/spirit.tres" id="53_ufa8n"]
+[ext_resource type="Resource" uid="uid://bqqjjkwu08h87" path="res://src/resources/prizes/kokiri.tres" id="54_2muvi"]
+[ext_resource type="Resource" uid="uid://duc64uivx3mdv" path="res://src/resources/prizes/goron.tres" id="55_3kbfv"]
+[ext_resource type="Resource" uid="uid://cu2xs8mwxxp5b" path="res://src/resources/prizes/zora.tres" id="56_ua2xg"]
+
+[node name="Icons" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 4
+columns = 9
+script = ExtResource("1_rves8")
+
+[node name="Slingshot" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("2_0420q")])
+
+[node name="Bow" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_n5srn")])
+
+[node name="FireArrow" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("4_tsbd1")])
+
+[node name="DinsFire" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("5_y7nfj")])
+
+[node name="MagicMeter" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("6_8d53v"), ExtResource("7_mlyfw")])
+
+[node name="ProgressiveWallet" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("8_ec5uh"), ExtResource("9_788g4")])
+
+[node name="ProgressiveScale" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("22_ojyjr"), ExtResource("23_08glr")])
+
+[node name="ZoraTunic" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("28_3souy")])
+
+[node name="IronBoots" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("33_wx288")])
+
+[node name="Boomerang" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("12_tscq7")])
+
+[node name="ProgressiveHookshot" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("13_6ah5g"), ExtResource("14_jkt0r")])
+
+[node name="IceArrow" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("10_ga17s")])
+
+[node name="FaroresWind" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("15_qdmjm")])
+
+[node name="KokiriSword" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("26_rcrqp")])
+
+[node name="MirrorShield" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("18_t7tmn")])
+
+[node name="ProgressiveStrength" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("19_ysgks"), ExtResource("20_u8d0g"), ExtResource("21_syft0")])
+
+[node name="GoronTunic" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("27_kkssv")])
+
+[node name="HoverBoots" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("32_ju434")])
+
+[node name="Bomb" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("16_rekba")])
+
+[node name="MegatonHammer" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("17_i3w2p")])
+
+[node name="LightArrow" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("11_vu2ed")])
+
+[node name="ZeldasLullaby" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("35_eglo8")
+
+[node name="EponasSong" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("36_bjtdi")
+
+[node name="SariasSong" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("37_tbejm")
+
+[node name="SunsSong" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("38_nup5a")
+
+[node name="SongOfTime" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("39_b5ycc")
+
+[node name="SongOfStorms" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("40_f4omt")
+
+[node name="LensOfTruth" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("29_6qefx")])
+
+[node name="Bottle" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("30_0b0ng"), ExtResource("31_jyupa")])
+
+[node name="TradeQuestItem" parent="." instance=ExtResource("1_agd7l")]
+layout_mode = 2
+items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("24_sqn5j"), ExtResource("25_exe6d")])
+
+[node name="MinuetOfForest" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("41_h6frv")
+
+[node name="BoleroOfFire" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("42_quwy0")
+
+[node name="SerenadeOfWater" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("43_csd4t")
+
+[node name="RequiemOfSpirit" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("44_xmtpy")
+
+[node name="NocturneOfShadow" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("45_q70ae")
+
+[node name="PreludeOfLight" parent="." instance=ExtResource("34_qycat")]
+layout_mode = 2
+song = ExtResource("46_w3qs2")
+
+[node name="LightMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("48_hf86j")
+
+[node name="ForestMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("49_5kn8x")
+
+[node name="FireMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("50_7m37t")
+
+[node name="WaterMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("51_3ho3i")
+
+[node name="ShadowMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("52_dm72i")
+
+[node name="SpiritMedallion" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("53_ufa8n")
+
+[node name="KokiriEmerald" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("54_2muvi")
+
+[node name="GoronRuby" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("55_3kbfv")
+
+[node name="ZoraSapphire" parent="." instance=ExtResource("47_341pt")]
+layout_mode = 2
+prize = ExtResource("56_ua2xg")

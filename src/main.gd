@@ -8,8 +8,7 @@ func _init() -> void:
 
 
 func _ready() -> void:
-	%Prizes.apply_settings()
-	%Songs.apply_settings()
+	%Icons.apply_settings()
 	TrackerLayoutLoader.load_builtin_layout(Settings.get_value("tracker", "preset"))
 
 
@@ -25,9 +24,7 @@ func _on_header_bar_command_requested(command: String, metadata: Variant = null)
 		"reset_stopwatch":
 			%Stopwatch.reset()
 		"reset_tracker":
-			%Items.reset()
-			%Prizes.reset()
-			%Songs.reset()
+			%Icons.reset()
 			%Hints.reset()
 			%Stopwatch.reset()
 		"take_screenshot":
@@ -53,8 +50,6 @@ func _on_tracker_layout_loaded(tracker_layout: TrackerLayout) -> void:
 	_tracker_layout = tracker_layout
 	%HeaderBar.set_title(_tracker_layout.title)
 	%Hints.clear_hint_groups()
-	%Items.reset()
-	%Prizes.reset()
-	%Songs.reset()
+	%Icons.reset()
 	%Hints.add_hint_groups(_tracker_layout.groups)
 	%Stopwatch.reset()

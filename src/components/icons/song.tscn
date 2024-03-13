@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbklcrwfwq1m5"]
 
-[ext_resource type="Script" path="res://src/components/songs/song.gd" id="1"]
+[ext_resource type="Script" path="res://src/components/icons/song.gd" id="1"]
 [ext_resource type="Material" uid="uid://c7cul3sllwsjy" path="res://src/resources/materials/grayscale.tres" id="3"]
 
 [node name="Song" type="Control" groups=["songs"]]
@@ -20,6 +20,7 @@ offset_right = 32.0
 offset_bottom = 32.0
 mouse_filter = 2
 expand_mode = 1
+stretch_mode = 5
 
 [node name="Small" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(16, 16)
@@ -34,3 +35,4 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 expand_mode = 1
+stretch_mode = 5
