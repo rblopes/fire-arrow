@@ -5,6 +5,7 @@
 - Added "Tournament of Truth" preset
 - Updated "OoTR League (S6)" preset
 - Updated project to Godot Engine 4.2
+- Updated icon buttons layout
 
 
 ## v0.4.1
