@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://1jna7tvwg1fi"]
+
+[ext_resource type="Script" path="res://src/global/locations/locations.gd" id="1_prusp"]
+[ext_resource type="JSON" path="res://assets/data/locations.json" id="2_a12wp"]
+
+[node name="Locations" type="Node"]
+script = ExtResource("1_prusp")
+metadata/locations_data = ExtResource("2_a12wp")

@@ -22,16 +22,14 @@ var flags: int:
 
 ## This location's symbol: a unique 3-letter abbreviation, shown in item hints, inline location
 ## groups and others.
-var symbol: String
+var symbol: String = UNDEFINED_SYMBOL
 
 
-func _init(p_symbol: String = "", p_description: String = "") -> void:
-	symbol = p_symbol
-	description = p_description
-
-
-func _to_string() -> String:
-	return description
+static func from_dict(dict: Dictionary) -> LocationHint:
+	var result := new()
+	result.description = dict.get("description")
+	result.symbol = dict.get("symbol")
+	return result
 
 
 ## Clears the given bits of [member flags].
@@ -57,3 +55,7 @@ func matches(value: String) -> bool:
 ## Applies the given bits to [member flags].
 func set_flags(bits: int) -> void:
 	flags |= bits
+
+
+func _to_string() -> String:
+	return description

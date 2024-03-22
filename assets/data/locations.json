@@ -1,0 +1,138 @@
+[
+	{
+		"symbol": "BTW",
+		"description": "Bottom of the Well"
+	},
+	{
+		"symbol": "COL",
+		"description": "Desert Colossus"
+	},
+	{
+		"symbol": "DC",
+		"description": "Dodongo's Cavern"
+	},
+	{
+		"symbol": "DKT",
+		"description": "Inside the Deku Tree"
+	},
+	{
+		"symbol": "DMC",
+		"description": "Death Mountain Crater"
+	},
+	{
+		"symbol": "DMT",
+		"description": "Death Mountain Trail"
+	},
+	{
+		"symbol": "FIR",
+		"description": "Fire Temple"
+	},
+	{
+		"symbol": "FOR",
+		"description": "Forest Temple"
+	},
+	{
+		"symbol": "GAN",
+		"description": "Inside Ganon's Castle"
+	},
+	{
+		"symbol": "GC",
+		"description": "Goron City"
+	},
+	{
+		"symbol": "GF",
+		"description": "Gerudo's Fortress"
+	},
+	{
+		"symbol": "GTG",
+		"description": "Gerudo Training Ground"
+	},
+	{
+		"symbol": "GV",
+		"description": "Gerudo Valley"
+	},
+	{
+		"symbol": "GY",
+		"description": "Graveyard"
+	},
+	{
+		"symbol": "HC",
+		"description": "Hyrule Castle"
+	},
+	{
+		"symbol": "HF",
+		"description": "Hyrule Field"
+	},
+	{
+		"symbol": "HW",
+		"description": "Haunted Wasteland"
+	},
+	{
+		"symbol": "IC",
+		"description": "Ice Cavern"
+	},
+	{
+		"symbol": "JJ",
+		"description": "Inside Jabu-Jabu's Belly"
+	},
+	{
+		"symbol": "KAK",
+		"description": "Kakariko Village"
+	},
+	{
+		"symbol": "KF",
+		"description": "Kokiri Forest"
+	},
+	{
+		"symbol": "LH",
+		"description": "Lake Hylia"
+	},
+	{
+		"symbol": "LLR",
+		"description": "Lon Lon Ranch"
+	},
+	{
+		"symbol": "LW",
+		"description": "Lost Woods"
+	},
+	{
+		"symbol": "MKT",
+		"description": "Market"
+	},
+	{
+		"symbol": "OGC",
+		"description": "Outside Ganon's Castle"
+	},
+	{
+		"symbol": "SFM",
+		"description": "Sacred Forest Meadow"
+	},
+	{
+		"symbol": "SHA",
+		"description": "Shadow Temple"
+	},
+	{
+		"symbol": "SPI",
+		"description": "Spirit Temple"
+	},
+	{
+		"symbol": "TOT",
+		"description": "Temple of Time"
+	},
+	{
+		"symbol": "WAT",
+		"description": "Water Temple"
+	},
+	{
+		"symbol": "ZD",
+		"description": "Zora's Domain"
+	},
+	{
+		"symbol": "ZF",
+		"description": "Zora's Fountain"
+	},
+	{
+		"symbol": "ZR",
+		"description": "Zora's River"
+	}
+]
