@@ -1,14 +1,8 @@
 extends "../../hint.gd"
 
-@export
-var items: Array[Item] = []:
-	set(value):
-		assert(len(value) > 0)
-		items = value.duplicate()
-
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return hint.icons == 1 and is_instance_valid(data) and (data is Item or data is Prize or data is Song)
+	return is_instance_valid(data) and len(hint.icons) == 1 and (data is Item or data is Song)
 
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
@@ -29,9 +23,7 @@ func _ready() -> void:
 	super()
 	if is_instance_valid(hint):
 		%Symbol.text = hint.get_symbol()
-		if not hint.pinned:
-			items.pop_front() # Remove "unknown" icon.
-		%Icons.add_icon_buttons(hint.icons, items)
+		%Icons.add_icon_buttons(hint.icons, hint.is_pinned())
 		%Icons.reset()
 
 

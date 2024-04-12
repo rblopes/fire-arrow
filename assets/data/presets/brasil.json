@@ -68,7 +68,10 @@
 					"BTW"
 				],
 				"description": "Dead Hand",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -78,6 +81,9 @@
 					"DMT"
 				],
 				"description": "Biggoron",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -87,7 +93,10 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Flare Dancer"
+				"description": "Above Flare Dancer",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -96,7 +105,10 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Pierre"
+				"description": "Above Pierre",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -106,7 +118,10 @@
 					"FIR"
 				],
 				"description": "Behind Totem",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -115,7 +130,10 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Darunia"
+				"description": "Darunia",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -124,7 +142,10 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Spinning Pot"
+				"description": "Spinning Pot",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -134,7 +155,10 @@
 					"GF"
 				],
 				"description": "Horseback Archery",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"overworld"
+				]
 			}
 		},
 		{
@@ -143,7 +167,10 @@
 				"locations": [
 					"GTG"
 				],
-				"description": "Underwater Rupees"
+				"description": "Underwater Rupees",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -153,7 +180,10 @@
 					"GV"
 				],
 				"description": "Crate & Waterfall",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"overworld"
+				]
 			}
 		},
 		{
@@ -162,7 +192,10 @@
 				"locations": [
 					"GY"
 				],
-				"description": "ReDead Grave"
+				"description": "ReDead Grave",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -172,7 +205,10 @@
 					"GY"
 				],
 				"description": "R. Family Tomb",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"song"
+				]
 			}
 		},
 		{
@@ -181,7 +217,10 @@
 				"locations": [
 					"HC"
 				],
-				"description": "Great Fairy"
+				"description": "Great Fairy",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -191,6 +230,9 @@
 					"HF"
 				],
 				"description": "Ocarina of Time",
+				"icons": [
+					"song"
+				],
 				"is_pinned": true
 			}
 		},
@@ -200,7 +242,10 @@
 				"locations": [
 					"HW"
 				],
-				"description": "Phantom Guide"
+				"description": "Phantom Guide",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -210,7 +255,10 @@
 					"IC"
 				],
 				"description": "White Wolfos",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"song"
+				]
 			}
 		},
 		{
@@ -219,7 +267,10 @@
 				"locations": [
 					"JJ"
 				],
-				"description": "Stingers"
+				"description": "Stingers",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -228,7 +279,10 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "20 Gold Skulltulas"
+				"description": "20 Gold Skulltulas",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -239,7 +293,11 @@
 				],
 				"description": "30, 40 & 50 GS",
 				"is_pinned": true,
-				"icons": 3
+				"icons": [
+					"overworld",
+					"overworld",
+					"overworld"
+				]
 			}
 		},
 		{
@@ -248,7 +306,10 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Collecting Cuccos"
+				"description": "Collecting Cuccos",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -258,6 +319,9 @@
 					"KAK"
 				],
 				"description": "Instead Nocturne",
+				"icons": [
+					"song"
+				],
 				"is_pinned": true
 			}
 		},
@@ -268,7 +332,10 @@
 					"LH"
 				],
 				"description": "Bean Stops",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"overworld"
+				]
 			}
 		},
 		{
@@ -277,7 +344,10 @@
 				"locations": [
 					"LH"
 				],
-				"description": "Diving Experiment"
+				"description": "Diving Experiment",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -286,7 +356,10 @@
 				"locations": [
 					"LH"
 				],
-				"description": "Shooting the Sun"
+				"description": "Shooting the Sun",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -295,7 +368,10 @@
 				"locations": [
 					"LW"
 				],
-				"description": "Skull Kid"
+				"description": "Skull Kid",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -305,6 +381,9 @@
 					"LW"
 				],
 				"description": "Skull Mask",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -314,7 +393,10 @@
 				"locations": [
 					"LW"
 				],
-				"description": "Target"
+				"description": "Target",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -323,7 +405,10 @@
 				"locations": [
 					"MKT"
 				],
-				"description": "Big Poes"
+				"description": "Big Poes",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -333,7 +418,10 @@
 					"MKT"
 				],
 				"description": "Bombchu Alley",
-				"icons": 2
+				"icons": [
+					"overworld",
+					"overworld"
+				]
 			}
 		},
 		{
@@ -342,7 +430,10 @@
 				"locations": [
 					"MKT"
 				],
-				"description": "Treasure Chest Game"
+				"description": "Treasure Chest Game",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -351,7 +442,10 @@
 				"locations": [
 					"OGC"
 				],
-				"description": "Great Fairy"
+				"description": "Great Fairy",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -360,7 +454,10 @@
 				"locations": [
 					"SHA"
 				],
-				"description": "Burning Skull"
+				"description": "Burning Skull",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -370,7 +467,10 @@
 					"SHA"
 				],
 				"description": "Crushing Spikes",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -380,27 +480,10 @@
 					"SHA"
 				],
 				"description": "Invisible Blades",
-				"icons": 2
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"SPI"
-				],
-				"description": "Adult Lower",
-				"icons": 2
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"SPI"
-				],
-				"description": "Child Lower",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -410,7 +493,36 @@
 					"SPI"
 				],
 				"description": "Colossus Hands",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"locations": [
+					"SPI"
+				],
+				"description": "Crawl Space",
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"locations": [
+					"SPI"
+				],
+				"description": "Silver Block",
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -419,7 +531,10 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "Boss Key Chest"
+				"description": "Boss Key Chest",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -428,7 +543,10 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "Central Pillar"
+				"description": "Central Pillar",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -438,7 +556,10 @@
 					"WAT"
 				],
 				"description": "Past Dark Link",
-				"icons": 2
+				"icons": [
+					"dungeon",
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -447,7 +568,10 @@
 				"locations": [
 					"ZD"
 				],
-				"description": "K. Zora Thawed"
+				"description": "K. Zora Thawed",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -456,7 +580,10 @@
 				"locations": [
 					"ZF"
 				],
-				"description": "At the Bottom"
+				"description": "At the Bottom",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -466,6 +593,9 @@
 					"ZR"
 				],
 				"description": "Frogs Final Reward",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -475,7 +605,10 @@
 				"locations": [
 					"ZR"
 				],
-				"description": "Frogs in the Rain"
+				"description": "Frogs in the Rain",
+				"icons": [
+					"overworld"
+				]
 			}
 		}
 	]

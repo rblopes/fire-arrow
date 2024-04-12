@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://do7itlhlw3k7i"]
+[gd_scene load_steps=26 format=3 uid="uid://do7itlhlw3k7i"]
 
 [ext_resource type="PackedScene" uid="uid://bwecnqd2fa6mx" path="res://src/components/hint/hint.tscn" id="1_rmkau"]
 [ext_resource type="Script" path="res://src/components/hint/instances/item_hint/item_hint.gd" id="2_qp4p1"]
@@ -13,10 +13,21 @@
 [ext_resource type="Resource" uid="uid://cjjtg3x3n6km5" path="res://src/resources/items/biggoron_sword.tres" id="10_rgf2g"]
 [ext_resource type="Script" path="res://src/components/hint/instances/item_hint/icons.gd" id="12_cohnm"]
 [ext_resource type="PackedScene" uid="uid://dmqtb5hv0ffjm" path="res://src/components/hint/instances/item_hint/icon_button.tscn" id="12_oq5g6"]
+[ext_resource type="Resource" uid="uid://c03dho6jgbq8k" path="res://src/resources/songs/zeldas.tres" id="14_xqitf"]
+[ext_resource type="Resource" uid="uid://bwwixvtxp6eaf" path="res://src/resources/songs/eponas.tres" id="15_51m34"]
+[ext_resource type="Resource" uid="uid://c5n4iwmsgbsn0" path="res://src/resources/songs/sarias.tres" id="16_xbgws"]
+[ext_resource type="Resource" uid="uid://dnsx6p2fjiiuw" path="res://src/resources/songs/suns.tres" id="17_xl17n"]
+[ext_resource type="Resource" uid="uid://da4u8jomr64ye" path="res://src/resources/songs/time.tres" id="18_orj8w"]
+[ext_resource type="Resource" uid="uid://cotw47lxsbtsr" path="res://src/resources/songs/storms.tres" id="19_qaphi"]
+[ext_resource type="Resource" uid="uid://dsswnliqpuf3c" path="res://src/resources/songs/minuet.tres" id="20_rb137"]
+[ext_resource type="Resource" uid="uid://cn0soj6g6bis7" path="res://src/resources/songs/bolero.tres" id="21_18mh5"]
+[ext_resource type="Resource" uid="uid://cwha2co8jhghk" path="res://src/resources/songs/prelude.tres" id="21_k30q3"]
+[ext_resource type="Resource" uid="uid://dw1whcocbuw0j" path="res://src/resources/songs/serenade.tres" id="22_xuy4o"]
+[ext_resource type="Resource" uid="uid://7ffsswl5wp12" path="res://src/resources/songs/requiem.tres" id="23_jetja"]
+[ext_resource type="Resource" uid="uid://bhymxqw353ba1" path="res://src/resources/songs/nocturne.tres" id="24_ado5x"]
 
 [node name="ItemHint" instance=ExtResource("1_rmkau")]
 script = ExtResource("2_qp4p1")
-items = Array[Resource("res://src/classes/resources/item.gd")]([ExtResource("3_0q6va"), ExtResource("4_jexki"), ExtResource("5_lq1ju"), ExtResource("6_2torb"), ExtResource("7_dsim2"), ExtResource("7_jf8ej"), ExtResource("8_fpro4"), ExtResource("9_cwpbn"), ExtResource("10_rgf2g")])
 
 [node name="Symbol" type="Label" parent="Contents" index="0"]
 unique_name_in_owner = true
@@ -36,3 +47,8 @@ layout_mode = 2
 theme_override_constants/separation = 0
 script = ExtResource("12_cohnm")
 metadata/icon_button = ExtResource("12_oq5g6")
+metadata/icon_defs = {
+"dungeon": [ExtResource("3_0q6va"), ExtResource("4_jexki"), ExtResource("5_lq1ju"), ExtResource("6_2torb"), ExtResource("7_dsim2"), ExtResource("7_jf8ej"), ExtResource("9_cwpbn"), ExtResource("8_fpro4"), ExtResource("10_rgf2g")],
+"overworld": [ExtResource("3_0q6va"), ExtResource("4_jexki"), ExtResource("7_dsim2"), ExtResource("7_jf8ej"), ExtResource("9_cwpbn"), ExtResource("8_fpro4"), ExtResource("10_rgf2g")],
+"song": [ExtResource("3_0q6va"), ExtResource("14_xqitf"), ExtResource("15_51m34"), ExtResource("16_xbgws"), ExtResource("17_xl17n"), ExtResource("18_orj8w"), ExtResource("19_qaphi"), ExtResource("21_k30q3"), ExtResource("20_rb137"), ExtResource("21_18mh5"), ExtResource("22_xuy4o"), ExtResource("23_jetja"), ExtResource("24_ado5x")]
+}

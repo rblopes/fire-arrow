@@ -48,6 +48,9 @@
 					"DMT"
 				],
 				"description": "Biggoron",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -57,7 +60,10 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Flare Dancer"
+				"description": "Above Flare Dancer",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -66,7 +72,10 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Pierre"
+				"description": "Above Pierre",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -75,7 +84,10 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Darunia"
+				"description": "Darunia",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -84,7 +96,10 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Maze Left"
+				"description": "Maze Left",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -93,7 +108,10 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Spinning Pot"
+				"description": "Spinning Pot",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -102,7 +120,10 @@
 				"locations": [
 					"GF"
 				],
-				"description": "Archery 1500 Pt."
+				"description": "Archery 1500 Pt.",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -111,7 +132,10 @@
 				"locations": [
 					"GTG"
 				],
-				"description": "Last Chest"
+				"description": "Last Chest",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -120,7 +144,10 @@
 				"locations": [
 					"GTG"
 				],
-				"description": "Underwater Rupees"
+				"description": "Underwater Rupees",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -129,7 +156,10 @@
 				"locations": [
 					"GV"
 				],
-				"description": "Behind Rocks"
+				"description": "Behind Rocks",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -138,7 +168,10 @@
 				"locations": [
 					"GY"
 				],
-				"description": "Composer's Grave"
+				"description": "Composer's Grave",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -147,7 +180,10 @@
 				"locations": [
 					"GY"
 				],
-				"description": "ReDead Grave"
+				"description": "ReDead Grave",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -156,7 +192,10 @@
 				"locations": [
 					"HC"
 				],
-				"description": "Great Fairy"
+				"description": "Great Fairy",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -166,6 +205,9 @@
 					"HF"
 				],
 				"description": "Ocarina of Time",
+				"icons": [
+					"song"
+				],
 				"is_pinned": true
 			}
 		},
@@ -175,7 +217,10 @@
 				"locations": [
 					"HW"
 				],
-				"description": "Phantom Guide"
+				"description": "Phantom Guide",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -184,7 +229,10 @@
 				"locations": [
 					"IC"
 				],
-				"description": "Iron Boots Chest"
+				"description": "Iron Boots Chest",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -193,7 +241,10 @@
 				"locations": [
 					"IC"
 				],
-				"description": "Instead Serenade"
+				"description": "Instead Serenade",
+				"icons": [
+					"song"
+				]
 			}
 		},
 		{
@@ -202,7 +253,10 @@
 				"locations": [
 					"JJ"
 				],
-				"description": "Stingers Room"
+				"description": "Stingers Room",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -211,7 +265,10 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "20 Gold Skulltulas"
+				"description": "20 Gold Skulltulas",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -221,7 +278,11 @@
 					"KAK"
 				],
 				"description": "30/40/50 GS",
-				"icons": 3,
+				"icons": [
+					"overworld",
+					"overworld",
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -231,7 +292,10 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Collecting Cuccos"
+				"description": "Collecting Cuccos",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -241,6 +305,9 @@
 					"KAK"
 				],
 				"description": "Instead Nocturne",
+				"icons": [
+					"song"
+				],
 				"is_pinned": true
 			}
 		},
@@ -250,7 +317,10 @@
 				"locations": [
 					"LH"
 				],
-				"description": "Diving Experiment"
+				"description": "Diving Experiment",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -259,7 +329,10 @@
 				"locations": [
 					"LH"
 				],
-				"description": "Shooting the Sun"
+				"description": "Shooting the Sun",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -268,7 +341,10 @@
 				"locations": [
 					"LW"
 				],
-				"description": "Skull Kid"
+				"description": "Skull Kid",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -278,6 +354,9 @@
 					"LW"
 				],
 				"description": "Skull Mask",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		},
@@ -287,7 +366,10 @@
 				"locations": [
 					"LW"
 				],
-				"description": "Target"
+				"description": "Target",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -296,7 +378,10 @@
 				"locations": [
 					"MKT"
 				],
-				"description": "Big Poes"
+				"description": "Big Poes",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -305,7 +390,10 @@
 				"locations": [
 					"MKT"
 				],
-				"description": "Treasure Chest Game"
+				"description": "Treasure Chest Game",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -314,7 +402,10 @@
 				"locations": [
 					"OGC"
 				],
-				"description": "Great Fairy"
+				"description": "Great Fairy",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -323,7 +414,10 @@
 				"locations": [
 					"SHA"
 				],
-				"description": "Burning Skull"
+				"description": "Burning Skull",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -332,7 +426,10 @@
 				"locations": [
 					"SPI"
 				],
-				"description": "Mirror Shield Chest"
+				"description": "Mirror Shield Chest",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -341,7 +438,10 @@
 				"locations": [
 					"SPI"
 				],
-				"description": "Silver Gauntlets Chest"
+				"description": "Silver Gauntlets Chest",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -350,7 +450,10 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "Boss Key Room"
+				"description": "Boss Key Room",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -359,7 +462,10 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "Central Pillar"
+				"description": "Central Pillar",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -368,7 +474,10 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "River Chest"
+				"description": "River Chest",
+				"icons": [
+					"dungeon"
+				]
 			}
 		},
 		{
@@ -377,7 +486,10 @@
 				"locations": [
 					"ZD"
 				],
-				"description": "K. Zora Thawed"
+				"description": "K. Zora Thawed",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -386,7 +498,10 @@
 				"locations": [
 					"ZF"
 				],
-				"description": "At the Bottom"
+				"description": "At the Bottom",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -395,7 +510,10 @@
 				"locations": [
 					"ZR"
 				],
-				"description": "Frogs in a Storm"
+				"description": "Frogs in the Rain",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -405,6 +523,9 @@
 					"ZR"
 				],
 				"description": "Frogs Final Reward",
+				"icons": [
+					"overworld"
+				],
 				"is_pinned": true
 			}
 		}

@@ -6,10 +6,8 @@ extends MiscellaneousHint
 ## The locations this hint refers to. The symbol of the first location is displayed beside its description.
 var locations: Array[LocationHint] = []
 
-## How many placeholders to display inside this hint.
-var icons: int = 1:
-	set(value):
-		icons = clampi(value, 1, 3)
+## Which placeholders to display inside this hint.
+var icons: Array[StringName] = []
 
 
 func _to_string() -> String:

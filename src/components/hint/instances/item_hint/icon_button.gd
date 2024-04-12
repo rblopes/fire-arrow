@@ -5,14 +5,14 @@ var _cursor: int = 0:
 		_cursor = value
 		icon = items[_cursor].texture
 
-var items: Array[Item] = []:
+var items: Array[Resource] = []:
 	set(value):
 		assert(len(value) > 0)
-		items = value.duplicate()
+		items = value
 
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return is_instance_valid(data) and (data is Item or data is Prize or data is Song)
+	return is_instance_valid(data) and (data is Item or data is Song)
 
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
@@ -34,5 +34,5 @@ func cycle_forward() -> void:
 
 func set_icon(data: Variant = null) -> void:
 	_cursor = 0
-	if is_instance_valid(data) and (data is Item or data is Prize or data is Song):
+	if is_instance_valid(data) and (data is Item or data is Song):
 		icon = data.texture

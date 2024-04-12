@@ -3,9 +3,12 @@
 ## HEAD
 - Added "Scrubs (S5)" preset
 - Added "Tournament of Truth" preset
+- Changed how icons are displayed by item hints
 - Updated "OoTR League (S6)" preset
 - Updated project to Godot Engine 4.2
 - Updated icon buttons layout
+- Updated item hints to only allow items or songs to be dragged over their
+  controls
 
 
 ## v0.4.1
