@@ -1,11 +1,11 @@
 {
-	"title": "OoTR League (S6)",
+	"title": "OoTR League (S7)",
 	"groups": [
 		{
 			"type": "locations",
 			"properties": {
 				"applied_flag": 1,
-				"capacity": 4,
+				"capacity": 3,
 				"color": "#ff8080",
 				"filtered_flags": 3,
 				"name": "Barren Locations",
@@ -28,7 +28,7 @@
 		{
 			"type": "miscellaneous",
 			"properties": {
-				"capacity": 10,
+				"capacity": 8,
 				"color": "#f2f2f2",
 				"name": "Hints",
 				"shortcut": "H",
@@ -38,11 +38,11 @@
 	],
 	"hints": [
 		{
-			"type": "counter",
+			"type": "special_location",
 			"params": {
-				"description": "Collected Skulltulas",
-				"increment_by": 5,
-				"max_value": 50
+				"choices": "DMC;DMT;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZF;ZR",
+				"description": "Adult Spawn at",
+				"shortcut": "A"
 			}
 		},
 		{
@@ -51,6 +51,27 @@
 				"choices": "DMC;DMT;GF;GV;GC;GY;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
 				"description": "Child Spawn at",
 				"shortcut": "C"
+			}
+		},
+		{
+			"type": "counter",
+			"params": {
+				"description": "Collected Skulltulas",
+				"increment_by": 5,
+				"max_value": 50
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"locations": [
+					"DMC"
+				],
+				"description": "Ladder Scrub",
+				"icons": [
+					"overworld"
+				],
+				"is_pinned": true
 			}
 		},
 		{
@@ -133,9 +154,10 @@
 				"locations": [
 					"GY"
 				],
-				"description": "ReDead Grave",
+				"description": "R. Family Tomb",
 				"icons": [
-					"overworld"
+					"overworld",
+					"song"
 				]
 			}
 		},
@@ -145,10 +167,9 @@
 				"locations": [
 					"GY"
 				],
-				"description": "R. Family Tomb",
+				"description": "ReDead Grave",
 				"icons": [
-					"overworld",
-					"song"
+					"overworld"
 				]
 			}
 		},
@@ -197,7 +218,7 @@
 				"locations": [
 					"IC"
 				],
-				"description": "White Wolfos",
+				"description": "Final Room",
 				"icons": [
 					"overworld",
 					"song"
@@ -237,7 +258,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Collecting Cuccos",
+				"description": "Cuccos",
 				"icons": [
 					"overworld"
 				]
@@ -324,7 +345,7 @@
 				"locations": [
 					"MKT"
 				],
-				"description": "Bombchu Alley",
+				"description": "Bombchu Bowling",
 				"icons": [
 					"overworld",
 					"overworld"
