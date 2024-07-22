@@ -7,12 +7,8 @@
 [ext_resource type="JSON" path="res://assets/data/presets/scrubs.json" id="5_gcqtw"]
 [ext_resource type="JSON" path="res://assets/data/presets/truth.json" id="6_rop2o"]
 
-[node name="tracker_layout_loader" type="Node"]
+[node name="TrackerLayoutLoader" type="Node"]
 script = ExtResource("1")
-metadata/modes = {
-"brasil_s1": ExtResource("2"),
-"league": ExtResource("3"),
-"scrubs": ExtResource("5_gcqtw"),
-"standard_s6": ExtResource("4"),
-"truth": ExtResource("6_rop2o")
-}
+
+[node name="Modes" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("brasil_s1", "league", "scrubs", "standard_s6", "truth"), [ExtResource("2"), ExtResource("3"), ExtResource("5_gcqtw"), ExtResource("4"), ExtResource("6_rop2o")]]

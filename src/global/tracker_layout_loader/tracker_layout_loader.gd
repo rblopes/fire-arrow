@@ -2,23 +2,20 @@ extends Node
 
 signal loaded(tracker_layout: TrackerLayout)
 
-@onready
-var _modes: Dictionary = get_meta("modes")
-
 
 func get_builtin_presets_info() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
-	for key in _modes:
-		var preset: JSON = _modes[key]
+	for key in $Modes.get_resource_list():
+		var preset: JSON = $Modes.get_resource(key)
 		result.append({"preset_name": key, "title": preset.data.get("title")})
 	return result
 
 
 func load_builtin_layout(layout_name: String) -> void:
-	var data = _get_builtin_layout(layout_name).data
+	var json = _get_builtin_layout(layout_name)
 	Locations.clear_all()
 	Hints.clear()
-	loaded.emit(parse_layout_data(data))
+	loaded.emit(parse_layout_data(json.data))
 
 
 func load_layout_from_file(file_path: String) -> void:
@@ -181,5 +178,5 @@ func parse_special_location_params(params: Dictionary) -> SpecialLocationHint:
 
 
 func _get_builtin_layout(layout_name: String) -> JSON:
-	assert(layout_name in _modes, "Invalid preset name")
-	return _modes.get(layout_name)
+	assert($Modes.has_resource(layout_name), "Invalid preset name: %s" % [layout_name])
+	return $Modes.get_resource(layout_name)
