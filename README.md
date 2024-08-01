@@ -23,7 +23,7 @@ It contains the usual features found in similar trackers, including:
   dungeon labels;
 - An area to annotate locations of interest and predefined miscellaneous hints.
 
-![Screenshot](etc/images/sample.png)
+![Screenshot](etc/images/sample.webp)
 
 ### Quick guide
 
@@ -60,19 +60,19 @@ As expected, using Fire Arrow should be quick and simple:
 Currently, the following list of hint annotation presets are bundled with the
 tracker:
 
-- **Tournament of Truth**: up to 4 barren locations, 5 paths to rewards, 7
-  pinned hints and capacity for up to 10 occasional hints (either single or dual
-  hints).
+- **OoTR League (Season 7)**: 3 barren locations, 5 goal paths, 6 pinned hints
+  and up to 8 occasional hints (either single or dual hints).
 
 - **Scrubs Tournament (Season 5)**: 3 barren locations, 5 "Way of the
   Hero" locations, 9 pinned hints and capacity for up to 7 occasional hints.
 
+- **Tournament of Truth**: up to 4 barren locations, 5 paths to rewards, 7
+  pinned hints and capacity for up to 10 occasional hints (either single or dual
+  hints).
+
 - **Copa do Brasil de OoTR**: with 3 barren locations, 5 paths to rewards, 9
   pinned hints and capacity for up to 7 occasional hints (either single or dual
   hints).
-
-- **OoTR League (Season 6)**: 4 irrelevant places, 5 goal paths, 8 pinned hints
-  and up to 9 occasional hints (either single or dual hints).
 
 - **Standard (Season 6)**, allowing 5 goal paths, 7 pinned hints and 8
   occasional hints.
@@ -89,16 +89,16 @@ Use the "Presets" command of the app menu to switch to any option.
 
 | Keyboard Shortcut    | Function                              |
 |:--------------------:|---------------------------------------|
-| <kbd>B</kbd>         | Add irrelevant (barren) location      |
-| <kbd>G</kbd>         | Add goal location                     |
-| <kbd>H</kbd>         | Add item hint                         |
+| <kbd>B</kbd>         | Add a barren location                 |
+| <kbd>G</kbd>         | Add a goal location                   |
+| <kbd>H</kbd>         | Add an item hint                      |
+| <kbd>A</kbd>         | Set adult spawn location              |
 | <kbd>C</kbd>         | Set child spawn location              |
-| <kbd>F12</kbd>       | Take screenshot                       |
+| <kbd>F12</kbd>       | Take a screenshot of the tracker      |
 | <kbd>F4</kbd>        | Start, pause and resume the stopwatch |
 | <kbd>Ctrl+F4</kbd>   | Reset the stopwatch                   |
 | <kbd>Ctrl+F2</kbd>   | Reset the tracker                     |
 | <kbd>Ctrl+D</kbd>    | Open settings dialog                  |
-| <kbd>Ctrl+O</kbd>    | Open the app data folder              |
 | <kbd>Ctrl+Q</kbd>    | Quit the app                          |
 | <kbd>Shift+F10</kbd> | App menu shortcut                     |
 

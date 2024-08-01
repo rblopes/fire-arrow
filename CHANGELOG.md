@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## HEAD
+
+
+## v0.5.0
 - Added "Scrubs (S5)" preset
 - Added "Tournament of Truth" preset
 - Changed how icons are displayed by item hints
