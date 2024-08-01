@@ -40,7 +40,7 @@
 		{
 			"type": "special_location",
 			"params": {
-				"choices": "DMC;DMT;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZF;ZR",
+				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZF;ZR",
 				"description": "Adult Spawn at",
 				"shortcut": "A"
 			}
