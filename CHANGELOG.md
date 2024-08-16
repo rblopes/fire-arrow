@@ -2,6 +2,9 @@
 
 ## HEAD
 
+## v0.5.1
+- Fixed "OoTR League (S7)" preset
+
 
 ## v0.5.0
 - Added "Scrubs (S5)" preset

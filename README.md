@@ -60,7 +60,7 @@ As expected, using Fire Arrow should be quick and simple:
 Currently, the following list of hint annotation presets are bundled with the
 tracker:
 
-- **OoTR League (Season 7)**: 3 barren locations, 5 goal paths, 6 pinned hints
+- **OoTR League (Season 7)**: 3 barren locations, 6 goal paths, 6 pinned hints
   and up to 8 occasional hints (either single or dual hints).
 
 - **Scrubs Tournament (Season 5)**: 3 barren locations, 5 "Way of the

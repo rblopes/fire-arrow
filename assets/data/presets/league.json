@@ -17,7 +17,7 @@
 			"type": "locations",
 			"properties": {
 				"applied_flag": 2,
-				"capacity": 5,
+				"capacity": 6,
 				"color": "#80b3ff",
 				"filtered_flags": 1,
 				"name": "Path to Goal",
@@ -48,7 +48,7 @@
 		{
 			"type": "special_location",
 			"params": {
-				"choices": "DMC;DMT;GF;GV;GC;GY;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
+				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
 				"description": "Child Spawn at",
 				"shortcut": "C"
 			}
