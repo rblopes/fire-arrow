@@ -74,4 +74,5 @@ func _on_hints_child_exiting_tree(node: Node) -> void:
 
 
 func _set_placeholder_visibility(value: bool) -> void:
-	%Placeholder.visible = value
+	if not is_queued_for_deletion():
+		%Placeholder.visible = value
