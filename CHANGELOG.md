@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## HEAD
+- Updated "Scrubs Tournament (S6)" preset
+
 
 ## v0.5.1
 - Fixed "OoTR League (S7)" preset

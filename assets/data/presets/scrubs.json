@@ -1,11 +1,11 @@
 {
-	"title": "Scrubs Tournament (S5)",
+	"title": "Scrubs Tournament (S6)",
 	"groups": [
 		{
 			"type": "locations",
 			"properties": {
 				"applied_flag": 1,
-				"capacity": 3,
+				"capacity": 6,
 				"color": "#ff8080",
 				"filtered_flags": 3,
 				"name": "Barren Locations",
@@ -17,18 +17,18 @@
 			"type": "locations",
 			"properties": {
 				"applied_flag": 2,
-				"capacity": 5,
+				"capacity": 4,
 				"color": "#80b3ff",
-				"filtered_flags": 3,
-				"name": "Way of the Hero",
+				"filtered_flags": 1,
+				"name": "Path to Goal",
 				"shortcut": "G",
-				"style": "stacked_no_goals"
+				"style": "stacked"
 			}
 		},
 		{
 			"type": "miscellaneous",
 			"properties": {
-				"capacity": 7,
+				"capacity": 9,
 				"color": "#f2f2f2",
 				"name": "Hints",
 				"shortcut": "H",
@@ -40,7 +40,7 @@
 		{
 			"type": "special_location",
 			"params": {
-				"choices": "DMC;DMT;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZR",
+				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HF;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;TOT;ZD;ZF;ZR",
 				"description": "Adult Spawn at",
 				"shortcut": "A"
 			}
@@ -48,9 +48,17 @@
 		{
 			"type": "special_location",
 			"params": {
-				"choices": "DMC;DMT;GF;GV;GC;GY;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
+				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZF;ZR",
 				"description": "Child Spawn at",
 				"shortcut": "C"
+			}
+		},
+		{
+			"type": "special_location",
+			"params": {
+				"choices": "BTW;DMC;DMT;COL;DC;FIR;FOR;GTG;GV;GF;GC;GY;HW;HC;HF;IC;GAN;JJ;DKT;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;SHA;SPI;TOT;WAT;ZD;ZF;ZR",
+				"description": "Has an item",
+				"shortcut": "I"
 			}
 		},
 		{
@@ -65,33 +73,9 @@
 			"type": "item",
 			"params": {
 				"locations": [
-					"COL"
-				],
-				"description": "Instead Requiem",
-				"icons": [
-					"song"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"DMC"
-				],
-				"description": "Instead Bolero",
-				"icons": [
-					"song"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
 					"DMT"
 				],
-				"description": "Biggoron",
+				"description": "Deliver Claim Check",
 				"icons": [
 					"overworld"
 				]
@@ -115,7 +99,19 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Pierre",
+				"description": "Above Scarecrow",
+				"icons": [
+					"dungeon"
+				]
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"locations": [
+					"GAN"
+				],
+				"description": "Shadow Trial Back",
 				"icons": [
 					"dungeon"
 				]
@@ -139,7 +135,7 @@
 				"locations": [
 					"GC"
 				],
-				"description": "Leftmost Chest",
+				"description": "Rock Maze Leftmost",
 				"icons": [
 					"overworld"
 				]
@@ -161,23 +157,9 @@
 			"type": "item",
 			"params": {
 				"locations": [
-					"GF"
-				],
-				"description": "Horseback Archery",
-				"icons": [
-					"overworld",
-					"overworld"
-				],
-				"is_pinned": true
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
 					"GTG"
 				],
-				"description": "Maze Final",
+				"description": "Maze Path Final",
 				"icons": [
 					"dungeon"
 				]
@@ -213,21 +195,9 @@
 				"locations": [
 					"GY"
 				],
-				"description": "Composer's Grave Song",
+				"description": "Composer's Grave",
 				"icons": [
-					"song"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"GY"
-				],
-				"description": "Flames in Composer's Grave",
-				"icons": [
-					"song"
+					"overworld"
 				]
 			}
 		},
@@ -247,24 +217,15 @@
 			"type": "item",
 			"params": {
 				"locations": [
-					"HC"
+					"HC",
+					"OGC"
 				],
-				"description": "Great Fairy",
+				"description": "Great Fairies",
 				"icons": [
+					"overworld",
 					"overworld"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"HF"
 				],
-				"description": "Ocarina of Time",
-				"icons": [
-					"song"
-				]
+				"is_pinned": true
 			}
 		},
 		{
@@ -285,11 +246,24 @@
 				"locations": [
 					"IC"
 				],
-				"description": "Iron Boots Chest",
+				"description": "Final Room",
 				"icons": [
-					"overworld"
+					"overworld",
+					"song"
 				],
 				"is_pinned": true
+			}
+		},
+		{
+			"type": "item",
+			"params": {
+				"locations": [
+					"JJ"
+				],
+				"description": "Stingers",
+				"icons": [
+					"overworld"
+				]
 			}
 		},
 		{
@@ -312,21 +286,9 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Collecting Cuccos",
+				"description": "Cuccos",
 				"icons": [
 					"overworld"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"KAK"
-				],
-				"description": "Instead Nocturne",
-				"icons": [
-					"song"
 				]
 			}
 		},
@@ -419,31 +381,6 @@
 			"type": "item",
 			"params": {
 				"locations": [
-					"OGC"
-				],
-				"description": "Great Fairy",
-				"icons": [
-					"overworld"
-				],
-				"is_pinned": true
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
-					"SFM"
-				],
-				"description": "Instead Minuet",
-				"icons": [
-					"song"
-				]
-			}
-		},
-		{
-			"type": "item",
-			"params": {
-				"locations": [
 					"SHA"
 				],
 				"description": "Burning Skull",
@@ -482,7 +419,7 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "Boss Key Chest",
+				"description": "Beyond the River",
 				"icons": [
 					"dungeon"
 				]
@@ -506,7 +443,7 @@
 				"locations": [
 					"WAT"
 				],
-				"description": "River Chest",
+				"description": "Rolling Boulders",
 				"icons": [
 					"dungeon"
 				]
@@ -530,7 +467,7 @@
 				"locations": [
 					"ZF"
 				],
-				"description": "At the Bottom",
+				"description": "Fountain's Bottom",
 				"icons": [
 					"overworld"
 				]
@@ -542,7 +479,7 @@
 				"locations": [
 					"ZR"
 				],
-				"description": "Frogs Final Reward",
+				"description": "Frogs' Ocarina Game",
 				"icons": [
 					"overworld"
 				],

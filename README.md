@@ -63,8 +63,8 @@ tracker:
 - **OoTR League (Season 7)**: 3 barren locations, 6 goal paths, 6 pinned hints
   and up to 8 occasional hints (either single or dual hints).
 
-- **Scrubs Tournament (Season 5)**: 3 barren locations, 5 "Way of the
-  Hero" locations, 9 pinned hints and capacity for up to 7 occasional hints.
+- **Scrubs Tournament (Season 6)**: 6 barren locations, 4 goal paths, 5 pinned
+  hints and up to 9 occasional hints.
 
 - **Tournament of Truth**: up to 4 barren locations, 5 paths to rewards, 7
   pinned hints and capacity for up to 10 occasional hints (either single or dual
@@ -94,6 +94,7 @@ Use the "Presets" command of the app menu to switch to any option.
 | <kbd>H</kbd>         | Add an item hint                      |
 | <kbd>A</kbd>         | Set adult spawn location              |
 | <kbd>C</kbd>         | Set child spawn location              |
+| <kbd>I</kbd>         | Set location containing an item       |
 | <kbd>F12</kbd>       | Take a screenshot of the tracker      |
 | <kbd>F4</kbd>        | Start, pause and resume the stopwatch |
 | <kbd>Ctrl+F4</kbd>   | Reset the stopwatch                   |
