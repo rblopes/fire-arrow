@@ -5,6 +5,7 @@
 
 ## v0.5.2
 - Added a icon button to special location hints, shown whenever it is needed
+- Fixed "OoTR League (S7)" preset
 - Updated "Scrubs Tournament (S6)" preset
 
 

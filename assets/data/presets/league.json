@@ -48,7 +48,7 @@
 		{
 			"type": "special_location",
 			"params": {
-				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZR",
+				"choices": "DMC;DMT;COL;GF;GV;GC;GY;HW;HC;HF;KAK;KF;LH;LLR;LW;MKT;SFM;TOT;ZD;ZF;ZR",
 				"description": "Child Spawn at",
 				"shortcut": "C"
 			}
@@ -80,7 +80,7 @@
 				"locations": [
 					"DMT"
 				],
-				"description": "Biggoron",
+				"description": "Deliver Claim Check",
 				"icons": [
 					"overworld"
 				],
@@ -105,7 +105,7 @@
 				"locations": [
 					"FIR"
 				],
-				"description": "Above Pierre",
+				"description": "Above Scarecrow",
 				"icons": [
 					"dungeon"
 				]
@@ -270,7 +270,7 @@
 				"locations": [
 					"KAK"
 				],
-				"description": "Instead Nocturne",
+				"description": "Instead of Nocturne",
 				"icons": [
 					"song"
 				],
@@ -433,7 +433,7 @@
 				"locations": [
 					"ZF"
 				],
-				"description": "At the Bottom",
+				"description": "Fountain's Bottom",
 				"icons": [
 					"overworld"
 				]
@@ -445,7 +445,7 @@
 				"locations": [
 					"ZR"
 				],
-				"description": "Frogs Final Reward",
+				"description": "Frogs' Ocarina Game",
 				"icons": [
 					"overworld"
 				],
