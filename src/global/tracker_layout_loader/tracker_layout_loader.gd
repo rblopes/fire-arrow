@@ -171,6 +171,9 @@ func parse_special_location_params(params: Dictionary) -> SpecialLocationHint:
 			"description":
 				if value is String:
 					result.description = value.strip_edges()
+			"has_icon":
+				if value is bool:
+					result.has_icon = value
 			"shortcut":
 				if value is String:
 					result.shortcut = UiHelper.get_shortcut(value.strip_edges())

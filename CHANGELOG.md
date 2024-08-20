@@ -1,6 +1,10 @@
 # CHANGELOG
 
 ## HEAD
+
+
+## v0.5.2
+- Added a icon button to special location hints, shown whenever it is needed
 - Updated "Scrubs Tournament (S6)" preset
 
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2ubh2ybwg1oj"]
+
+[ext_resource type="PackedScene" uid="uid://dmqtb5hv0ffjm" path="res://src/components/icon_button/icon_button.tscn" id="1_0bao4"]
+[ext_resource type="Resource" uid="uid://ddvh6gavmffne" path="res://src/resources/items/unknown.tres" id="2_f27gq"]
+[ext_resource type="Resource" uid="uid://cqr0hj71tp1qt" path="res://src/resources/items/null.tres" id="3_imark"]
+[ext_resource type="Resource" uid="uid://bvnlfdb4cy4jn" path="res://src/resources/items/bombchu.tres" id="4_affp7"]
+[ext_resource type="Resource" uid="uid://dllecgkvpogdq" path="res://src/resources/items/bottle.tres" id="5_pcwus"]
+[ext_resource type="Resource" uid="uid://dsqsxabjopuwr" path="res://src/resources/items/big_poe.tres" id="6_vnyle"]
+[ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="7_ks7ks"]
+[ext_resource type="Resource" uid="uid://cjjtg3x3n6km5" path="res://src/resources/items/biggoron_sword.tres" id="8_r428t"]
+
+[node name="IconButton" instance=ExtResource("1_0bao4")]
+items = Array[Resource]([ExtResource("2_f27gq"), ExtResource("3_imark"), ExtResource("4_affp7"), ExtResource("5_pcwus"), ExtResource("6_vnyle"), ExtResource("7_ks7ks"), ExtResource("8_r428t")])
+allowed_icon_types = 1

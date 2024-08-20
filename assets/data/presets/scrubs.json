@@ -58,6 +58,7 @@
 			"params": {
 				"choices": "BTW;DMC;DMT;COL;DC;FIR;FOR;GTG;GV;GF;GC;GY;HW;HC;HF;IC;GAN;JJ;DKT;KAK;KF;LH;LLR;LW;MKT;OGC;SFM;SHA;SPI;TOT;WAT;ZD;ZF;ZR",
 				"description": "Has an item",
+				"has_icon": true,
 				"shortcut": "I"
 			}
 		},

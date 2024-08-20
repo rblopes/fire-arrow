@@ -1,0 +1,16 @@
+[gd_scene load_steps=11 format=3 uid="uid://nuas5w30dhxr"]
+
+[ext_resource type="PackedScene" uid="uid://dmqtb5hv0ffjm" path="res://src/components/icon_button/icon_button.tscn" id="1_jmvc7"]
+[ext_resource type="Resource" uid="uid://ddvh6gavmffne" path="res://src/resources/items/unknown.tres" id="2_xs2jk"]
+[ext_resource type="Resource" uid="uid://cqr0hj71tp1qt" path="res://src/resources/items/null.tres" id="3_rrd7u"]
+[ext_resource type="Resource" uid="uid://cpo75kili6jsn" path="res://src/resources/items/small_key.tres" id="4_cuuto"]
+[ext_resource type="Resource" uid="uid://bb0reuuat8taa" path="res://src/resources/items/boss_key.tres" id="5_m6p3b"]
+[ext_resource type="Resource" uid="uid://bvnlfdb4cy4jn" path="res://src/resources/items/bombchu.tres" id="6_rky5w"]
+[ext_resource type="Resource" uid="uid://dllecgkvpogdq" path="res://src/resources/items/bottle.tres" id="7_wmjli"]
+[ext_resource type="Resource" uid="uid://dsqsxabjopuwr" path="res://src/resources/items/big_poe.tres" id="8_gpxp7"]
+[ext_resource type="Resource" uid="uid://buh1ymbocvv6k" path="res://src/resources/items/rutos_letter.tres" id="9_fgigb"]
+[ext_resource type="Resource" uid="uid://cjjtg3x3n6km5" path="res://src/resources/items/biggoron_sword.tres" id="10_tt21x"]
+
+[node name="IconButton" instance=ExtResource("1_jmvc7")]
+items = Array[Resource]([ExtResource("2_xs2jk"), ExtResource("3_rrd7u"), ExtResource("4_cuuto"), ExtResource("5_m6p3b"), ExtResource("6_rky5w"), ExtResource("7_wmjli"), ExtResource("8_gpxp7"), ExtResource("9_fgigb"), ExtResource("10_tt21x")])
+allowed_icon_types = 1

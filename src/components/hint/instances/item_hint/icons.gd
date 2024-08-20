@@ -1,19 +1,15 @@
 extends HBoxContainer
 
-@onready
-var _icon_button_scene: PackedScene = get_meta("icon_button")
-
-@onready
-var _icon_defs: Dictionary = get_meta("icon_defs")
+@export
+var _icon_defs: ResourcePreloader
 
 
 func add_icon_buttons(icon_keys: Array[StringName], is_pinned: bool) -> void:
 	for key: StringName in icon_keys:
-		var icons := _get_icons(key)
+		var button := _instantiate_icon_button(key)
 		if not is_pinned:
-			# Remove the "unknown" icon of this hint's icon list.
-			icons.pop_front()
-		add_child(_instantiate_icon_button(icons))
+			button.items.pop_front()
+		add_child(button)
 
 
 func cycle_icons_backward() -> void:
@@ -41,14 +37,6 @@ func set_icon(data: Variant) -> void:
 		node.set_icon(data)
 
 
-func _get_icons(key: StringName) -> Array[Resource]:
-	assert(key in _icon_defs)
-	var result: Array[Resource] = []
-	result.assign(_icon_defs[key].duplicate())
-	return result
-
-
-func _instantiate_icon_button(items: Array[Resource]) -> Button:
-	var result := _icon_button_scene.instantiate()
-	result.items = items
-	return result
+func _instantiate_icon_button(key: StringName) -> Button:
+	assert(_icon_defs.has_resource(key), str("Icon button scene not found: ", key))
+	return _icon_defs.get_resource(key).instantiate()
